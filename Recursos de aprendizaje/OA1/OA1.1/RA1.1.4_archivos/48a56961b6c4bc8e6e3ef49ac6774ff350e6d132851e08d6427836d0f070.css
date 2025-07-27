@@ -1,0 +1,73 @@
+/* Your code */
+#recomendacion_articulo .modal-content{
+  height: 450px;
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/222da4d1-56ed-4e94-bb2f-6d556b3f03f9/original/ajacutivo_modal.jpg);
+	background-position:top right;
+	background-size:cover;
+	background-repeat:no-repeat;
+	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+	border:none;
+	border-radius:18px;
+	overflow:hidden;
+}
+
+
+#recomendacion_articulo .boton_cerrar{
+ background-image:url(https://confuturo.cdn.modyo.com/uploads/95fea867-edbb-45a7-ba0a-2da38f8d07af/original/close.png);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:36px;
+	height:36px;
+	margin: 24px 24px 0 0 ;
+}
+#recomendacion_articulo .boton_cerrar:hover{
+	cursor:pointer;
+}
+#recomendacion_articulo .banner_modal_mobile{
+	width:100%;
+	height:150px;
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/91e65842-c45f-4724-9015-8dadb4c98d10/original/ajacutivo_modal_mobile.jpg);
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+#recomendacion_articulo .contenido{
+  display: flex;
+	height:100%;
+	padding-right: 300px;
+	padding-left:48px;
+	margin:initial;
+	flex-direction:column;
+	justify-content: center;
+}
+#recomendacion_articulo .contenido .titulo{
+	color:#fff
+}
+#recomendacion_articulo .contenido p{
+	color:#fff
+}
+
+
+@media (max-width: 991.98px) {
+	#recomendacion_articulo .modal-content{
+			background-image:none;
+		  height: auto;
+	}
+	#recomendacion_articulo .boton_cerrar{
+		margin: 16px 24px 16px 0 ;
+	}
+	#recomendacion_articulo .contenido{
+		padding-right: 24px;
+	  padding-left: 24px;
+		margin:48px 0
+	}
+	#recomendacion_articulo .contenido .titulo{
+	color:#000
+	}
+	#recomendacion_articulo .contenido p{
+		color:#000
+	}
+
+}

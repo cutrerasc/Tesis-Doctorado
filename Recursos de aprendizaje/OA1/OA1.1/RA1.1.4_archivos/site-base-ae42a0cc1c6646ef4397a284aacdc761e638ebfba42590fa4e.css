@@ -1,0 +1,800 @@
+/*Generico CSS*/
+
+/*variables*/
+html {
+  font-size: 16px;
+}
+
+body {
+  /*color: #2E2E2E;*/
+	color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+
+.h1{
+    font-size: 40px;
+}
+.h2{
+    font-size: 32px;
+}
+.h3{
+    font-size: 28px;
+}
+.h4{
+    font-size: 24px;
+}
+
+
+
+
+
+
+.text-violet{
+color:#7245A7
+}
+
+.border-violet{
+border-color:#7245A7
+}
+
+.rounded-4{
+border-rounder:18px
+}
+
+.card.bg-violet{
+background-color:#ecdaff
+}
+
+
+/*icons*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' -25,
+  'opsz' 40
+}
+
+
+
+/*buttons*/
+.btn {
+  border-radius: 30px;
+}
+
+.btn-primary {
+  background-color: #7245A7;
+  border-color: #7245A7;
+	color:#fff!important
+}
+.btn-primary:hover {
+  background-color: #522883;
+  border-color: #522883;
+}
+
+.bg-danger {
+  background-color: #7245A7 !important;
+}
+
+
+
+/*FIN generico CSS*/
+
+
+
+
+
+
+/*contenedor barra superior*/
+.contenedor_barra_superior {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1000;
+  transition: 1s;
+}
+
+.contenedor_barra_superior.active {
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*barra_superior*/
+.barra_superior {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+}
+.barra_superior .logo {
+	display:block;
+  width: 380px;
+  height: 55px;
+	background-image:url('https://confuturo.cdn.modyo.com/uploads/61f87482-8e74-4391-a597-08a3b797ad6e/original/logo_como_jubilar.png');
+	margin-left: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+	background-size:contain;
+  margin-top: 18px;
+}
+.barra_superior .boton_asesoria {
+  color: #7245A7;
+  background-color: #fff;
+  border: solid 3px #7245A7;
+  padding: 12px 55px 10px 24px;
+  border-radius: 30px;
+  margin-top: 23px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  background-image: url("	https://confuturo.cdn.modyo.com/uploads/65367fd8-07e0-40a8-9a67-ac42f85922b1/original/phone_old.webp");
+  background-repeat: no-repeat;
+  background-position: center right 18px;
+  background-size: 24px;
+  transition: 0.3s;
+}
+.barra_superior .boton_asesoria:hover {
+  background-color: rgba(102, 51, 162, 0.1);
+  cursor: pointer;
+}
+.barra_superior .menu_icon {
+  display: none;
+  width: 46px;
+  height: 46px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 38px;
+  margin: 22px 0 0 0;
+  background-image: url("https://confuturo.cdn.modyo.com/uploads/dd7a4444-7ffa-4e1b-ac04-6f9d21903e75/original/menu.webp");
+	
+}
+
+.boton_asesoria_mobile{
+	display:none;
+	position:fixed;
+	bottom:0;
+	border:none;
+	height:65px;
+	width:100%;
+	background-color:#7245A7;
+	color:#fff;
+	text-decoration:underline;
+	font-size: 20px;
+	box-shadow: 0px -10px 30px 0px rgba(0, 0, 0, 0.2);
+	z-index:1000;
+}
+
+.boton_asesoria_mobile .container{	
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.boton_asesoria_mobile .icon{
+	width:32px;
+	height:32px;
+	background-image:url('https://confuturo.cdn.modyo.com/uploads/e6078873-aa7c-45f8-8d20-4d790fc2c063/original/mail_white.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px;
+	margin-left: 18px;
+}
+
+
+
+@media (max-width: 1199.98px) {
+	.barra_superior {
+  height: 80px;
+	}
+  .barra_superior .boton_asesoria {
+    display: none;
+  }
+  .barra_superior .menu_icon {
+    display: inherit;
+  }
+	.barra_superior .logo {
+  width: 200px;
+  height: 55px;
+	margin-left: 0;
+	background-image:url('https://confuturo.cdn.modyo.com/uploads/fc9e68a7-5fed-4600-ae9c-54579c779063/original/logo_cj_mobile.png');
+  margin-top: 15px;
+	}
+	.barra_superior .menu_icon {
+  margin: 18px 0 0 0;
+	}
+	.boton_asesoria_mobile{
+		display:block;
+	}
+}
+
+
+@media (max-width: 575.98px) { 
+	
+}
+
+
+/*contenido*/
+.contenido {
+  margin-top: 120px;
+  overflow: visible;
+}
+
+@media (max-width: 1199.98px) {
+  .contenido {
+		margin-top: 100px;
+	}
+}
+
+
+
+
+
+
+
+/*articulo*/
+.articulo {
+  background-color: #fff;
+  border-radius: 16px;
+  font-size: 1.125rem;
+   padding-top: 10px;
+}
+.articulo > h1 {
+  padding: 60px 0 60px 0;
+}
+
+
+
+.articulo .titulo_articulo{
+	font-size: 56px;
+}
+
+
+.accordion-button{
+  font-size: 1.125rem;
+}
+
+
+.articulo .no-margin{
+margin-left:-48px;
+margin-right:-48px
+}
+
+
+.articulo .alert.alert-info {
+  background-color: #FCF3F8;
+  border: none;
+  color: #B20071;
+  padding: 24px 16px 24px 160px;
+  background-repeat: no-repeat;
+  background-position: left 20px bottom;
+  background-size: 110px auto;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+.articulo .alert.alert-info a {
+  color: #B20071;
+  font-weight: 600;
+}
+.articulo .accordion-button:not(.collapsed) {
+  background-color: #F6F5FF;
+  color: #2E2E2E;
+}
+.articulo .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(114, 69, 167, 0.25);
+}
+.articulo a{
+color:#9b00e9
+}
+
+@media (max-width: 575.98px) { 
+	.articulo > h1 {
+		padding: 32px 0 48px 0;
+	}
+	.articulo .no-margin{
+	margin-left:-24px;
+	margin-right:-24px
+	}
+}
+
+@media (max-width: 767.98px) {
+	.articulo .titulo_articulo{
+		font-size: 42px;
+		line-height:48px;
+	}
+  .articulo .alert.alert-info {
+    background-position: center bottom;
+    padding-left: 16px;
+    padding-bottom: 90px;
+  }
+}
+
+
+
+/*card button horizontal*/
+.card-button-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #7245A7;
+  border-radius: 8px;
+  color: #fff;
+  padding: 32px 42px 32px 32px;
+  text-decoration: none;
+  background-image:url('https://confuturo.cdn.modyo.com/uploads/7eca9589-f333-40e2-bcb6-7d5479de79bf/original/arrow_white_right.png');
+  background-position: bottom 10px right 15px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  transition: 0.3s;
+	color:#fff!important
+}
+.card-button-horizontal p {
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.card-button-horizontal:hover {
+  cursor: pointer;
+  background-position: bottom 10px right 10px;
+  background-color: #522883;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+/*banner_article*/
+.banner_article{
+	height:280px;
+	background-position:center;
+	background-size:cover
+}
+@media (max-width: 767.98px) { 
+	.banner_article{
+		height:200px;
+	}
+}
+
+
+
+
+/*encuesta_satisfaccion*/
+.encuesta_satisfaccion{
+		background-color: #fff;
+    border-radius: 16px;
+	  height: 340px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	  padding:24px;
+}
+.encuesta_satisfaccion .icon{
+	position:relative;
+  margin: auto;
+	height:90px;
+	width:90px;
+	border-radius:70px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/3ec44d82-9349-47e7-90d9-8b23b13851d6/original/ejecutivo.jpg);
+}
+.encuesta_satisfaccion .btn{
+	  min-width: 100px;
+}
+
+/*offcanvasGlosario*/
+#offcanvasGlosario .icon{
+	position:relative;
+	height:70px;
+	width:70px;
+	border-radius:70px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/3ec44d82-9349-47e7-90d9-8b23b13851d6/original/ejecutivo.jpg);
+}
+#offcanvasGlosario .boton_cerrar{
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/95fea867-edbb-45a7-ba0a-2da38f8d07af/original/close.png);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:36px;
+	height:36px;
+}
+
+
+
+
+
+
+
+
+/*glosario*/
+.glosario{
+	display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px 0 0;
+	width:17px;
+	height:17px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:15px;
+  background-image:url(https://confuturo.cdn.modyo.com/uploads/c02c6970-c6dd-4d66-9f4f-18e0055b2e1f/original/info.png);
+}
+.glosario:hover{
+		cursor:pointer;
+		background-size:17px;
+}
+
+
+/*header_articulo*/
+.header_articulo{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	position: sticky;
+	padding:0 24px 0 24px;
+	height: 64px;
+  top: 90px;
+	background-color:#fff;
+	border-bottom:solid 1px #eee;
+	margin-left:-48px;
+	margin-right:-48px;
+	z-index:900;
+}
+
+@media (max-width: 1199.98px) {
+	.header_articulo{
+  top: 80px;
+}
+}
+
+@media (max-width: 575.98px) {
+  .header_articulo{
+		margin-left:-24px;
+		margin-right:-24px;
+  }
+}
+
+
+
+
+/*miga de pan*/
+.breadcrumb{
+	margin:0;
+	padding:0;
+	background-color:initial;
+	border:none;
+	text-decoration:none;
+	color:#000000!important
+}
+.breadcrumb .material-symbols-outlined{
+	line-height:1.2;
+}
+
+/*accesibilidad*/
+.accesibilidad{
+	display:flex;
+	align-items: center;
+	font-size:18px;
+	border-radius:8px;
+	
+}
+.accesibilidad div{
+	background-color:initial;
+	border:none;
+}
+
+.accesibilidad button{
+		border:none;
+		background-color: #efefef;
+    border-radius: 20px;
+    line-height: 18px;
+	  padding: 10px 8px;
+}
+
+@media (max-width: 575.98px) {
+  .accesibilidad .titulo {
+    display:none
+  }
+}
+
+
+
+/*formulario*/
+.formulario .enviando,
+.formulario .enviado{
+display:none;
+}
+.formulario.state_1 .campos,
+.formulario.state_2 .campos{
+	display:none;
+}
+.formulario.state_1 .enviando{
+	display:block;
+}
+
+.formulario.state_2 .enviado{
+	display:block;
+}
+
+
+
+
+/*menu_lateral*/
+.menu_lateral {
+  background-color: #fff;
+  border-radius: 16px;
+}
+.menu_lateral .titulo {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  padding: 42px 44px 0 44px;
+}
+.menu_lateral .menu {
+  padding: 15px 24px 20px 24px;
+}
+.menu_lateral .menu a {
+  color: #2E2E2E;
+  text-decoration: none;
+}
+.menu_lateral .menu .item {
+  display: flex;
+  padding: 20px;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  background-repeat: no-repeat;
+  background-position: center right 16px;
+  background-size: 24px;
+	border-radius: 8px;
+	margin:7px 0;
+	width: 100%;
+  border: none;
+	background-color:initial;
+}
+.menu_lateral .menu .item:hover {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.menu_lateral .menu>.item.active{
+	background-color:#efefef;
+	font-weight:500;
+}
+
+.menu_lateral .menu>.item.active::before {
+}
+
+
+
+.menu_lateral .menu > button.item {
+	 background-image: url("	https://confuturo.cdn.modyo.com/uploads/e41b2222-bfb9-4cec-bb10-04399606f805/original/simple_arrow_bottom.png");
+}
+.menu_lateral .menu > button.item.open {
+	background-image: url("	https://confuturo.cdn.modyo.com/uploads/8817230e-ff92-4afb-ae66-8e96924206de/original/simple_arrow_top.png");
+}
+
+.menu_lateral .menu > button.item.open  a{
+}
+.menu_lateral .menu > button.item a:hover {
+  text-decoration: underline;
+}
+
+
+
+.menu_lateral .menu .sub_menu {
+  display: none;
+  padding-left:30px
+}
+.menu_lateral .menu .sub_menu.open {
+  display: block;
+}
+.menu_lateral .menu .sub_menu .item {
+  padding: 16px;
+  font-size: 1rem;
+  line-height: 1.25rem;
+	margin: 10px 0px;
+
+}
+.menu_lateral .menu .sub_menu .item:nth-child(1){
+	border-top: none;
+}.menu_lateral .menu .sub_menu .item:last-child{
+	border-bottom: none;
+}
+
+.menu_lateral .menu .sub_menu .item:hover {
+	cursor: pointer;
+	background-color:#f9f9f9;
+}
+.menu_lateral .menu .sub_menu .item.active {
+	background-color:#efefef;
+	font-weight:500;
+}
+.menu_lateral .menu .sub_menu .item.active::before {
+}
+
+
+
+/*scroll*/
+#offcanvasMenu{
+	max-width: 90%;
+}
+#offcanvasMenu .titulo{
+	padding: 0 34px 0 34px;
+}
+#offcanvasMenu .contenedor_boton_cerrar{
+	position:absolute;
+	width: 100%;
+}
+
+#offcanvasMenu .boton_cerrar{
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/95fea867-edbb-45a7-ba0a-2da38f8d07af/original/close.png);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:36px;
+	height:36px;
+	margin:16px 16px 0 0 
+}
+#offcanvasMenu .boton_cerrar:hover{
+  cursor: pointer;
+}
+#offcanvasMenu .menu_lateral{
+	margin-top:56px;
+}
+#offcanvasMenu .menu_lateral .menu{
+	padding: 15px 18px 20px 18px;
+}
+
+
+
+/*offcanvasSolicitudAsesoria*/
+
+#offcanvasSolicitudAsesoria {
+	max-width: 90%;
+}
+
+
+#offcanvasSolicitudAsesoria .contenedor_boton_cerrar{
+	position:absolute;
+	width: 100%;
+}
+
+#offcanvasSolicitudAsesoria .formulario .banner{
+	height:80px;
+	width:80px;
+	border-radius:70px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+
+#offcanvasSolicitudAsesoria .boton_cerrar{
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/95fea867-edbb-45a7-ba0a-2da38f8d07af/original/close.png);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:36px;
+	height:36px;
+	margin:16px 16px 0 0 
+}
+
+#offcanvasSolicitudAsesoria .boton_cerrar:hover{
+	cursor: pointer;
+}
+
+
+
+
+
+/*offcanvasEnvioDocumento*/
+#offcanvasEnvioDocumento {
+	max-width: 90%;
+}
+
+#offcanvasEnvioDocumento .boton_cerrar{
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/95fea867-edbb-45a7-ba0a-2da38f8d07af/original/close.png);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:36px;
+	height:36px;
+}
+
+#offcanvasEnvioDocumento .banner{
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/164d9b63-e565-49a2-a5cc-73cd26ad5ed2/original/hombre_50_fondo_violeta.jpg);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:100%;
+	height:180px;
+}
+
+#offcanvasEnvioDocumento .contenedor_boton_cerrar{
+	position:absolute;
+	width: 100%;
+}
+
+#offcanvasEnvioDocumento .boton_cerrar{
+	background-image:url(https://confuturo.cdn.modyo.com/uploads/95fea867-edbb-45a7-ba0a-2da38f8d07af/original/close.png);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:36px;
+	height:36px;
+	margin:16px 16px 0 0 
+}
+#offcanvasEnvioDocumento .boton_cerrar:hover{
+cursor:pointer
+}
+
+
+/*footer*/
+footer{
+	margin: 50px 0 60px 0;
+	color:#555;
+	font-size:1rem;
+}
+footer b{
+	color:#000
+}
+footer hr{
+	border-top:none;
+}
+footer>div{
+ display: flex;
+ flex-direction: row;
+ border-top: solid 1px #ddd;
+ padding: 80px 0 0 0;
+}
+footer>div>div{
+	width:33.3%;
+}
+footer .logo{
+	background-position:left 15px top;
+	background-size: 160px;
+	background-repeat: no-repeat;
+	padding: 0 0 0 190px;
+  min-height: 120px;
+}
+
+
+@media (max-width: 1199.98px) {
+	footer{
+		margin: 0 0 120px 0;
+	}
+	footer>div{
+	 flex-direction: column;
+   padding: 60px 0 0 0;
+	}
+	footer .logo{
+		background-position:left center;
+		background-size: 110px;
+		padding:0 0 0 135px;
+
+	}
+	footer>div>div{
+		width:100%;
+		min-height: 100px;
+		display:flex;
+		align-items: center;
+    margin-bottom: 30px;
+	  font-size:1rem;
+	}
+	footer>div>div:last-child{
+    margin-bottom: 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	footer>div>div{
+    margin-bottom: 60px;
+	}
+}
+/* Your code */
+
+
+
+
