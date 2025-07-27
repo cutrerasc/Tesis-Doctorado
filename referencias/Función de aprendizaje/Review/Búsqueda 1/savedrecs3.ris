@@ -1,0 +1,1577 @@
+﻿TY  - JOUR
+AU  - Mashayekhi, F
+AU  - Shabani, S
+AU  - Sasani, ST
+AU  - Salehi, Z
+TI  - The association of stem cell factor and soluble c-Kit (s-cKit) receptor serum concentrations with the severity and risk prediction of autism spectrum disorders
+T2  - METABOLIC BRAIN DISEASE
+KW  - Stem cell factor
+KW  - Soluble c-Kit
+KW  - Serum
+KW  - Concentration
+KW  - Autism spectrum disorders
+KW  - SCF/C-KIT
+KW  - IN-VITRO
+KW  - EXPRESSION
+KW  - SURVIVAL
+AB  - S tem cell factor (SCF) and its receptor (c-kit) signaling play important role in normal brain physiology including neurogenesis, synapse formation and spatial learning function of the hippocampal region of the brain. Autism spectrum disorder (ASD) is believed to result from abnormal development of neuronal networks and synaptic function. The aim of this study was to evaluate the SCF and its soluble receptor (s-ckit) serum concentrations in ASD. We also studied the serum SCF and s-ckit concentration with the severity of ASD (Levels 1-3; Mild, Moderate and severe, respectively). Ninety five patients with ASD (Mild; n=33, Moderate; n=32 and severe; n=30) and 82 normal controls age matched were included in this study. The serum concentration of SCF and s-ckit were measured by enzyme-linked immunosorbent assay (ELISA). The SCF serum concentration in control subjects was 3.45 +/- 1.06 ng/ml and in ASD was 3.41 +/- 0.92 ng/ml (P=0.88). The serum levels of s-ckit in control and ASD groups were 56.82 +/- 13.22 ng/ml and 67.11 +/- 12.00, respectively (P=001). We have also studied serum SCF and s-ckit concentrations with the severity of ASD. The serum concentration of SCF in mild, moderate and severe ASD groups was 3.45 +/- 0.93, 3.4 +/- 0.87 and 3.43 +/- 0.98 ng/ml, respectively (P>0.05) and for s-ckit was 48.77 +/- 9.28, 61.66 +/- 12.18 and 93.11 +/- 14.81ng/ml, respectively (P<0.05). The result of this study suggests that serum s-cKit concentrations may provide a reliable and practical indicator of ASD and positively correlated with disease severity. It is also concluded that s-cKit might be involved in the pathophysiology of ASD.
+AD  - Univ Guilan, Fac Sci, Dept Biol, Rasht, IranDA  - MAR
+PY  - 2022
+VL  - 37
+IS  - 3
+SP  - 619
+EP  - 624
+DO  - 10.1007/s11011-021-00883-5
+C6  - JAN 2022
+AN  - WOS:000741877900001
+N1  - Times Cited in Web of Science Core Collection:  3
+Total Times Cited:  3
+ER  -
+
+TY  - JOUR
+AU  - Liu, PF
+AU  - Shang, DM
+AU  - Liu, Q
+AU  - Yi, ZH
+AU  - Wei, K
+TI  - Kriging Model for Reliability Analysis of the Offshore Steel Trestle Subjected to Wave and Current Loads
+T2  - JOURNAL OF MARINE SCIENCE AND ENGINEERING
+KW  - reliability
+KW  - offshore steel trestle
+KW  - wave and current loads
+KW  - kriging model
+KW  - Latin hypercube sampling
+KW  - LEARNING-FUNCTION
+KW  - DYNAMIC-RESPONSE
+KW  - DESIGN
+KW  - IMPACT
+KW  - PILE
+AB  - Offshore steel trestles (OSTs) are exposed to severe marine environments with stochastic wave and current loads, making structural safety assessment challenging and difficult. Reliability analysis is a suitable way to consider both wave and current loading intensity uncertainties, but the implicit and complex limit state functions of the reliability analysis usually imply huge computational costs. This paper proposes an efficient reliability analysis framework for OST using the kriging model of optimal linear unbiased estimation. The surrogate model is built with stochastic waves, current parameters, and the corresponding load factors. The framework is then used to evaluate the reliability of an example OST subjected to wave and current loads at three limit states of OST, including first yield (FY), full plastic (FP), and collapse initiation (CI). Three different distributions are used for comparison of the results of failure probability and reliability index. The results and the computational cost by the proposed framework are compared with that from the Monte Carlo sampling (MCS) and Latin hypercube sampling (LHS) method. The influences of sample number on the prediction accuracy and reliability index are investigated. The influence of marine growth on the reliability analysis of the OST is discussed using MCS and the kriging model. The results show that the reliability analysis based on the kriging model can obtain the reliability index for the OST efficiently with less calculation time but similar results compared with MCS and LHS. With the increase of the number of samples, the prediction accuracy of the kriging model increases, and the corresponding failure probability fluctuates greatly at first and then tends to be stable. The reliability of the example OST is reduced with the increase of marine growth, regardless of the limit state.
+AD  - State Key Lab Hlth & Safety Bridge Struct, Wuhan 430034, Peoples R ChinaAD  - China Railway Britech Co Ltd, Wuhan 430034, Peoples R ChinaAD  - Southwest Jiaotong Univ SWJTU, Sch Civil Engn, Dept Bridge Engn, Chengdu 610031, Peoples R ChinaAD  - Sichuan Highway Planning Survey Design & Res Inst, Chengdu 610031, Peoples R ChinaDA  - JAN
+PY  - 2022
+VL  - 10
+IS  - 1
+C7  - 25
+DO  - 10.3390/jmse10010025
+AN  - WOS:000746261000001
+N1  - Times Cited in Web of Science Core Collection:  3
+Total Times Cited:  3
+ER  -
+
+TY  - JOUR
+AU  - Quintana, G
+AU  - Rudolf, T
+AU  - Ciurana, J
+AU  - Brecher, C
+TI  - Surface roughness prediction through internal kernel information and external accelerometers using artificial neural networks
+T2  - JOURNAL OF MECHANICAL SCIENCE AND TECHNOLOGY
+KW  - Cutting parameters
+KW  - Milling process
+KW  - NC kernel
+KW  - Surface roughness
+KW  - FUZZY INFERENCE SYSTEM
+KW  - END-MILLING PROCESS
+KW  - MACHINING PROCESS
+KW  - OPERATIONS
+KW  - OPTIMIZATION
+KW  - ALGORITHM
+KW  - MODEL
+AB  - In this paper, the average surface roughness parameter (Ra) is predicted using artificial neural network (ANN) models and internal kernel information and external piezoelectric accelerometer data. Experiments were conducted to Obtain data to develop ANN models to predict surface roughness. A total of 72 samples were used to develop two networks, one based on accelerometer inputs and the other on kernel inputs. The Matlab ANN Toolbox was used for the modeling. The two networks had similar characteristics. Feed-forward back-propagation, 'newff', was the network structure selected, with a Levenberg-Marquardt backpropagation training function, 'trainlm', and a backpropagation weight and bias learning function, 'learngdm'. Samples obtained at the experimental stage were randomly divided into three groups to train (70% of the samples), validate (15% of the samples) and test (15% of the samples) the neural networks with a 'dividerand data division function. The input processing functions used were 'fixunknowns', 'removeconstantrows' and 'mapminmax'. The transfer function was 'tansig' for hidden layers and 'purelin' for the output layer. The output processing functions used were 'removeconstantrows' and 'mapminmax'. The inputs consisted of the process parameters of radial depth of cut (Ae), the axial depth of cut (Ap), the spindle speed (N), the feed rate (f), the feed per tooth (fz), the cutting speed (Vc), the tooth passing frequency (ft), the cutting section (Cs), the material removal rate (MRR) and the cutting tool characteristics of the cutter radius (R), the number of teeth (Z) and the tool shape. The main difference between the two neural networks consisted of data origin: one considered data obtained with accelerometers and the other data collected in the NC kernel. Results showing high correlation factors between outputs and targets confirm that data provided by both internal and external sources can be useful for Ra prediction. However, NC kernel data provide several advantages.
+AD  - Univ Girona, Dept Mech Engn & Ind Construct, Girona, SpainAD  - ASCAMM Technol Ctr, Barcelona, SpainAD  - RWTH Aachen Univ Technol, Lab Machine Tools & Prod Engn, Aachen, GermanyDA  - NOV
+PY  - 2011
+VL  - 25
+IS  - 11
+SP  - 2877
+EP  - 2886
+DO  - 10.1007/s12206-011-0806-0
+AN  - WOS:000296926200019
+N1  - Times Cited in Web of Science Core Collection:  14
+Total Times Cited:  14
+ER  -
+
+TY  - JOUR
+AU  - Wang, YB
+AU  - Liu, Y
+AU  - Lopez, D
+AU  - Lee, M
+AU  - Dayal, S
+AU  - Hurtado, A
+AU  - Bi, XN
+AU  - Baudry, M
+TI  - Protection against TBI-Induced Neuronal Death with Post-Treatment with a Selective Calpain-2 Inhibitor in Mice
+T2  - JOURNAL OF NEUROTRAUMA
+KW  - calpain
+KW  - cell death
+KW  - neuroprotection
+KW  - TBI
+KW  - TRAUMATIC BRAIN-INJURY
+KW  - CONTROLLED CORTICAL IMPACT
+KW  - PHARMACOLOGICAL ANALYSIS
+KW  - SYNAPTIC PLASTICITY
+KW  - DEGRADATION
+KW  - PROTEIN
+KW  - MEMORY
+KW  - MOUSE
+KW  - DEGENERATION
+KW  - SPECTRIN
+AB  - Traumatic Brain Injury (TBI) is a major cause of death and disability worldwide. The calcium-dependent protease, calpain, has been shown to be involved in TBI-induced neuronal death. However, whereas various calpain inhibitors have been tested in several animal models of TBI, there has not been any clinical trial testing the efficacy of calpain inhibitors in human TBI. One important reason for this could be the lack of knowledge regarding the differential functions of the two major calpain isoforms in the brain, calpain-1 and calpain-2. In this study, we used the controlled cortical impact (CCI) model in mice to test the roles of calpain-1 and calpain-2 in TBI-induced neuronal death. Immunohistochemistry (IHC) with calpain activity markers performed at different time-points after CCI in wild-type and calpain-1 knock-out (KO) mice showed that calpain-1 was activated early in cortical areas surrounding the impact, within 0-8h after CCI, whereas calpain-2 activation was delayed and was predominant during 8-72h after CCI. Calpain-1 KO enhanced cell death, whereas calpain-2 activity correlated with the extent of cell death, suggesting that calpain-1 activation suppresses and calpain-2 activation promotes cell death following TBI. Systemic injection(s) of a calpain-2 selective inhibitor, NA101, at 1h or 4h after CCI significantly reduced calpain-2 activity and cell death around the impact site, reduced the lesion volume, and promoted motor and learning function recovery after TBI. Our data indicate that calpain-1 activity is neuroprotective and calpain-2 activity is neurodegenerative after TBI, and that a selective calpain-2 inhibitor can reduce TBI-induced cell death.
+AD  - Western Univ Hlth Sci, Grad Coll Biomed Sci, 309 E 2nd St, Pomona, CA 91766 USAAD  - Western Univ Hlth Sci, Coll Osteopath Med Pacific, Pomona, CA USAAD  - Pitzer Coll, Claremont, CA 91711 USADA  - JAN
+PY  - 2018
+VL  - 35
+IS  - 1
+SP  - 105
+EP  - 117
+DO  - 10.1089/neu.2017.5024
+AN  - WOS:000419569700013
+N1  - Times Cited in Web of Science Core Collection:  37
+Total Times Cited:  39
+ER  -
+
+TY  - JOUR
+AU  - Shiga, T
+AU  - Nakamura, TJ
+AU  - Komine, C
+AU  - Goto, Y
+AU  - Mizoguchi, Y
+AU  - Yoshida, M
+AU  - Kondo, Y
+AU  - Kawaguchi, M
+TI  - A Single Neonatal Injection of Ethinyl Estradiol Impairs Passive Avoidance Learning and Reduces Expression of Estrogen Receptor a in the Hippocampus and Cortex of Adult Female Rats
+T2  - PLOS ONE
+KW  - ENDOCRINE-DISRUPTING CHEMICALS
+KW  - BISPHENOL-A
+KW  - BEHAVIORAL ALTERATIONS
+KW  - DORSAL HIPPOCAMPUS
+KW  - EXPOSURE
+KW  - ACTIVATION
+KW  - MECHANISMS
+KW  - RETRIEVAL
+KW  - CADMIUM
+KW  - ALPHA
+AB  - Although perinatal exposure of female rats to estrogenic compounds produces irreversible changes in brain function, it is still unclear how the amount and timing of exposure to those substances affect learning function, or if exposure alters estrogen receptor a (ER alpha) expression in the hippocampus and cortex. In adult female rats, we investigated the effects of neonatal exposure to a model estrogenic compound, ethinyl estradiol (EE), on passive avoidance learning and ER alpha expression. Female Wistar-Imamichi rats were subcutaneously injected with oil, 0.02 mg/kg EE, 2 mg/kg EE, or 20 mg/kg 17 beta-estradiol within 24 h after birth. All females were tested for passive avoidance learning at the age of 6 weeks. Neonatal 0.02 mg/kg EE administration significantly disrupted passive avoidance compared with oil treatment in gonadally intact females. In a second experiment, another set of experimental females, treated as described above, was ovariectomized under pentobarbital anesthesia at 10 weeks of age. At 15-17 weeks of age, half of each group received a subcutaneous injection of 5 mu g estradiol benzoate a day before the passive avoidance learning test. Passive avoidance learning behavior was impaired by the 0.02 mg/kg EE dose, but notably only in the estradiol benzoate-injected group. At 17-19 weeks of age, hippocampal and cortical samples were collected from rats with or without the 5 mu g estradiol benzoate injection, and western blots used to determine ER alpha expression. A significant decrease in ER alpha expression was observed in the hippocampus of the estradiol-injected, neonatal EE-treated females. The results demonstrated that exposure to EE immediately after birth decreased learning ability in adult female rats, and that this may be at least partly mediated by the decreased expression of ER alpha in the hippocampus.
+AD  - Meiji Univ, Sch Agr, Kanagawa, JapanAD  - Teikyo Heisei Univ, Fac Pharmaceut Sci, Tokyo, JapanAD  - Natl Inst Hlth Sci, Div Pathol, Tokyo, JapanAD  - Teikyo Univ Sci, Sch Life & Environm Sci, Tokyo, JapanDA  - JAN 7
+PY  - 2016
+VL  - 11
+IS  - 1
+C7  - e0146136
+DO  - 10.1371/journal.pone.0146136
+AN  - WOS:000367810600020
+N1  - Times Cited in Web of Science Core Collection:  15
+Total Times Cited:  18
+ER  -
+
+TY  - JOUR
+AU  - Li, ZY
+AU  - Zeng, Q
+AU  - Hu, SQ
+AU  - Liu, ZY
+AU  - Wang, ST
+AU  - Jin, Y
+AU  - Li, LM
+AU  - Ou, HL
+AU  - Wu, ZZ
+TI  - Chaihu Shugan San ameliorated cognitive deficits through regulating gut microbiota in senescence-accelerated mouse prone 8
+T2  - FRONTIERS IN PHARMACOLOGY
+KW  - mild cognitive impairment
+KW  - gut microbiota
+KW  - neural injury
+KW  - Chaihu Shugan San
+KW  - senescence-accelerated mouse prone 8
+KW  - METAANALYSIS
+KW  - STRESS
+KW  - MEMORY
+KW  - MODEL
+AB  - Background: Traditional Chinese medicines exhibit promising preventive effects on Alzheimer's disease. Chaihu Shugan San (CSS) is a well-known traditional herbal formula whose several kinds of ingredients have the potential of ameliorating Alzheimer's disease. The present study aimed to evaluate the effects of CSS on the microbiota-gut-brain axis and cognitive deficits of senescence-accelerated mouse prone 8 (SAMP8) mice as well as investigate the underlying mechanisms.
+   Methods: Thirty 5-month-old SAMP8 mice were randomly divided into the model group (SAMP8), CSS low-dose treatment group (CSSL), and CSS high-dose treatment group (CSSH). Ten SAMR1 mice were used as the normal control, and ten SAMP8 mice treated with donepezil were used as the positive control of cognitive function. CSS was orally administrated to SAMP8 mice for 8 weeks. The Morris water maze test was used to evaluate cognitive function. Histological staining was used to observe neuronal injury and A ss deposition. Transmission electron microscopy was used to observe the synaptic ultrastructure. 16S rRNA gene analysis was performed to measure the changes in intestinal microbiota.
+   Results: The results showed that CSS significantly improved the learning function and memory deficits of aged SAMP8 mice in the Morris water maze examination. CSS ameliorated neuronal injury, synaptic injuries, and A ss deposition in the brain of SAMP8 mice. In addition, CSS also significantly improved microbiota composition in terms of elevating Lactobacillus reuteri and decreasing Staphylococcus xylosus in the feces of aged SAMP8 mice.
+   Conclusion: These findings suggested that CSS might have a preventive potential for cognitive deficits in aging through regulating gut microbiota, which paved the way for the application of CSS for prevention and therapeutic purposes for mild cognitive impairment as well as Alzheimer's disease.
+AD  - Shenzhen Univ, Affiliated Hosp 1, Shenzhen Peoples Hosp 2, Shenzhen, Peoples R ChinaAD  - Ningbo Coll Hlth Sci, Acad Workstat, Ningbo, Peoples R ChinaAD  - Sun Yat Sen Univ, Affiliated Hosp 8, Shenzhen, Peoples R ChinaAD  - Qingdao Univ, Coll Mat Sci & Engn, Collaborat Innovat Ctr Marine Biobased Fiber & Eco, State Key Lab Biofibers & Ecotext, Qingdao, Peoples R ChinaDA  - MAY 15
+PY  - 2023
+VL  - 14
+C7  - 1181226
+DO  - 10.3389/fphar.2023.1181226
+AN  - WOS:001000395700001
+N1  - Times Cited in Web of Science Core Collection:  4
+Total Times Cited:  4
+ER  -
+
+TY  - JOUR
+AU  - Zuo, ZY
+AU  - Zhou, CF
+AU  - Ma, ZY
+AU  - Huang, YF
+AU  - Chen, LL
+AU  - Li, W
+AU  - Xu, J
+AU  - Chen, KJ
+TI  - Flexible Artificial Ag NPs:a-SiC<sub>0.11</sub>:H Synapse on Al Foil with High Uniformity and On/Off Ratio for Neuromorphic Computing
+T2  - NANOMATERIALS
+KW  - memristor
+KW  - flexibility
+KW  - multilevel resistive switching
+KW  - uniformity
+KW  - RESISTIVE MEMORY
+KW  - THIN-FILMS
+KW  - TRANSISTOR
+KW  - MEMRISTOR
+KW  - TRANSPORT
+KW  - DEVICES
+AB  - A neuromorphic computing network based on SiCx memristor paves the way for a next-generation brain-like chip in the AI era. Up to date, the SiCx-based memristor devices are faced with the challenge of obtaining flexibility and uniformity, which can push forward the application of memristors in flexible electronics. For the first time, we report that a flexible artificial synaptic device based on a Ag NPs:a-SiC0.11:H memristor can be constructed by utilizing aluminum foil as the substrate. The device exhibits stable bipolar resistive switching characteristic even after bending 1000 times, displaying excellent flexibility and uniformity. Furthermore, an on/off ratio of approximately 10(7) can be obtained. It is found that the incorporation of silver nanoparticles significantly enhances the device's set and reset voltage uniformity by 76.2% and 69.7%, respectively, which is attributed to the contribution of the Ag nanoparticles. The local electric field of Ag nanoparticles can direct the formation and rupture of conductive filaments. The fitting results of I-V curves show that the carrier transport mechanism agrees with Poole-Frenkel (P-F) model in the high-resistance state, while the carrier transport follows Ohm's law in the low-resistance state. Based on the multilevel storage characteristics of the Al/Ag NPs:a-SiC0.11:H/Al foil resistive switching device, we successfully observed the biological synaptic characteristics, including the long-term potentiation (LTP), long-term depression (LTD), and spike-timing-dependent plasticity (STDP). The flexible artificial Ag NPs:a-SiC0.11:H/Al foil synapse possesses excellent conductance modulation capabilities and visual learning function, demonstrating the promise of application in flexible electronics technology for high-efficiency neuromorphic computing in the AI period.
+AD  - Nanjing Univ, Sch Elect Sci & Engn, Nanjing 210093, Peoples R ChinaAD  - Nanjing Univ, Collaborat Innovat Ctr Adv Microstruct, Nanjing 210093, Peoples R ChinaAD  - Nanjing Univ, Jiangsu Prov Key Lab Photon & Elect Mat Sci & Tech, Nanjing 210093, Peoples R ChinaDA  - SEP
+PY  - 2024
+VL  - 14
+IS  - 18
+C7  - 1474
+DO  - 10.3390/nano14181474
+AN  - WOS:001326472500001
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  0
+ER  -
+
+TY  - JOUR
+AU  - Gutierrez-Franco, E
+AU  - Mejia-Argueta, C
+AU  - Rabelo, L
+TI  - Data-Driven Methodology to Support Long-Lasting Logistics and Decision Making for Urban Last-Mile Operations
+T2  - SUSTAINABILITY
+KW  - urban logistics
+KW  - emerging markets
+KW  - nanostores
+KW  - customer-centric supply chains
+KW  - hybrid methods
+KW  - prescriptive analytics
+KW  - framework
+KW  - digital twin
+KW  - VEHICLE-ROUTING PROBLEM
+KW  - REVERSE LOGISTICS
+KW  - E-COMMERCE
+KW  - FREIGHT TRANSPORT
+KW  - DELIVERY
+KW  - OPTIMIZATION
+KW  - ALGORITHMS
+KW  - FRAMEWORK
+KW  - LOCATION
+KW  - DESIGN
+AB  - Last-mile operations in forward and reverse logistics are responsible for a large part of the costs, emissions, and times in supply chains. These operations have increased due to the growth of electronic commerce and direct-to-consumer strategies. We propose a novel data- and model-driven framework to support decision making for urban distribution. The methodology is composed of diverse, hybrid, and complementary techniques integrated by a decision support system. This approach focuses on key elements of megacities such as socio-demographic diversity, portfolio mix, logistics fragmentation, high congestion factors, and dense commercial areas. The methodological framework will allow decision makers to create early warning systems and, with the implementation of optimization, machine learning, and simulation models together, make the best utilization of resources. The advantages of the system include flexibility in decision making, social welfare, increased productivity, and reductions in cost and environmental impacts. A real-world illustrative example is presented under conditions in one of the most congested cities: the megacity of Bogota, Colombia. Data come from a retail organization operating in the city. A network of stakeholders is analyzed to understand the complex urban distribution. The execution of the methodology was capable of solving a complex problem reducing the number of vehicles utilized, increasing the resource capacity utilization, and reducing the cost of operations of the fleet, meeting all constraints. These constraints included the window of operations and accomplishing the total number of deliveries. Furthermore, the methodology could accomplish the learning function using deep reinforcement learning in reasonable computational times. This preliminary analysis shows the potential benefits, especially in understudied metropolitan areas from emerging markets, supporting a more effective delivery process, and encouraging proactive, dynamic decision making during the execution stage.
+AD  - MIT, Ctr Latin American Logist Innovat, Global SCALE Network, Cambridge, MA 02139 USAAD  - Univ Cent Florida, Dept Ind Engn & Management Syst, Orlando, FL 16299 USAAD  - MIT, Food & Retail Operat Lab, Ctr Transportat & Logist, Cambridge, MA 02139 USADA  - JUN
+PY  - 2021
+VL  - 13
+IS  - 11
+C7  - 6230
+DO  - 10.3390/su13116230
+AN  - WOS:000660763000001
+N1  - Times Cited in Web of Science Core Collection:  34
+Total Times Cited:  37
+ER  -
+
+TY  - JOUR
+AU  - Zhou, YL
+AU  - Zheng, W
+AU  - Liu, WJ
+AU  - Wang, CY
+AU  - Zhan, YN
+AU  - Li, HQ
+AU  - Chen, LJ
+AU  - Ning, YP
+TI  - Cross-sectional relationship between kynurenine pathway metabolites and cognitive function in major depressive disorder
+T2  - PSYCHONEUROENDOCRINOLOGY
+KW  - Depression
+KW  - Kynurenine
+KW  - Cognition
+KW  - Tryptophan
+KW  - NEUROCOGNITIVE FUNCTION
+KW  - INFLAMMATION
+KW  - TRYPTOPHAN
+KW  - HIPPOCAMPAL
+KW  - ACID
+KW  - IMPAIRMENT
+KW  - CELLS
+KW  - SEX
+KW  - MEN
+AB  - Objective: Cognitive impairment is common among patients with major depressive disorder (MDD), but its pathological mechanism is complex and not fully understood. Evidence suggests that the kynurenine (KYN) pathway may be implicated in the pathophysiology of depression, but few studies have explored the association between the KYN pathway and cognitive impairment in MDD. Our aim was to examine the relationship between cognitive impairment and KYN pathway metabolites in patients with MDD.
+   Methods: A total of 146 patients with MDD according to DSM-V and 72 healthy controls (HCs) were enrolled, and the severity of depressive symptoms using the 17-item Hamilton Depression Rating Scale (HAMD-17) and cognitive performance including speed of processing, working memory, visual learning and verbal learning were assessed. Blood samples were collected, and serum concentrations of tryptophan (TRP), kynurenine (KYN) and kynurenic acid (KYNA) were measured by liquid chromatography-tandem mass spectrometry.
+   Results: In females with MDD, there was a significant negative association between the KYN level and verbal learning (B = -0.039, adjusted p = 0.018), and the KYN/TRP ratio was negatively correlated with speed of processing (B =-470.086, adjusted p = 0.029), verbal learning (B = -544.251, adjusted p = 0.002) and visual learning (B = -513.777, adjusted p = 0.004). Those associations were not present in male individuals with MDD or in HCs, except for a significant negative correlation between the KYNA/KYN ratio and category fluency (B = -0.373, adjusted p = 0.039) in female HCs.
+   Conclusion: Our results suggest that learning function and speed of processing in female MDD were associated with KYN serum level and the KYN/TRP ratio, potentially implicating the KYN pathway in the pathological mechanism of cognitive function in female MDD.
+AD  - Guangzhou Med Univ, Guangzhou Huiai Hosp, Affiliated Brain Hosp, Mingxin Rd 36, Guangzhou 510370, Liwan District, Peoples R ChinaAD  - Guangdong Engn Technol Res Ctr Translat Med Met D, Guangzhou, Guangdong, Peoples R ChinaDA  - MAR
+PY  - 2019
+VL  - 101
+SP  - 72
+EP  - 79
+DO  - 10.1016/j.psyneuen.2018.11.001
+AN  - WOS:000459840000011
+N1  - Times Cited in Web of Science Core Collection:  41
+Total Times Cited:  43
+ER  -
+
+TY  - JOUR
+AU  - Ge, ML
+AU  - Zhang, YX
+AU  - Hao, QK
+AU  - Zhao, YL
+AU  - Dong, BR
+TI  - Effects of mesenchymal stem cells transplantation on cognitive deficits in animal models of Alzheimer's disease: A systematic review and meta-analysis
+T2  - BRAIN AND BEHAVIOR
+KW  - Alzheimer's disease
+KW  - animal models
+KW  - cognitive deficits
+KW  - mesenchymal stem cells
+KW  - meta-analysis
+KW  - morris water maze
+KW  - NEUROTROPHIC FACTORS
+KW  - OXIDATIVE STRESS
+KW  - BRAIN
+KW  - MICE
+KW  - INJURY
+KW  - MEMORY
+KW  - RAT
+AB  - Background: Alzheimer's disease(AD) is a globally prevalent neurodegenerative disease, clinically characterized by progressive memory loss and gradual impairment of cognitive functions. Mesenchymal stem cells (MSCs) transplantation has been considered a possible therapeutic method for Alzheimer's disease (AD). However, no quantitative data synthesis of MSC therapy for AD exists. We conducted asystematic review and meta-analysis to study the effects of MSCs on cognitive deficits in animal models of AD.
+   Methods: We identified eligible studies published from January 1980 to January 2017 by searching four electronic databases (PubMed, MEDLINE, EMBASE, CNKI). The endpoint was the effects of MSCs on cognitive performance evaluated by the Morris water maze (MWM) test including escape latency, and/or number of platform crossing, and/or time in the target quadrant.
+   Results: Nine preclinical studies incorporating 225 animals with AD were included for the meta-analysis. The studies indicated that MSC-based treatment significantly improved the learning function through measurements of the escape latency (SMD = -0.99, 95% CI = -1.33 to -0.64, p < .00001). Additionally, we observed that transplantation of MSCs significantly increased the number of platform crossing in six experiments (SMD = 0.78, 95% CI = 0.43 to 1.13, p < .0001). What's more, the times in the target quadrant were increased in five studies indicated that transplantation of MSCs could ameliorate the cognitive impairments (SMD = 1.06, 95% CI = 0.46 to 1.67, p = .0005).
+   Conclusions: This study showed that MSC transplantation could reduce cognitive deficits in AD models. These findings support the further studies to translate MSCs in the treatment of AD in humans
+AD  - Sichuan Univ, West China Hosp, Ctr Gerontol & Geriatr, Chengdu, Sichuan, Peoples R ChinaAD  - Collaborat Innovat Ctr Sichuan Elderly Care & Hlt, Chengdu, Sichuan, Peoples R ChinaAD  - Chengdu Med Coll, Chengdu, Sichuan, Peoples R ChinaDA  - JUL
+PY  - 2018
+VL  - 8
+IS  - 7
+C7  - e00982
+DO  - 10.1002/brb3.982
+AN  - WOS:000438495400019
+N1  - Times Cited in Web of Science Core Collection:  17
+Total Times Cited:  18
+ER  -
+
+TY  - JOUR
+AU  - Vahedi, J
+AU  - Ghasemi, MR
+AU  - Miri, M
+TI  - Structural reliability assessment using an enhanced adaptive Kriging method
+T2  - STRUCTURAL ENGINEERING AND MECHANICS
+KW  - structural reliability
+KW  - surrogate model
+KW  - Kriging
+KW  - Monte-Carlo simulation
+KW  - design of experiments
+KW  - LEARNING-FUNCTION
+KW  - SIMULATION
+KW  - DESIGN
+KW  - OPTIMIZATION
+KW  - APPROXIMATE
+KW  - FAILURE
+AB  - Reliability assessment of complex structures using simulation methods is time-consuming. Thus, surrogate models are usually employed to reduce computational cost. AK-MCS is a surrogate-based Active learning method combining Kriging and Monte-Carlo Simulation for structural reliability analysis. This paper proposes three modifications of the AK-MCS method to reduce the number of calls to the performance function. The first modification is related to the definition of an initial Design of Experiments (DoE). In the original AK-MCS method, an initial DoE is created by a random selection of samples among the Monte Carlo population. Therefore, samples in the failure region have fewer chances to be selected, because a small number of samples are usually located in the failure region compared to the safe region. The proposed method in this paper is based on a uniform selection of samples in the predefined domain, so more samples may be selected from the failure region. Another important parameter in the AK-MCS method is the size of the initial DoE. The algorithm may not predict the exact limit state surface with an insufficient number of initial samples. Thus, the second modification of the AK-MCS method is proposed to overcome this problem. The third modification is relevant to the type of regression trend in the AK-MCS method. The original AK-MCS method uses an ordinary Kriging model, so the regression part of Kriging model is an unknown constant value. In this paper, the effect of regression trend in the AK-MCS method is investigated for a benchmark problem, and it is shown that the appropriate choice of regression type could reduce the number of calls to the performance function. A stepwise approach is also presented to select a suitable trend of the Kriging model. The numerical results show the effectiveness of the proposed modifications.
+AD  - Univ Sistan & Baluchestan, Dept Civil Engn, Zahedan, IranDA  - JUN 25
+PY  - 2018
+VL  - 66
+IS  - 6
+SP  - 677
+EP  - 691
+DO  - 10.12989/sem.2018.66.6.677
+AN  - WOS:000436233700001
+N1  - Times Cited in Web of Science Core Collection:  12
+Total Times Cited:  12
+ER  -
+
+TY  - JOUR
+AU  - Tao, Y
+AU  - Bao, JQ
+AU  - Liu, Q
+AU  - Liu, L
+AU  - Zhu, JQ
+TI  - Deep residual network enabled smart hyperspectral image analysis and its application to monitoring moisture, size distribution and contents of four bioactive compounds of granules in the fluid-bed granulation process of Guanxinning tablets
+T2  - SPECTROCHIMICA ACTA PART A-MOLECULAR AND BIOMOLECULAR SPECTROSCOPY
+KW  - Guanxinning tablets
+KW  - Hyperspectral image
+KW  - Deep residual network
+KW  - Process analytical chemistry
+KW  - Granulation process monitoring
+KW  - Intelligent process analysis
+KW  - NEAR-INFRARED SPECTROSCOPY
+AB  - Bed collapse is a serious problem in a fluid-bed granulation process of traditional Chinese medicine. Moisture content and size distribution are regarded as two pivotal influencing factors. Herein, a smart hyperspectral image analysis methodology was established via deep residual network (ResNet) algorithm, which was then applied to monitoring moisture content, size distribution and contents of four bioactive compounds of granules in the fluid -bed granulation process of Guanxinning tablets. First, a hyperspectral imaging camera was utilized to acquire hyperspectral images of 132 real granule samples in the spectral region of 389-1020 nm. Second, the moisture content and size distribution of the granules were measured with a laser particle sizer and a fast moisture analyzer, respectively. Moreover, the contents of danshensu, ferulic acid, rosmarinic acid and salvianolic acid B of the granules were determined by using high-performance liquid chromatography-diode array detection. Third, ResNet quantitative calibration models were built, which consisted of convolutional layer, maxpooling layer, four convolutional blocks with residual learning function and two fully connected layers. As a result, the R2c values for the moisture content, granule sizes and contents of four bioactive compounds are determined to be 0.957, 0.986, 0.936, 0.959, 0.937, 0.938, 0.956, 0.889, 0.914 and 0.928, whereas the R2p values are calculated as 0.940, 0.969, 0.904, 0.930, 0.925, 0.928, 0.896, 0.849, 0.844, and 0.905, respectively. The predicted values matched well with the measured values. These findings indicated that ResNet algorithm driven hyperspectral image analysis is feasible for monitoring both the physical and chemical properties of Guanxinning tablets at the same time.
+AD  - Zhejiang Univ Technol, Coll Pharmaceut Sci, Hangzhou 310014, Peoples R ChinaAD  - Chiatai Qingchunbao Pharmaceut Co Ltd, Hangzhou 310023, Peoples R ChinaAD  - Zhejiang Univ Technol, Coll Pharmaceut Sci, 18 Chaowang Ave, Hangzhou 310014, Peoples R ChinaDA  - FEB 15
+PY  - 2023
+VL  - 287
+C7  - 122083
+DO  - 10.1016/j.saa.2022.122083
+C6  - NOV 2022
+AN  - WOS:000900057600007
+N1  - Times Cited in Web of Science Core Collection:  7
+Total Times Cited:  8
+ER  -
+
+TY  - JOUR
+AU  - Arghavani, A
+AU  - Zhang, HB
+AU  - Huang, ZY
+AU  - Chen, YW
+TI  - Chimp: A Learning-based Power-aware Communication Protocol for Wireless Body Area Networks
+T2  - ACM TRANSACTIONS ON EMBEDDED COMPUTING SYSTEMS
+KW  - Wireless body sensor networks
+KW  - optimal adaptive power control
+KW  - interference
+KW  - energy
+KW  - reliability
+KW  - leaning automata
+KW  - SENSOR NETWORKS
+KW  - TRANSMISSION
+KW  - SYSTEM
+AB  - Radio links in wireless body area networks (WBANs) commonly experience highly time-varying attenuation due to the dynamic network topology and frequent occlusions caused by body movements, making it challenging to design a reliable, energy-efficient, and real-time communication protocol for WBANs. In this article, we present Chimp, a learning-based power-aware communication protocol in which each sending node can self-learn the channel quality and choose the best transmission power level to reduce energy consumption and interference range while still guaranteeing high communication reliability. Chimp is designed based on learning automata that uses only the acknowledgment packets and motion data from a local gyroscope sensor to infer the real-time channel status. We design a new cost function that takes into account the energy consumption, communication reliability and interference and develop a new learning function that can guarantee to select the optimal transmission power level to minimize the cost function for any given channel quality. For highly dynamic postures such as walking and running, we exploit the correlation between channel quality and motion data generated by a gyroscope sensor to fastly estimate channel quality, eliminating the need to use expensive channel sampling procedures. We evaluate the performance of Chimp through experiments using TelosB motes equipped with the MPU-9250 motion sensor chip and compare it with the state-of-the-art protocols in different body postures. Experimental results demonstrate that Chimp outperforms existing schemes and works efficiently in most common body postures. In high-date-rate scenarios, it achieves almost the same performance as the optimal power assignment scheme in which the optimal power level for each transmission is calculated based on the collected channel measurements in an off-line manner.
+AD  - Univ Otago, Dept Comp Sci, 133 Union St E, Dunedin 9016, New ZealandDA  - APR
+PY  - 2019
+VL  - 18
+IS  - 2
+C7  - 18
+DO  - 10.1145/3309763
+AN  - WOS:000473746500007
+N1  - Times Cited in Web of Science Core Collection:  5
+Total Times Cited:  5
+ER  -
+
+TY  - JOUR
+AU  - Islam, R
+AU  - Matsuzaki, K
+AU  - Sumiyoshi, E
+AU  - Hossain, ME
+AU  - Hashimoto, M
+AU  - Katakura, M
+AU  - Sugimoto, N
+AU  - Shido, O
+TI  - Theobromine Improves Working Memory by Activating the CaMKII/CREB/BDNF Pathway in Rats
+T2  - NUTRIENTS
+KW  - theobromine
+KW  - cacao
+KW  - working memory
+KW  - behavior
+KW  - CaMKII
+KW  - CREB
+KW  - BDNF
+KW  - SCOPOLAMINE-INDUCED IMPAIRMENT
+KW  - SPONTANEOUS-ALTERNATION BEHAVIOR
+KW  - MEDIAL PREFRONTAL CORTEX
+KW  - LONG-TERM POTENTIATION
+KW  - MOLECULAR-MECHANISMS
+KW  - OBJECT RECOGNITION
+KW  - COGNITIVE DECLINE
+KW  - AMYLOID-BETA
+KW  - CAFFEINE
+KW  - BRAIN
+AB  - Theobromine (TB) is a primary methylxanthine found in cacao beans. cAMP-response element-binding protein (CREB) is a transcription factor, which is involved in different brain processes that bring about cellular changes in response to discrete sets of instructions, including the induction of brain-derived neurotropic factor (BDNF). Ca2+/calmodulin-dependent protein kinase II (CaMKII) has been strongly implicated in the memory formation of different species as a key regulator of gene expression. Here we investigated whether TB acts on the CaMKII/CREB/BDNF pathway in a way that might improve the cognitive and learning function in rats. Male Wistar rats (5 weeks old) were divided into two groups. For 73 days, the control rats (CN rats) were fed a normal diet, while the TB-fed rats (TB rats) received the same food, but with a 0.05% TB supplement. To assess the effects of TB on cognitive and learning ability in rats: The radial arm maze task, novel object recognition test, and Y-maze test were used. Then, the brain was removed and the medial prefrontal cortex (mPFC) was isolated for Western Blot, real-time PCR and enzyme-linked immunosorbent assay. Phosphorylated CaMKII (p-CaMKII), phosphorylated CREB (p-CREB), and BDNF level in the mPFC were measured. In all the behavior tests, working memory seemed to be improved by TB ingestion. In addition, p-CaMKII and p-CREB levels were significantly elevated in the mPFC of TB rats in comparison to those of CN rats. We also found that cortical BDNF protein and mRNA levels in TB rats were significantly greater than those in CN rats. These results suggest that orally supplemented TB upregulates the CaMKII/CREB/BDNF pathway in the mPFC, which may then improve working memory in rats.
+AD  - Shimane Univ, Fac Med, Dept Environm Physiol, 89-1 Enya Cho, Izumo, Shimane 6938501, JapanAD  - Mawlana Bhashani Sci & Technol Univ, Dept Biotechnol & Genet Engn, Tangail 1902, BangladeshAD  - Univ Alabama Birmingham, Dept Biochem & Mol Genet, Birmingham, AL 35294 USAAD  - Josai Univ, Fac Pharmaceut Sci, Dept Nutr Physiol, 1-1 Keyakidai, Sakado, Saitama 3500295, JapanAD  - Kanazawa Univ, Grad Sch Med Sci, Dept Physiol, 13-1 Takara Machi, Kanazawa, Ishikawa 9208640, JapanDA  - APR
+PY  - 2019
+VL  - 11
+IS  - 4
+C7  - 888
+DO  - 10.3390/nu11040888
+AN  - WOS:000467749800181
+N1  - Times Cited in Web of Science Core Collection:  35
+Total Times Cited:  36
+ER  -
+
+TY  - CPAPER
+AU  - Saeed, F
+AU  - Dixit, A
+A1  - IEEE
+TI  - A Decision Support System Approach for Accreditation & Quality Assurance Council at Higher Education Institutions in Yemen
+T2  - 2015 IEEE 3RD INTERNATIONAL CONFERENCE ON MOOCS, INNOVATION AND TECHNOLOGY IN EDUCATION (MITE)
+CP  - IEEE 3rd International Conference on MOOCs, Innovation and Technology in Education (MITE)
+KW  - Data mining
+KW  - Classification
+KW  - Naive Bayes
+KW  - Evaluation
+KW  - Institution
+KW  - Bayesian
+KW  - Council
+KW  - Ministry
+KW  - license
+KW  - Accreditation
+KW  - Quality Assurance
+AB  - Classification is used for discovery of a predictive learning function that classifies data item into one of several predefined classes. e.g., classify universities based on students number or based on offered programs, or classify cars based on gas mileage, and Presentation it by decision-tree, classification rule, neural network, and genetic algorithms, etc.
+   It is noted that, there are large amount of data obtained from the universities. We need to evaluate the accurate assessment of the performance of any institution. Currently the decision in ministry of higher education and scientific research is taken randomly, not based on logical analysis. Moreover, the education towards to universal, the ministry of higher education in Yemen has to activate the council of accreditation, and support it to start quickly and effectively. In this paper, we have used approach to assist the council for accreditation to start automation for accreditation operations and mechanisms, that's proposed by using machine learning techniques, also to help decision makers for taking accurate and swift decisions. Our study is used to classify institution that wants to take a license from council to three classes: grant license of accreditation, grand license provided to improvement has done, or not granting accreditation license. We have used the intelligent algorithms for calculate probability of grand accreditation license based on degree of council standards, which we used to predict through a model building to classification by using Naive Bayes algorithm. The proposed method is typically for evaluation the new institution by depends on evaluation of existing institutions. We experiment the proposed framework by flexible parameters and attributes with private training dataset, that's carefully generated and tested using real life applications. In addition, we implemented our proposed approach as a program.
+AD  - Galgotias Univ, Comp Sci & Engn, Greater Noida, IndiaPY  - 2015
+SP  - 163
+EP  - 168
+AN  - WOS:000380436800033
+N1  - Times Cited in Web of Science Core Collection:  3
+Total Times Cited:  3
+ER  -
+
+TY  - JOUR
+AU  - Wu, HM
+AU  - Min, DY
+AU  - Sun, BX
+AU  - Ma, YF
+AU  - Chen, HP
+AU  - Wu, J
+AU  - Ren, P
+AU  - Wu, JB
+AU  - Cao, YG
+AU  - Zhao, BS
+AU  - Wang, P
+TI  - Effect of WiFi signal exposure in utero and early life on neurodevelopment and behaviors of rats
+T2  - ENVIRONMENTAL SCIENCE AND POLLUTION RESEARCH
+KW  - WiFi signal
+KW  - Neurodevelopment
+KW  - Cognitive function
+KW  - Hippocampal cell
+KW  - Oxidative stress
+KW  - 2.45 GHZ EXPOSURE
+KW  - VALPROIC ACID
+KW  - ELECTROMAGNETIC-FIELDS
+KW  - POSTNATAL-DEVELOPMENT
+KW  - MEMORY IMPAIRMENTS
+KW  - OXIDATIVE STRESS
+KW  - ANIMAL-MODEL
+KW  - EXPRESSION
+KW  - RADIATION
+KW  - APOPTOSIS
+AB  - The aim of this study is to examine the long-term effects of prenatal and early-life WIFI signal exposure on neurodevelopment and behaviors as well as biochemical alterations of Wistar rats. On the first day of pregnancy (E0), expectant rats were allocated into two groups: the control group (n = 12) and the WiFi-exposed group (WiFi group, n = 12). WiFi group was exposed to turn on WiFi for 24 h/day from E0 to postnatal day (PND) 42. The control group was exposed to turn-off WiFi at the same time. On PND7-42, we evaluated the development and behavior of the offspring, including body weight, pain threshold, and swimming ability, spatial learning, and memory among others. Also, levels of proteins involved in apoptosis were analyzed histologically in the hippocampus in response to oxidative stress. The results showed that WiFi signal exposure in utero and early life (1) increased the body weight of WiFi + M (WiFi + male) group; (2) no change in neuro-behavioral development was observed in WiFi group; (3) increased learning and memory function in WiFi + M group; (4) enhanced comparative levels of BDNF and p-CREB proteins in the hippocampus of WiFi + M group; (5) no neuronal loss or degeneration was detected, and neuronal numbers in hippocampal CA1 were no evidently differences in each group; (6) no change in the apoptosis-related proteins (caspase-3 and Bax) levels; and (7) no difference in GSH-PX and SOD activities in the hippocampus. Prenatal WiFi exposure has no effects on hippocampal CA1 neurons, oxidative equilibrium in brain, and neurodevelopment of rats. Some effects of prenatal WiFi exposure are sex dependent. Prenatal WiFi exposure increased the body weight, improved the spatial memory and learning function, and induced behavioral hyperactivity of male rats.
+AD  - Harbin Med Univ, Dept Nursing, Daqing, Peoples R ChinaAD  - Liaoning Univ Tradit Chinese Med, Affiliated Hosp, Shenyang, Peoples R ChinaAD  - Harbin Med Univ, Dept Physiol, 39 Xinyang Rd, Daqing 163319, Heilongjiang, Peoples R ChinaAD  - Harbin Med Univ, Dept Pharmacol, Daqing, Peoples R ChinaAD  - Harbin Med Univ, Dept Pathol & Pathophysiol, Daqing, Peoples R ChinaDA  - SEP
+PY  - 2023
+VL  - 30
+IS  - 42
+SP  - 95892
+EP  - 95900
+DO  - 10.1007/s11356-023-29159-4
+C6  - AUG 2023
+AN  - WOS:001046418000010
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  0
+ER  -
+
+TY  - JOUR
+AU  - Gilbert, M
+TI  - Gating by Memory: a Theory of Learning in the Cerebellum
+T2  - CEREBELLUM
+KW  - Theory
+KW  - Hypothesis
+KW  - Learning
+KW  - Cerebellum
+KW  - Network
+KW  - Circuit
+KW  - Synapse
+KW  - FIBER RECEPTIVE-FIELDS
+KW  - LONG-TERM DEPRESSION
+KW  - INDIVIDUAL PURKINJE-CELL
+KW  - INFERIOR OLIVE
+KW  - CLIMBING FIBERS
+KW  - MOSSY FIBERS
+KW  - ELECTROPHYSIOLOGICAL PROPERTIES
+KW  - OLIVOCEREBELLAR PROJECTION
+KW  - PARASAGITTAL ZONATION
+KW  - PARALLEL FIBERS
+AB  - This paper presents a model of learning by the cerebellar circuit. In the traditional and dominant learning model, training teaches finely graded parallel fibre synaptic weights which modify transmission to Purkinje cells and to interneurons that inhibit Purkinje cells. Following training, input in a learned pattern drives a training-modified response. The function is that the naive response to input rates is displaced by a learned one, trained under external supervision. In the proposed model, there is no weight-controlled graduated balance of excitation and inhibition of Purkinje cells. Instead, the balance has two functional states-a switch-at synaptic, whole cell and microzone level. The paper is in two parts. The first is a detailed physiological argument for the synaptic learning function. The second uses the function in a computational simulation of pattern memory. Against expectation, this generates a predictable outcome from input chaos (real-world variables). Training always forces synaptic weights away from the middle and towards the limits of the range, causing them to polarise, so that transmission is either robust or blocked. All conditions teach the same outcome, such that all learned patterns receive the same, rather than a bespoke, effect on transmission. In this model, the function of learning is gating-that is, to select patterns that trigger output merely, and not to modify output. The outcome is memory-operated gate activation which operates a two-state balance of weight-controlled transmission. Group activity of parallel fibres also simultaneously contains a second code contained in collective rates, which varies independently of the pattern code. A two-state response to the pattern code allows faithful, and graduated, control of Purkinje cell firing by the rate code, at gated times.
+AD  - Univ Birmingham, Sch Psychol, Birmingham, W Midlands, EnglandDA  - DEC
+PY  - 2022
+VL  - 21
+IS  - 6
+SP  - 926
+EP  - 943
+DO  - 10.1007/s12311-021-01325-9
+C6  - NOV 2021
+AN  - WOS:000716880100001
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  1
+ER  -
+
+TY  - JOUR
+AU  - Xu, Q
+AU  - Hou, XR
+AU  - Xiao, TC
+AU  - Zhao, WL
+TI  - Factors Affecting Medical Students' Continuance Intention to Use Mobile Health Applications
+T2  - JOURNAL OF MULTIDISCIPLINARY HEALTHCARE
+KW  - mobile apps
+KW  - medical students
+KW  - structural equation modelling
+KW  - continuance intention
+KW  - ACCEPTANCE MODEL TAM
+KW  - NURSING-STUDENTS
+KW  - SMARTPHONE APPLICATION
+KW  - ADOPTION
+KW  - TECHNOLOGY
+KW  - UNIVERSITY
+KW  - ATTITUDE
+KW  - APPS
+AB  - Background: With the dramatic growth in smartphones, mobile health applications (apps) in the field of healthcare or medicine, which are characterized by strong operability, flexibility and interactivity, provide a supplementary approach to medical learning. The aims of this study were to awaken medical students to pay more attention to the learning function of mobile health app and gain deeper insight into our understanding of the factors influencing medical students' mobile health apps continuance intention for enhancing practical utilization.
+   Methods: A cross-sectional survey was conducted with a self-designed questionnaire administered to medical students at Chongqing Medical University. Data were collected from 450 participants from March to April 2019. SPSS V.25 was used for the descriptive statistical analysis of the results. Smart PLS 3.2.7 was used to construct a structural equation modelling framework to estimate the influencing factors of medical students' continuance intention to use mobile health apps.
+   Results: The external characteristics of mobile health apps had a positive influence on perceived ease of use (beta = 0.378, P < 0.001). Perceived ease of use had a positive impact on perceived usefulness (beta = 0.573, P < 0.001). Perceived ease of use (beta = 0.195, P = 0.011), perceived usefulness (beta = 0.450, P < 0.001) and subjective norms (beta = 0.255, P < 0.001) had a positive impact on attitude towards using mobile health apps. Additionally, perceived usefulness 03 = 0.202, P < 0.001) and attitude (beta = 0.730, P < 0.001) had a remarkable influence on continuance intention. Furthermore, the mediating effect of attitude between perceived usefulness and continuance intention was significant (beta = 0.329, P < 0.001).
+   Conclusion: Both perceived usefulness and attitude have a significant effect on medical students' mobile health apps continuance intention. So, we suggest apps providers and developers evoking and maintaining users' interest in mobile health apps and perfecting apps' features from various aspect. Also, more attention should be paid on social relationship to introduce medical students to familiarize mobile health apps and strengthen adhesiveness of medical students.
+AD  - Chongqing Med Univ, Coll Med Informat, Chongqing, Peoples R ChinaAD  - Chongqing Med Univ, Med Data Sci Acad, Chongqing, Peoples R ChinaAD  - Chongqing Med Univ, Dept Med Informat Lib, Chongqing, Peoples R ChinaPY  - 2022
+VL  - 15
+SP  - 471
+EP  - 484
+DO  - 10.2147/JMDH.S327347
+AN  - WOS:000767485700002
+N1  - Times Cited in Web of Science Core Collection:  5
+Total Times Cited:  5
+ER  -
+
+TY  - JOUR
+AU  - Yin, SW
+AU  - Wang, Y
+AU  - Meng, YL
+AU  - Liu, CX
+TI  - Effects of mild intrauterine hypoperfusion in the second trimester on memory and learning function in rat offspring
+T2  - NEURAL REGENERATION RESEARCH
+KW  - STEM-CELL PROLIFERATION
+KW  - MODEL
+AB  - Mild intrauterine hypoperfusion (MIUH) is a serious pathological event that affects the growth and development of fetuses and offspring. MIUH can lead to growth restriction, low birth weight, neurodevelopmental disorders, and other adverse clinical outcomes. To study the effects of MIUH on learning and memory function in offspring, a model of MIUH was established by placing a coil (length 2.5 mm, diameter 0.24 mm) on the uterine artery and ovarian uterine artery of Sprague-Dawley rats in the second trimester of pregnancy (day 17). Next, 120 mg/kg lithium chloride (the MIUH + Li group) or normal saline (the MIUH group) was injected intraperitoneally into these rats. In addition, 120 mg/kg lithium chloride (the Li group) or normal saline (the SHAM group) was injected intraperitoneally into pregnant rats without coil placement. The Morris water maze was used to detect changes in learning and memory ability in the offspring at 4 weeks after birth. In the MIUH group, the escape latency and journey length before reaching the platform were both increased, and the number of times that the platform was crossed and the activity time in the target quadrant within 90 seconds were both decreased compared with the SHAM group. Immunofluorescence double staining and western blot assays demonstrated that hippocampal nestin and Ki67 (both cell-proliferation-related proteins) expression was significantly downregulated in the MIUH group compared with the SHAM group. Furthermore, western blot assays were conducted to investigate changes in related signaling pathway proteins in the brains of offspring rats, and revealed that glycogen synthase kinase 3 beta (GSK3 beta) expression was upregulated and beta -catenin expression was downregulated in the MIUH group compared with the SHAM group. In addition, compared with the MIUH group, the expression levels of p-GSK3 beta and beta -catenin were upregulated in the MIUH + Li group. These results suggest that MIUH may affect learning and memory function in rat offspring by regulating the GSK3 beta signaling pathway. The experimental procedures were approved by Animal Ethics Committee of Shengjing Hospital of China Medical University (approval No. 2018PS07K) in June 2018.
+AD  - China Med Univ, Shengjing Hosp, Dept Gynecol & Obstet, Shenyang, Liaoning, Peoples R ChinaAD  - Key Lab Maternal Fetal Med Liaoning Prov, Shenyang, Liaoning, Peoples R ChinaAD  - China Med Univ, Shengjing Hosp, Dept Anesthesiol, Shenyang, Liaoning, Peoples R ChinaDA  - NOV
+PY  - 2020
+VL  - 15
+IS  - 11
+SP  - 2082
+EP  - 2088
+DO  - 10.4103/1673-5374.282268
+AN  - WOS:000545753100022
+N1  - Times Cited in Web of Science Core Collection:  3
+Total Times Cited:  4
+ER  -
+
+TY  - JOUR
+AU  - Li, Z
+AU  - Liu, MD
+AU  - Ji, SX
+TI  - The Identification of the Origin of Chinese Wolfberry Based on Infrared Spectral Technology and the Artificial Neural Network
+T2  - SPECTROSCOPY AND SPECTRAL ANALYSIS
+KW  - Chinese wolfberry (Lycium barbarum L.)
+KW  - FTIR (Fourier transform infrared spectroscopy)
+KW  - Wavelet transform
+KW  - Artificial neural networks
+AB  - The Fourier Transform Infrared Spectroscopy (FTIR) is established to find the geographic origins of Chinese wolfberry quickly. In the paper, the 45 samples of Chinese wolfberry from different places of Qinghai Province are to be surveyed by FTIR. The original data matrix of FTIR is pretreated with common preprocessing and wavelet transform. Compared with common windows shifting smoothing preprocessing, standard normal variation correction and multiplicative scatter correction, wavelet transform is an effective spectrum data preprocessing method. Before establishing model through the artificial neural networks, the spectra variables are compressed by means of the wavelet transformation so as to enhance the training speed of the artificial neural networks,, and at the same time the related parameters of the artificial neural networks model are also discussed in detail. The survey shows even if the infrared spectroscopy data is compressed to 1/8 of its original data, the spectral information and analytical accuracy are not deteriorated. The compressed spectra variables are used for modeling parameters of the back propagation artificial neural network (BP-ANN) model and the geographic origins of Chinese wolfberry are used for parameters of export. Three layers of neural network model are built to predict the 10 unknown samples by using the MATLAB neural network toolbox design error back propagation network. The number of hidden layer neurons is 5, and the number of output layer neuron is 1. The transfer function of hidden layer is tansig, while the transfer function of output layer is purelin. Network training function is trainl and the learning function of weights and thresholds is learngdm net. trainParam. epochs=1 000, while net. trainParam. goal=0. 001. The recognition rate of 100% is to be achieved. It can be concluded that the method is quite suitable for the quick discrimination of producing areas of Chinese wolfberry. The infrared spectral analysis technology combined with the artificial neural networks is proved to be a reliable and new method for the identification of the original place of Traditional Chinese Medicine.
+AD  - Qinghai Univ Nationalities, Coll Phys & Elect Informat Engn, Xining 810007, Peoples R ChinaAD  - Qinghai Univ Nationalities, Coll Chem & Life Sci, Xining 810007, Peoples R ChinaDA  - MAR
+PY  - 2016
+VL  - 36
+IS  - 3
+SP  - 720
+EP  - 723
+DO  - 10.3964/j.issn.1000-0593(2016)03-0720-04
+AN  - WOS:000372478000022
+N1  - Times Cited in Web of Science Core Collection:  8
+Total Times Cited:  14
+ER  -
+
+TY  - CPAPER
+AU  - Zhang, J
+AU  - Xu, JX
+A1  - IEEE
+TI  - Countermeasure Research on Sichuan-Tibet Railway Construction Based on Safety Risk Assessment
+T2  - 2019 4TH INTERNATIONAL CONFERENCE ON INTELLIGENT TRANSPORTATION ENGINEERING (ICITE 2019)
+CP  - 4th International Conference on Intelligent Transportation Engineering (ICITE)
+KW  - safety management engineering
+KW  - Sichuan-Tibet Railway
+KW  - risk evaluation
+KW  - fuzzy comprehensive evaluation method
+KW  - BP Neural Network
+AB  - In order to provide theoretical support for high-quality construction of Sichuan-Tibet railway project, the construction risk level of Sichuan-Tibet railway project should be evaluated scientifically and reasonably. This paper analyses the characteristics of bridge and tunnel construction projects in view of the five super-large bridges and nine super-long tunnels in the construction of Sichuan-Tibet railway, constructing seventeen safety risk evaluation index systems for bridge engineering and twenty safety risk evaluation index systems for tunnel engineering, establishing the risk assessment model to complete the risk assessment of key bridges and tunnels of Sichuan-Tibet railway. Finally, the BP neural network model is constructed to validate the results of risk assessment. This BP network model has three layers, the maximum number of training times is 10,000, the hidden layer neurons are 15, the hidden layer activation function is Tansig function, the output layer activation function is logig function, the training function is trainlm function, and the learning function is learngdm function. The training data are scoring data of some key bridges and some key tunnels of Sichuan-Tibet railway, and the remaining scoring results are used as validation data, to predict the risk level of bridge and tunnel engineering. The results show that the accuracy of predicting the safety risk grade of bridge and tunnel engineering by BP neural network is 92.86% BP neural network is applicable to the risk assessment model. 50% of the key bridge and tunnel projects of Sichuan-Tibet railway are in danger, and only 20% of the projects are in safety grade. Therefore, it is suggested that construction units pay attention to the safety supervision of construction personnel, strict control of the quality of construction equipment and materials. For different possible accidents, relevant units should start emergency plans as soon as possible, take safety protection measures, avoid continuous operation of cold and anoxia as far as possible, minimize the time of frequent geological activities, and further analyze the hidden dangers of construction risks. To reduce or even eliminate risk sources fundamentally.
+AD  - Southwest Jiaotong Univ SWJTU, Chengdu, Peoples R ChinaPY  - 2019
+SP  - 54
+EP  - 58
+DO  - 10.1109/icite.2019.8880177
+AN  - WOS:000591798700012
+N1  - Times Cited in Web of Science Core Collection:  4
+Total Times Cited:  4
+ER  -
+
+TY  - JOUR
+AU  - Russo, E
+AU  - Citraro, R
+AU  - Davoli, A
+AU  - Gallelli, L
+AU  - Di Paola, ED
+AU  - De Sarro, G
+TI  - Ameliorating effects of aripiprazole on cognitive functions and depressive-like behavior in a genetic rat model of absence epilepsy and mild-depression comorbidity
+T2  - NEUROPHARMACOLOGY
+KW  - Epilepsy
+KW  - Depression
+KW  - Anxiety
+KW  - Memory
+KW  - Learning
+KW  - Dopamine
+KW  - SPIKE-WAVE DISCHARGES
+KW  - ATYPICAL ANTIPSYCHOTIC-DRUG
+KW  - LONG-TERM TREATMENT
+KW  - ANIMAL-MODELS
+KW  - WAG/RIJ RATS
+KW  - ANTIEPILEPTIC DRUGS
+KW  - PARTIAL AGONIST
+KW  - DOPAMINE
+KW  - OLANZAPINE
+KW  - EXPRESSION
+AB  - Aripiprazole (APZ) is regarded as a first-line atypical antipsychotic used for the treatment of first and multiple episodes of schizophrenia to improve positive- and negative-symptoms. Its therapeutic indications were extended to acute manic and mixed episodes associated with bipolar disorder. In addition, APZ was approved as an adjunct therapy for major depressive disorder in 2007. Compared to other antipsychotic drugs. APZ has a unique pharmacological profile. It is a partial agonist at D-2 dopamine receptors and serotonin 5-HT1A and 5-HT7 receptors, whereas it is an antagonist at serotonin 5-HT2A and 5-HT6 receptors. Since epilepsy is often accompanied with neurological comorbidities such as depression, anxiety and cognitive deficits caused by both the disease and/or drug treatment, we wished to examine the effects of a sub-chronic treatment (>14 consecutive days) with APZ (0.3, 1 and 3 mg/kg; i.p.) on both absence seizures and WAG/Rij rat's behavior using different standard paradigms: Open field (OF) test, elevated plus maze (EPM) test, forced swimming (FS) test, sucrose consumption (SC) test and Morris water maze (MWM). WAG/Rij rats represent a validated genetic animal model of absence epilepsy with mild-depression comorbidity, also including other behavioral alterations. APZ treatment showed some anti-absence properties and regarding the behavioral comorbidity in this rat strain, we observed that APZ possesses clear antidepressant effects in the FS and SC tests also increasing memory/learning function in the Morris water maze test. In the two anxiety models used, APZ showed only minor effects. In conclusion, our results indicate that APZ might actually have a potential in treating absence seizures or as add-on therapy but more interestingly, these effect might be accompanied by positive modulatory actions on depression, anxiety and memory which might be also beneficial in other epileptic syndromes.
+   This article is part of a Special Issue entitled 'Cognitive Enhancers'. (C) 2012 Elsevier Ltd. All rights reserved.
+AD  - Magna Graecia Univ Catanzaro, Sch Med, Dept Hlth Sci, I-88100 Catanzaro, ItalyDA  - JAN
+PY  - 2013
+VL  - 64
+SP  - 371
+EP  - 379
+DO  - 10.1016/j.neuropharm.2012.06.039
+AN  - WOS:000311250300042
+N1  - Times Cited in Web of Science Core Collection:  70
+Total Times Cited:  75
+ER  -
+
+TY  - JOUR
+AU  - Hakala, JO
+AU  - Pahkala, K
+AU  - Juonala, M
+AU  - Salo, P
+AU  - Kähönen, M
+AU  - Hutri-Kähönen, N
+AU  - Lehtimäki, T
+AU  - Laitinen, TP
+AU  - Jokinen, E
+AU  - Taittonen, L
+AU  - Tossavainen, P
+AU  - Viikari, JSA
+AU  - Raitakari, OT
+AU  - Rovio, SP
+TI  - Repeatedly Measured Serum Creatinine and Cognitive Performance in Midlife
+T2  - NEUROLOGY
+KW  - GLOMERULAR-FILTRATION-RATE
+KW  - CARDIOVASCULAR RISK
+KW  - ENDOTHELIAL FUNCTION
+KW  - PHYSICAL-ACTIVITY
+KW  - HYPERFILTRATION
+KW  - DISEASE
+KW  - ASSOCIATION
+KW  - ATHEROSCLEROSIS
+KW  - ALBUMINURIA
+KW  - IMPAIRMENT
+AB  - Background and Objectives Serum creatinine is typically used to assess kidney function. Impaired kidney function and thus high serumcreatinine increase the risk of poor cognitive performance. However, serum creatinine might have a nonlinear association because low serumcreatinine has been linked to cardiovascular risk and impaired cognitive performance. We studied the longitudinal association between serum creatinine and cognitive performance in midlife.
+   Methods Since 2001, participants from the Cardiovascular Risk in Young Finns Study were followed up for 10 years. Serum creatinine was measured repeatedly in 2001, 2007, and 2011. Sex-specific longitudinal trajectories for serum creatinine among participants without kidney disease were identified with latent class growth mixture modeling. Overall cognitive function and 4 specific domains-working memory, episodic memory and associative learning, reaction time, and information processing-were assessed with a computerized cognitive test.
+   Results Four serum creatinine trajectory groups with clinically normal serum creatinine were identified for bothmen (n = 973) and women (n = 1,204). After 10 years of follow-up, cognitive testing was performed for 2,026 participants 34 to 49 years of age (mean age 41.8 years). In men and women, consistently low serum creatinine was associated with poor childhood school performance, low adulthood education, low adulthood annual income, low physical activity, and smoking. Compared to the men in the low serum creatinine trajectory group, those in the high serumcreatinine group had better overall cognitive performance (ss = 0.353 SD, 95% CI 0.022-0.684) and working memory (ss = 0.351 SD, 95% CI 0.034-0.668), while those in the moderate (ss = 0.247 SD, 95% CI 0.026-0.468) or normal (ss = 0.244 SD, 95% CI 0.008-0.481) serum creatinine groups had better episodic memory and associative learning. No associations were found for women.
+   Discussion Our results indicate that in men, compared to low serum creatinine levels, consistently high levels may be associated with better memory and learning function in midlife.
+AD  - Univ Turku, Res Ctr Appl & Prevent Cardiovasc Med, Turku, FinlandAD  - Univ Turku, Ctr Populat Hlth Res, Turku, FinlandAD  - Turku Univ Hosp, Turku, FinlandAD  - Univ Turku, Dept Phys Act & Hlth, Paavo Nurmi Ctr, Sports & Exercise Med Unit, Turku, FinlandAD  - Univ Turku, Dept Med, Turku, FinlandAD  - Turku Univ Hosp, Div Med, Turku, FinlandAD  - Tampere Univ Hosp, Dept Clin Physiol, Tampere, FinlandAD  - Tampere Univ Hosp, Dept Pediat, Tampere, FinlandAD  - Tampere Univ, Fac Med & Hlth Technol, Tampere, FinlandAD  - Tampere Univ, Fac Med & Hlth Technol, Dept Clin Chem, Fimlab Labs, Tampere, FinlandAD  - Tampere Univ, Fac Med & Hlth Technol, Finnish Cardiovasc Res Ctr Tampere, Tampere, FinlandAD  - Univ Eastern Finland, Dept Clin Physiol, Kuopio, FinlandAD  - Kuopio Univ Hosp, Kuopio, FinlandAD  - Univ Helsinki, Dept Paediat Cardiol, Hosp Children & Adolescents, Helsinki, FinlandAD  - Tampere Univ Hosp, Dept Pediat, Tampere, FinlandAD  - Univ Oulu, PEDEGO Res Unit, Dept Pediat, Oulu, FinlandAD  - Univ Oulu, Med Res Ctr, Oulu, FinlandAD  - Oulu Univ Hosp, Oulu, FinlandAD  - Turku Univ Hosp, Dept Clin Physiol & Nucl Med, Turku, FinlandDA  - MAY 31
+PY  - 2022
+VL  - 98
+IS  - 22
+SP  - E2268
+EP  - E2281
+DO  - 10.1212/WNL.0000000000200268
+AN  - WOS:000884404400009
+N1  - Times Cited in Web of Science Core Collection:  3
+Total Times Cited:  3
+ER  -
+
+TY  - JOUR
+AU  - Li, DY
+AU  - Bing, YH
+AU  - Chu, CP
+AU  - Cui, X
+AU  - Cui, SB
+AU  - Qiu, DL
+AU  - Su, LD
+TI  - Chronic Ethanol Consumption Impairs the Tactile-Evoked Long-Term Depression at Cerebellar Molecular Layer Interneuron-Purkinje Cell Synapses <i>in vivo</i> in Mice
+T2  - FRONTIERS IN CELLULAR NEUROSCIENCE
+KW  - ethanol
+KW  - cerebellar purkinje cell
+KW  - molecular layer interneuron
+KW  - sensory stimulation
+KW  - plasticity
+KW  - nitric oxide
+KW  - in vivo cell-attached recording
+KW  - GABAERGIC TRANSMISSION
+KW  - MEMORY DEFICITS
+KW  - POTENTIATION
+KW  - PLASTICITY
+KW  - RELEASE
+KW  - EXCITABILITY
+KW  - MECHANISMS
+AB  - The cerebellum is sensitive to ethanol (EtOH) consumption. Chronic EtOH consumption impairs motor learning by modulating the cerebellar circuitry synaptic transmission and long-term plasticity. Under in vitro conditions, acute EtOH inhibits both parallel fiber (PF) and climbing fiber (CF) long-term depression (LTD). However, thus far it has not been investigated how chronic EtOH consumption affects sensory stimulation-evoked LTD at the molecular layer interneurons (MLIs) to the Purkinje cell (PC) synapses (MLI-PC LTD) in the cerebellar cortex of living animals. In this study, we investigated the effect of chronic EtOH consumption on facial stimulation-evoked MLI-PC LTD, using an electrophysiological technique as well as pharmacological methods, in urethane-anesthetized mice. Our results showed that facial stimulation induced MLI-PC LTD in the control mice, but it could not be induced in mice with chronic EtOH consumption (0.8 g/kg; 28 days). Blocking the cannabinoid type 1 (CB1) receptor activity with AM-251, prevented MLI-PC LTD in the control mice, but revealed a nitric oxide (NO)-dependent long-term potentiation (LTP) of MLI-PC synaptic transmission (MLI-PC LTP) in the EtOH consumption mice. Notably, with the application of a NO donor, S-nitroso-N- Acetyl-D, L-penicillamine (SNAP) alone prevented the induction of MLI-PC LTD, but a mixture of SNAP and AM-251 revealed an MLI-PC LTP in control mice. In contrast, inhibiting NO synthase (NOS) revealed the facial stimulation-induced MLI-PC LTD in EtOH consumption mice. These results indicate that long-term EtOH consumption can impair the sensory stimulation-induced MLI-PC LTD via the activation of a NO signaling pathway in the cerebellar cortex in vivo in mice. Our results suggest that the chronic EtOH exposure causes a deficit in the cerebellar motor learning function and may be involved in the impaired MLI-PC GABAergic synaptic plasticity.
+AD  - Yanbian Univ, Key Lab Cellular Funct & Pharmacol Jilin Prov, Yanji, Peoples R ChinaAD  - Yanbian Univ, Coll Med, Dept Physiol & Pathophysiol, Yanji, Peoples R ChinaAD  - Zhejiang Shuren Univ, Coll Basic Courses, Hangzhou, Zhejiang, Peoples R ChinaAD  - Yanbian Univ, Affiliated Hosp, Dept Neurol, Yanji, Peoples R ChinaAD  - Zhe Jiang Univ, Sch Med, Affiliated Hosp 2, Neurosci Care Unit, Hangzhou, Zhejiang, Peoples R ChinaDA  - JAN 14
+PY  - 2019
+VL  - 12
+C7  - 521
+DO  - 10.3389/fncel.2018.00521
+AN  - WOS:000455679600001
+N1  - Times Cited in Web of Science Core Collection:  6
+Total Times Cited:  9
+ER  -
+
+TY  - JOUR
+AU  - Babanezhad, M
+AU  - Nakhjiri, AT
+AU  - Marjani, A
+AU  - Shirazian, S
+TI  - gbell Learning function along with Fuzzy Mechanism in Prediction of Two-Phase Flow
+T2  - ACS OMEGA
+KW  - BUBBLE-COLUMN REACTOR
+KW  - GAS-LIQUID FLOW
+KW  - EULERIAN-LAGRANGIAN SIMULATIONS
+KW  - CFD SIMULATION
+KW  - NUMERICAL-SIMULATION
+KW  - INTERPHASE FORCES
+KW  - HYBRID MODEL
+KW  - ANFIS
+KW  - HYDRODYNAMICS
+KW  - TEMPERATURE
+AB  - The integration of the computational fluid dynamics (CFD) and the adaptive network-based fuzzy inference system, known as ANFIS, is investigated for simulating the hydrodynamic in a bubble column reactor. The Eulerian-Eulerian two-phase model is employed as the CFD approach. For the ANFIS technique, a sensitivity analysis is done by varying the number of inputs and the number of membership functions (MFs). The x and z coordinates of the fluid location, the air velocity, and the pressure are considered as the inputs of the ANFIS, while the air vorticity is the output. The results revealed that the ANFIS with all four inputs and the MFs of five achieved the highest intelligence with the regression number close to 1. More specifically, gbell function in the learning framework is used to train all local computing nodes from solving Navier-Stokes equations. In the decision or prediction part, the fuzzy mechanism is used for the prediction of extra nodes that solve, which Navier-Stokes equations did not solve. The results show that the gbell function enables us to fully train all numerical points and also store data set in the frame of mathematical equations. Besides, this function responds well with the number of inputs and MFs for accurate prediction of reactor hydrodynamics. Additionally, a high number of MFs and input parameters influence the accuracy of the method during prediction. In the current study, gbell MF was studied to investigate its accuracy in the prediction of the two-phase flow. Also, different numbers of MFs were considered to investigate the level of accuracy and capability of prediction. ANFIS clustering methods, grid partition and fuzzy C-mean (FCM) clustering, are compared to see the ability of the method in prediction. To compare the accuracy of the ANFIS method with FCM clustering, the data were compared to the gaussmf function. The results showed that the method has high accuracy and that it could predict the flow pattern.
+AD  - Duy Tan Univ, Inst Res & Dev, Da Nang 550000, VietnamAD  - Duy Tan Univ, Fac Elect Elect Engn, Da Nang 550000, VietnamAD  - Islamic Azad Univ, Dept Petr & Chem Engn, Sci & Res Branch, Tehran 1477893855, IranAD  - Univ Limerick, Bernal Inst, Dept Chem Sci, Limerick V94 T9PX, IrelandAD  - South Ural State Univ, Lab Computat Modeling Drugs, Chelyabinsk 454080, RussiaAD  - Ton Duc Thang Univ, Dept Management Sci & Technol Dev, Ho Chi Minh City, VietnamAD  - Ton Duc Thang Univ, Fac Appl Sci, Ho Chi Minh City, VietnamDA  - OCT 13
+PY  - 2020
+VL  - 5
+IS  - 40
+SP  - 25882
+EP  - 25890
+DO  - 10.1021/acsomega.0c03225
+AN  - WOS:000580943000040
+N1  - Times Cited in Web of Science Core Collection:  6
+Total Times Cited:  6
+ER  -
+
+TY  - JOUR
+AU  - Liu, J
+AU  - Yi, JX
+AU  - Zhou, Q
+AU  - Cheng, YS
+TI  - A sequential multi-fidelity surrogate model-assisted contour prediction method for engineering problems with expensive simulations
+T2  - ENGINEERING WITH COMPUTERS
+KW  - Contour prediction
+KW  - Multi-fidelity Kriging model
+KW  - Sequential process
+KW  - Expected improvement
+KW  - MULTIOBJECTIVE GENETIC ALGORITHM
+KW  - RELIABILITY-ANALYSIS
+KW  - OPTIMIZATION PROBLEMS
+KW  - LEARNING-FUNCTION
+KW  - DESIGN
+KW  - CRITERION
+KW  - OUTPUT
+AB  - The problem of locating a contour widely exists in the engineering product design, such as the constrained optimization problem, reliability analysis, and so on. The surrogate model-assisted contour prediction methods have gained more attention lately because they can alleviate the computational burden significantly compared with the traditional simulation-based approaches. Representatively, the method built on the expected improvement (EI) infill criterion can allocate a contour from expensive simulations by refining the Kriging model with high-fidelity (HF) samples sequentially. Recently, the multi-fidelity (MF) Kriging model has gained remarkable attention because it integrates the accurate but costly HF model and cheap but biased low-fidelity (LF) model to provide an accurate prediction of the original black-box system. To facilitate the usage of the MF Kriging model in the contour prediction, a novel sequential multi-fidelity surrogate model-assisted contour prediction method is developed in this work. First, an extended expected improvement (EEI) infill criterion is developed to overcome the shortcoming of the original EI criterion on determining the locations and fidelity level of new samples. The developed EEI criterion can quantify the improvement of a sample from different fidelities over the contour of interest by considering the relative correlation between different fidelities. Second, considering the significant effect of the high-to-low simulation cost ratio on the MF Kriging model, the proposed approach selects an HF sample or several LF samples with equivalent computational resources to refine the MF Kriging model in each cycle according to their total improvements to the contour of interest. To this end, the EEI criterion is further revised combining a parallel strategy to generate the LF samples. The performance of the proposed approach is tested on three numerical examples with different complexities and an engineering case. The results show that the proposed approach has better efficiency, prediction accuracy, and robust performance compared with several state-of-the-art methods.
+AD  - Huazhong Univ Sci & Technol, Sch Naval Architecture & Ocean Engn, Wuhan 430074, Peoples R ChinaAD  - Huazhong Univ Sci & Technol, Sch Aerosp Engn, Wuhan 430074, Peoples R ChinaAD  - Collaborat Innovat Ctr Adv Ship & Deep Sea Explor, Shanghai 200240, Peoples R ChinaDA  - FEB
+PY  - 2022
+VL  - 38
+IS  - 1
+SP  - 31
+EP  - 49
+DO  - 10.1007/s00366-020-01043-6
+C6  - MAY 2020
+AN  - WOS:000534724800001
+N1  - Times Cited in Web of Science Core Collection:  12
+Total Times Cited:  12
+ER  -
+
+TY  - JOUR
+AU  - Demir, B
+AU  - Bruzzone, L
+TI  - A multiple criteria active learning method for support vector regression
+T2  - PATTERN RECOGNITION
+KW  - Regression
+KW  - Parameters estimation
+KW  - Active learning
+KW  - Support vector regression
+KW  - NEURAL-NETWORKS
+KW  - EXTRACTION
+AB  - This paper presents a novel active learning method developed in the framework of epsilon-insensitive support vector regression (SVR) for the solution of regression problems with small size initial training data. The proposed active learning method selects iteratively the most informative as well as representative unlabeled samples to be included in the training set by jointly evaluating three criteria: (i) relevancy, (ii) diversity, and (iii) density of samples. All three criteria are implemented according to the SVR properties and are applied in two clustering-based consecutive steps. In the first step, a novel measure to select the most relevant samples that have high probability to be located either outside or on the boundary of the epsilon-tube of SVR is defined. To this end, initially a clustering method is applied to all unlabeled samples together with the training samples that are inside the epsilon-tube (those that are not support vectors, i.e., non-SVs); then the clusters with non-SVs are eliminated. The unlabeled samples in the remaining clusters are considered as the most relevant patterns. In the second step, a novel measure to select diverse samples among the relevant patterns from the high density regions in the feature space is defined to better model the SVR learning function. To this end, initially clusters with the highest density of samples are chosen to identify the highest density regions in the feature space. Then, the sample from each selected cluster that is associated with the portion of feature space having the highest density (i.e., the most representative of the underlying distribution of samples contained in the related cluster) is selected to be included in the training set. In this way diverse samples taken from high density regions are efficiently identified. Experimental results obtained on four different data sets show the robustness of the proposed technique particularly when a small-size initial training set are available. (C) 2014 Elsevier Ltd. All rights reserved.
+AD  - Univ Trento, Dept Informat Engn & Comp Sci, I-38123 Trento, ItalyDA  - JUL
+PY  - 2014
+VL  - 47
+IS  - 7
+SP  - 2558
+EP  - 2567
+DO  - 10.1016/j.patcog.2014.02.001
+AN  - WOS:000334978100025
+N1  - Times Cited in Web of Science Core Collection:  53
+Total Times Cited:  62
+ER  -
+
+TY  - JOUR
+AU  - Nguyen, VD
+AU  - Nguyen, HTH
+AU  - Vranova, V
+AU  - Nguyen, LTN
+AU  - Bui, QM
+AU  - Khieu, TT
+TI  - Artificial neural network modeling for Congo red adsorption on microwave-synthesized akaganeite nanoparticles: optimization, kinetics, mechanism, and thermodynamics
+T2  - ENVIRONMENTAL SCIENCE AND POLLUTION RESEARCH
+KW  - Akaganeite nanoparticles
+KW  - Microwave synthesized
+KW  - Congo red
+KW  - Artificial neural network
+KW  - Modeling
+KW  - Adsorption
+KW  - AQUEOUS-SOLUTIONS
+KW  - DYE ADSORPTION
+KW  - BETA-FEOOH
+KW  - REMOVAL
+KW  - SORPTION
+KW  - EQUILIBRIUM
+KW  - WATER
+KW  - CARBON
+KW  - ISOTHERMS
+KW  - BIOCHAR
+AB  - This work aims to synthesize akaganeite nanoparticles (AKNPs) by using microwave and use them to adsorb Congo red dye (CR) from the aqueous solution. The AKNPs with an average particle size of about 50 nm in width and 100 nm in length could be fabricated in 20 min. The effects of pH, CR initial concentration, adsorption time, and adsorbent dosage on the adsorption process were investigated and the artificial neural network (ANN) was used to analyze the adsorption data. The various ANN structures were examined in training the data to find the optimal model. The structure with training function, TRAINLM; adaptation learning function, LARNGDM; transfer function, LOGSIG (in hidden layer) and PURELIN (in output layer); and 10 neutrons in hidden layer having the highest correlation (R-2 = 0.996) and the lowest MSE (4.405) is the optimal ANN structure. The consistency between the experimental data and the data predicted by the ANN model showed that the behavior of the adsorption process of CR onto AKNPs under different conditions can be estimated by the ANN model. The adsorption kinetics was studied by fitting the data into pseudo-first-order, pseudo-second-order, Elovich, and intraparticle diffusion models. The results showed that the adsorption kinetics obeyed the pseudo-second-order model and governed by several steps. The adsorption isotherms at the different temperatures were studied by fitting the data to Langmuir, Freundlich, and Temkin isotherm models. The R-2 obtained from the Langmuir model was above 0.9 and the highest value in three of four temperatures, suggesting that the adsorption isotherms were the best fit to the Langmuir model and the maximum adsorption capacity was estimated to be more than 150 mg/g. Thermodynamic studies suggested that the adsorption of CR onto AKNPs was a spontaneous and endothermic process and physicochemical adsorption. The obtained results indicated the potential application of microwave-synthesize AKNPs for removing organic dyes from aqueous solutions.
+AD  - TNU Univ Sci, Fac Chem, Tan Thinh Ward, Thai Nguyen 250000, VietnamAD  - Mendel Univ Brno, Fac Forestry & Wood Technol, Zemedelska 1, Brno 61300, Czech RepublicDA  - FEB
+PY  - 2021
+VL  - 28
+IS  - 8
+SP  - 9133
+EP  - 9145
+DO  - 10.1007/s11356-020-10633-2
+C6  - OCT 2020
+AN  - WOS:000583130100009
+N1  - Times Cited in Web of Science Core Collection:  19
+Total Times Cited:  19
+ER  -
+
+TY  - JOUR
+AU  - Bai, YF
+AU  - Ding, XF
+AU  - Hu, DS
+AU  - Jiang, YM
+TI  - Research on Dynamic Path Planning of Multi-AGVs Based on Reinforcement Learning
+T2  - APPLIED SCIENCES-BASEL
+KW  - AGVs
+KW  - Q-learning
+KW  - Kohonen
+KW  - adaptive and clustering algorithms
+KW  - potential energy
+KW  - ALGORITHM
+KW  - ROBOTS
+AB  - Automatic guided vehicles have become an important part of transporting goods in dynamic environments, and how to design an efficient path planning method for multiple AGVs is a current research hotspot. Due to the complex road conditions in dynamic environments, there may be dynamic obstacles and situations in which only the target point is known but a complete map is lacking, which leads to poor path planning and long planning time for multiple automatic guided vehicles (AGVs). In this paper, a two-level path planning method (referred to as GA-KL, genetic KL method) for multi-AGVs is proposed by integrating the scheduling policy into global path planning and combining the global path planning algorithm and local path planning algorithm. First, for local path planning, we propose an improved Q-learning path optimization algorithm (K-L, Kohonen Q-learning algorithm) based on a Kohonen network, which can avoid dynamic obstacles and complete autonomous path finding using the autonomous learning function of the Q-learning algorithm. Then, we adopt the idea of combining global and local planning by combining the K-L algorithm with the improved genetic algorithm; in addition, we integrate the scheduling policy into global path planning, which can continuously adjust the scheduling policy of multi-AGVs according to changes in the dynamic environment. Finally, through simulation and field experiments, we verified that the K-L algorithm can accomplish autonomous path finding; compared with the traditional path planning algorithm, the algorithm achieved improves results in path length and convergence time with various maps; the convergence time of the algorithm was reduced by about 6.3%, on average, and the path length was reduced by about 4.6%, on average. The experiments also show that the GA-KL method has satisfactory global search capability and can effectively avoid dynamic obstacles. The final experiments also demonstrated that the GA-KL method reduced the total path completion time by an average of 12.6% and the total path length by an average of 8.4% in narrow working environments or highly congested situations, which considerably improved the efficiency of the multi-AGVs.
+AD  - Sichuan Univ, Coll Comp Sci, Chengdu 610065, Peoples R ChinaAD  - Big Data Anal & Fus Applicat Technol Engn Lab Sic, Chengdu 610065, Peoples R ChinaDA  - AUG
+PY  - 2022
+VL  - 12
+IS  - 16
+C7  - 8166
+DO  - 10.3390/app12168166
+AN  - WOS:000847014900001
+N1  - Times Cited in Web of Science Core Collection:  9
+Total Times Cited:  9
+ER  -
+
+TY  - JOUR
+AU  - Ren, C
+AU  - Aoues, Y
+AU  - Lemosse, D
+AU  - De Cursi, ES
+TI  - Ensemble of surrogates combining Kriging and Artificial Neural Networks for reliability analysis with local goodness measurement
+T2  - STRUCTURAL SAFETY
+KW  - Active learning
+KW  - Reliability analysis
+KW  - Ensemble of surrogate models
+KW  - Artificial Neural Networks
+KW  - Kriging
+KW  - SMALL FAILURE PROBABILITIES
+KW  - LEARNING-FUNCTION
+KW  - SIMULATION
+KW  - DESIGN
+KW  - MODELS
+AB  - In engineering problems, reliability assessment is often computationally expensive. Surrogate models with active learning approaches are commonly used to solve this problem. Kriging is one of the most popular surrogate models used in this domain. Recently, artificial neural networks (ANN) have also attracted a lot of interest for structural reliability assessment due to their powerful capability. Many active learning approaches have been developed based on Kriging models and ANN. But selecting an appropriate model or technique for a reliability assessment problem with limited knowledge of the limit state function remains a challenging task. Ensemble of surrogates seems to be a good approach to tackle this challenge. In this work, two active learning approaches are proposed to combine Kriging and ANN models for reliability analysis. One is the local best surrogate (LBS) approach and the other is the local weighted average surrogate (LWAS) approach. Cross-validation and Jackknife techniques are used to estimate prediction errors of the surrogate models. In addition, two methods are proposed to locally measure the goodness of the surrogate models and calculate the prediction errors of the ensemble of surrogates. The surrogate models are updated by selecting the new sample points that have large prediction errors and are close to the limit state. The efficiency and accuracy of the proposed approaches are demonstrated by 4 representative examples and two finite element problems. The results show that the proposed methods can be effective in evaluating the reliability of high dimension and rare event problems with less computational costs than the single typical surrogate model with active learning approaches (e.g. AK-MCS). Moreover, compared with the ensemble of surrogate models based on global goodness measurement, the proposed approaches also outperform in most cases. Finally, it should be mentioned that the proposed approaches are not only suitable for the combination of Kriging and ANN but also can be extended to other multiple surrogate models including support vector machine, polynomial chaos expansion, and so on.
+AD  - Normandie Univ, INSA Rouen Normandie, LMN, F-76000 Rouen, FranceDA  - MAY
+PY  - 2022
+VL  - 96
+C7  - 102186
+DO  - 10.1016/j.strusafe.2022.102186
+C6  - JAN 2022
+AN  - WOS:000789675900004
+N1  - Times Cited in Web of Science Core Collection:  45
+Total Times Cited:  47
+ER  -
+
+TY  - JOUR
+AU  - Zhao, ZG
+AU  - Duan, XJ
+AU  - Wang, ZM
+TI  - A NOVEL GLOBAL METHOD FOR RELIABILITY ANALYSIS WITH KRIGING
+T2  - INTERNATIONAL JOURNAL FOR UNCERTAINTY QUANTIFICATION
+KW  - reliability analysis
+KW  - uncertainty quantification
+KW  - Monte Carlo simulation
+KW  - Kriging
+KW  - meta model
+KW  - design of experiments
+KW  - DESIGN
+AB  - In engineering applications, an important challenge of structural reliability analysis is to minimize the number of calls to the performance function, which is expensive to evaluate. In recent years, metamodels have been introduced to solve this problem and the methods combining the Kriging model and Monte Carlo simulation have widely gained attention, because they sample training points sequentially. Two essential issues should be considered in these kinds of methods: the selection of the next training point and the stopping criterion of the iteration. EGRA (efficient global reliability analysis) and AK-MCS (active learning reliability method combining Kriging and Monte Carlo simulation) are two representative approaches, whose strategy of sampling training points and stopping criterion are based on evaluations of each Monte Carlo sample under certain learning functions. However, these proposed learning functions are based on the individual performance of each Monte Carlo sample, causing the methods to focus more on the local optimization. As a result, the idea of globally solving the problem was proposed and applied to the GSAS method in 2015. In this paper, a new global reliability analysis method is proposed. Unlike GSAS, a new learning function called the uncertainty reduction quantification function (UROF) is put forward. Specifically, a new random variable proposed in GSAS that helps simplify the statistical feature of Monte Carlo samples is inherited from GSAS, and a weighting function that establishes the connection between any point and the next training point is proposed. These two functions are combined to build UROF, which quantifies the uncertainty reduction of predicted failure probability after a new training point is added. Meanwhile, a novel stopping criterion is proposed by calculating a prediction of an upper bound of failure probability's relative error; the iteration stops when this prediction reaches a preset bound. In the end, a series of examples are performed, which indicates that both UROF and the novel stopping criterion can improve the efficiency of the method, more or less.
+AD  - Natl Univ Def Technol, Coll Sci, Changsha 410000, Hunan, Peoples R ChinaPY  - 2016
+VL  - 6
+IS  - 5
+SP  - 445
+EP  - 466
+DO  - 10.1615/Int.J.UncertaintyQuantification.2016017441
+AN  - WOS:000391887100006
+N1  - Times Cited in Web of Science Core Collection:  2
+Total Times Cited:  2
+ER  -
+
+TY  - JOUR
+AU  - Chen, KS
+AU  - Liu, BL
+AU  - Han, CH
+AU  - Zhao, SM
+AU  - Wang, L
+AU  - Zhan, HC
+TI  - Correction of Orbital Angular Momentum State Based on Diffractive Deep Neural Network
+T2  - ACTA OPTICA SINICA
+KW  - diffractive deep neural network
+KW  - passive diffractive layer
+KW  - orbital angular momentum state
+KW  - atmospheric turbulence
+KW  - phase screen
+KW  - TRANSMISSION
+AB  - Objective As the basic physical quantity of classical mechanics and quantum mechanics, orbital angular momentum (OAM) is a natural characteristic of the spiral phase beams and has been widely studied in modern times. Meanwhile, the OAM states of different topological charges are orthogonal to each other, which can be employed as a new degree of freedom of information. Thus, OAM state has been applied to a variety of multiplexing communication systems, and the OAM state correction is the key to realize these multiplexing communication systems.
+   We propose a high-precision OAM state correction method based on a diffractive deep neural network (D2NN) because D2NN has almost zero energy deep learning function, and is faster and more accurate than that of the traditional deep learning network, CNN. As D2NN can realize various complex functions in traditional computer neural networks and perform parallel operations at the speed of light, the proposed method will provide a high-speed and efficient OAM state correction for realizing large-capacity and high-quality for the next-generation wireless communication.
+   Methods We study a D2NN-based OAM correction method. First, the D2NN component is obtained mainly through the training dataset composed of multiple sets of OAM states and the target OAM states under different turbulence interference. Second, the designed D2NN network components are trained, and the parameters in the components are updated and optimized until the square error loss function of the OAM state and the target OAM state output from the D2NN component reaches a predetermined threshold. Then, the D2NN component is obtained, and can achieve the wavefront correction with high-speed and high-precision. The influence of the training parameters and the network iteration times on the proposed correction method is discussed, and the number of D2NN network layers and the training parameters with the best performance are presented. Finally, after the physically D2NN diffractive component is fabricated, using techniques such as 3D printing or lithography, one can perform the specific task by adopting only optical diffraction components.
+   Results and Discussions We propose a fast and efficient OAM state correction method based on D2NN to significantly reduce the training time and the loss function compared with the correction method based on the traditional CNNs. Furthermore, the environment configuration required by D2NN is not high and can be widely utilized. Meanwhile, we adjust the number of diffraction layers, the training parameters, and the network iterations in the designed D2NN to find the best correction performance. Additionally, the training parameters, with only amplitude as parameters, only phase as parameters, and both the phase and amplitude as parameters are discussed. The results show that the D2NN-based correction method performs optimally under medium turbulence (atmospheric turbulence intensity of 10(-14) m-2/3), with 8 diffraction layers (Table 4), and both the amplitude and phase used as the training parameters. As the number of network iterations increases, the loss function value in the proposed correction method will gradually decrease and converge to a constant (Figs. 8 and 9). In addition, the influence of the topological charge of the OAM state in the dataset on the correction effect is also studied. The comparison of the peak signal-to-noise ratio (PSNR) of the corrected OAM state shows that a smaller topological charge leads to a smaller distortion degree and a higher accuracy, with the PSNR greater than 30. This indicates that the OAM state has been corrected to be close to the original OAM state (Fig. 7).
+   Conclusions The selection of iteration times, layers, and training parameters in the designed D2NN component will affect the correction speed and accuracy, and the high- precision OAM state correction can be realized through the designed D2NN component. When the atmospheric turbulence intensity is 10(-14) m(-2/3), the designed D2NN component has the best performance when the layer number is 8, and the phase and amplitude are adopted as the parameters. Meanwhile, the loss function is reduced by more than 45. 45% compared with those of the D2NN compoent when the layer number is 5. For the strong atmospheric turbulence, the correction accuracy can be improved by increasing the iteration number during the network training, since the reduction rate of the loss function in 20 iterations reaches 98. 03%. For weak turbulence, only phase parameters can be employed for training. For strong turbulence, the method combining the phase and the amplitude parameters is better in training. In addition, a smaller topological charge leads to a smaller corrected distortion. The proposed method has a fast and efficient learning function to provide a new implementation method for OAM state correction.
+AD  - Nanjing Univ Posts & Telecommun, Sch Commun & Informat Engn, Nanjing 210023, Jiangsu, Peoples R ChinaAD  - Natl Lab Solid State Microstruct, Nanjing 210008, Jiangsu, Peoples R ChinaDA  - DEC
+PY  - 2023
+VL  - 43
+IS  - 24
+C7  - 2401008
+DO  - 10.3788/AOS230663
+AN  - WOS:001141747200009
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  0
+ER  -
+
+TY  - JOUR
+AU  - Chen, JY
+AU  - Zhao, XZ
+AU  - Cui, L
+AU  - He, G
+AU  - Wang, XH
+AU  - Wang, FD
+AU  - Duan, SW
+AU  - He, L
+AU  - Li, Q
+AU  - Yu, XD
+AU  - Zhang, FQ
+AU  - Xu, MQ
+TI  - Genetic regulatory subnetworks and key regulating genes in rat hippocampus perturbed by prenatal malnutrition: implications for major brain disorders
+T2  - AGING-US
+KW  - prenatal
+KW  - famine
+KW  - malnutrition
+KW  - rat
+KW  - transcriptome
+KW  - PROTEIN-MALNUTRITION
+KW  - EXPRESSION
+KW  - SCHIZOPHRENIA
+KW  - TRANSCRIPTOME
+KW  - VARIANTS
+KW  - BEHAVIOR
+KW  - DATABASE
+KW  - PACKAGE
+KW  - ALTERS
+KW  - DLGAP3
+AB  - Objective: Many population studies have shown that maternal prenatal nutrition deficiency may increase the risk of neurodevelopmental disorders in their offspring, but its potential transcriptomic effects on brain development are not clear. We aimed to investigate the transcriptional regulatory interactions between genes in particular pathways responding to the prenatal nutritional deficiency and to explore their effects on neurodevelopment and related disorders.
+   Results: We identified three modules in rat hippocampus responding to maternal prenatal nutritional deficiency and found 15 key genes (Hmgn1, Ssbp1, LOC684988, Rpl23, Gga1, Rhobtb2, Dhcr24, Atg9a, Dlgap3, Grm5, Scn2b, Furin, Sh3kbp1, Ubqln1, and Unc13a) related to the rat hippocampus developmental dysregulation, of which Hmgn1, Rhobtb2 and Unc13a related to autism, and Dlgap3, Grm5, Furin and Ubqln1 are related to Alzheimer's disease, and schizophrenia. Transcriptional alterations of the hub genes were confirmed except for Atg9a. Additionally, through modeling miRNA-mRNA-transcription factor interactions for the hub genes, we confirmed a transcription factor, Cebpa, is essential to regulate the expression of Rhobtb2.
+   We did not find significant signals in the prefrontal cortex responding to maternal prenatal nutritional deficiency.
+   Conclusion: These findings demonstrated that these genes with the three modules in rat hippocampus involved in synaptic development, neuronal projection, cognitive function, and learning function are significantly enriched hippocampal CA1 pyramidal neurons and suggest that three genetic regulatory subnetworks and thirteen key regulating genes in rat hippocampus perturbed by a prenatal nutrition deficiency. These genes and related subnetworks may be prenatally involved in the etiologies of major brain disorders, including Alzheimer's disease, autism, and schizophrenia.
+   Methods: We compared the transcriptomic differences in the hippocampus and prefrontal cortex between 10 rats with prenatal nutritional deficiency and 10 rats with prenatal normal chow feeding by differential analysis and co-expression network analysis. A network-driven integrative analysis with microRNAs and transcription factors was performed to define significant modules and hub genes responding to prenatal nutritional deficiency. Meanwhile, the module preservation test was conducted between the hippocampus and prefrontal cortex. Expression levels of the hub genes were further validated with a quantitative real-time polymerase chain reaction based on additional 40 pairs of rats.
+AD  - Shanghai Jiao Tong Univ, Minist Educ, Biox Inst, Key Lab Genet Dev & Neuropsychiat Disorders, Shanghai 200030, Peoples R ChinaAD  - Shanghai Jiao Tong Univ, Sch Med, Shanghai Mental Hlth Ctr, Shanghai Key Lab Psychot Disorders, Shanghai 200030, Peoples R ChinaAD  - Harvard Med Sch, Ctr Biomed Informat, Boston, MA 02115 USAAD  - Shanghai Jiao Tong Univ, Int Peace Matern & Child Hlth Hosp China, Shanghai 200030, Peoples R ChinaAD  - Shanghai Jiao Tong Univ, Sch Agr & Biol, Shanghai Key Lab Vet Biotechnol, Shanghai 200240, Peoples R ChinaAD  - Zhejiang Univ, Sch Med, Affiliated Hosp 1, Sch Publ Hlth,Inst Translat Med, Hangzhou 310058, Peoples R ChinaAD  - Ningbo Univ, Sch Med, Med Genet Ctr, Ningbo 315000, Peoples R ChinaAD  - Fudan Univ, Shanghai Key Lab Birth Defect, Translat Med Ctr Dev & Dis, Inst Pediat,Childrens Hosp, Shanghai 201102, Peoples R ChinaAD  - Shanghai Jiao Tong Univ, Dept Dev & Behav Pediat, Pediat Translat Med Inst, Shanghai Childrens Med Ctr,Sch Med, Shanghai 200127, Peoples R ChinaAD  - Nanjing Med Univ, Affiliated Brain Hosp, Dept Psychiat, Nanjing 210029, Jiangsu, Peoples R ChinaDA  - MAY 15
+PY  - 2020
+VL  - 12
+IS  - 9
+SP  - 8434
+EP  - 8458
+DO  - 10.18632/aging.103150
+AN  - WOS:000533150800051
+N1  - Times Cited in Web of Science Core Collection:  62
+Total Times Cited:  64
+ER  -
+
+TY  - JOUR
+AU  - Zhong, XM
+AU  - Ouyang, C
+AU  - Liang, WY
+AU  - Dai, CY
+AU  - Zhang, WR
+TI  - (2R,6R)-Hydroxynorketamine Alleviates Electroconvulsive Shock-Induced Learning Impairment by Inhibiting Autophagy
+T2  - NEUROPSYCHIATRIC DISEASE AND TREATMENT
+KW  - electroconvulsive shock
+KW  - learning impairment
+KW  - (2R 6R)-hydroxynorketamine
+KW  - autophagy
+KW  - KETAMINE
+KW  - MTOR
+KW  - ACTIVATION
+KW  - UNDERLIES
+KW  - APOPTOSIS
+KW  - BRAIN
+KW  - MODEL
+AB  - Purpose: Learning impairment after electroconvulsive therapy (ECT) is common. Ketamine, an anesthetic used for ECT, has been demonstrated to attenuate cognitive impairment after ECT. However, the mechanism by which ketamine occurs in this case is still unknown. We aimed to explore the role of ketamine metabolite (2R,6R)-hydroxynorketamine [(2R,6R)-HNK] in the protection against learning impairment and investigate whether autophagy is involved in the protective effect. Materials and Methods: A rat depression model received electroconvulsive shock (ECS; simulated ECT in animal models) daily for 3 days. The Morris water maze was used to assess the spatial learning function of the rats. Western blotting was used to detect the expression of Beclin-1, light chain (LC)3-II/LC3-I, p62, mammalian target of rapamycin (mTOR), and p-mTOR in the hippocampus. Results: The escape latency for the maze in the ECS group was significantly longer than that in the sham ECS group (P=0.042). Meanwhile, the escape latency in the (2R,6R)-HNK+ECS group was significantly shorter than that in the ECS group (P=0.005). The LC3-II/LC3-I ratio and Beclin-1 expression level significantly increased, and the p62 expression level significantly decreased in the ECS group, compared with those in the sham ECS group (all P<0.001). The (2R,6R)-HNK+ECS group showed lower LC3-II/LC3-I ratio (P<0.001) and Beclin-1 expression level (P<0.001) and higher p62 (P<0.001) and p-mTOR expression levels (P=0.048) than did the ECS group. After small-molecule enhancer of rapamycin 28 (SMER28) administration, the role of (2R,6R)-HNK in protecting against learning impairment and inhibiting autophagy was abrogated, showing no difference in the escape latency; the difference in the LC3-II/LC3-I ratio and p62 expression level between the SMER28 +(2R,6R)-HNK+ECS and ECS groups was not as significant as that between the (2R,6R)HNK+ECS and ECS groups (P<0.05-0.01 vs P<0.001). Conclusion: (2R,6R)-HNK yields cognitive protection by suppressing autophagy through the mTOR in the ECS-treated rat
+AD  - Guangzhou Med Univ, Affiliated Brain Hosp, Dept Geriatr Psychiat, Guangzhou 510370, Guangdong, Peoples R ChinaAD  - Guangzhou Med Univ, Affiliated Brain Hosp, Inst Neurosci, Guangzhou 510370, Guangdong, Peoples R ChinaPY  - 2021
+VL  - 17
+SP  - 297
+EP  - 304
+DO  - 10.2147/NDT.S278422
+AN  - WOS:000617505700002
+N1  - Times Cited in Web of Science Core Collection:  7
+Total Times Cited:  8
+ER  -
+
+TY  - JOUR
+AU  - Gao, GD
+AU  - Wang, XL
+AU  - He, SM
+AU  - Li, WX
+AU  - Wang, QF
+AU  - Liang, QC
+AU  - Zhao, YQ
+AU  - Hou, F
+AU  - Chen, L
+AU  - Li, AN
+TI  - Clinical study for alleviating opiate drug psychological dependence by a method of ablating the nucleus accumbens with stereotactic surgery
+T2  - STEREOTACTIC AND FUNCTIONAL NEUROSURGERY
+CP  - Meeting of the American-Society-for-Stereotactic-and-Functional-Neurosurgery
+KW  - stereotactic surgery
+KW  - drug abstinence
+KW  - nucleus accumbens
+KW  - psychological dependence
+AB  - The aim of this study was to explore a new way of treating drug addiction by ablating the nucleus accumbens (NA(C)), which has a close relationship with drug-induced psychological dependence, using stereotactic surgery, blocking the mesocorticolimbic dopamine circuit, alleviating craving for drugs and lowering the relapse rate after detoxification. On the basis of animal experiments, stereotactic surgery was performed in 28 patients by making a lesion in the NA(C) bilaterally to treat opiate drug dependence. Indications, the criterion of therapeutic effect, treatment process and the therapeutic and safety evaluation index of the surgery were formulated particularly. The mean follow-up period was 15 months. Relapse has not occurred in 11 cases up till now. Drug-free time in these patients has been more than half a year in 4 cases (more than a year in 3 cases), and less than half a year in 7 cases. Relapse occurred in 15 cases after surgery. Drug-free time in these patients was more than half a year in 3 cases, between 1 month and half a year in 10 cases and less than 1 month in 2 cases. The therapeutic effect was excellent in 7 cases (26.9%), good in 10 cases (38.5%) and poor in 2 cases (7.7%). Another 7 cases were still under investigation at the time of writing. Relapse rates after surgery were 7.7, 38.5 and 57.5% within 1 month, between 1 month and half a year and after more than half a year, respectively. There were no common complications of surgery such as intracranial hematoma or infection in these patients after operation. Character type was changed slightly in 2 cases, and 4 cases suffered temporary memory loss, which did not affect their daily lives and learning function. They all recovered within 1 month. There were different degrees of effectiveness of treating drug addicts' psychological dependence by making lesions in the NA(C) bilaterally with stereotactic surgery. No particular complications occurred. The operation is safe and feasible. The mean follow-up time in this study was 15 months. The effectiveness was satisfactory. The relapse rate of drug addicts after detoxification was clearly reduced. Copyright (C) 2003 S. Karger AG, Basel.
+AD  - Fourth Mil Med Univ, Tangdu Hosp, Dept Neurosurg, Xian 710038, Peoples R ChinaPY  - 2003
+VL  - 81
+IS  - 1-4
+SP  - 96
+EP  - 104
+DO  - 10.1159/000075111
+AN  - WOS:000188386000015
+N1  - Times Cited in Web of Science Core Collection:  89
+Total Times Cited:  109
+ER  -
+
+TY  - JOUR
+AU  - Chen, TF
+AU  - Lee, SH
+AU  - Zheng, WR
+AU  - Hsu, CC
+AU  - Cho, KH
+AU  - Kuo, LW
+AU  - Chou, CCK
+AU  - Chiu, MJ
+AU  - Tee, BL
+AU  - Cheng, TJ
+TI  - White matter pathology in alzheimer's transgenic mice with chronic exposure to low-level ambient fine particulate matter
+T2  - PARTICLE AND FIBRE TOXICOLOGY
+KW  - Ambient air pollution
+KW  - Alzheimer's disease
+KW  - White matter
+KW  - Optic tract
+KW  - AIR-POLLUTION EXPOSURE
+KW  - GUT-BRAIN AXIS
+KW  - SYSTEMIC INFLAMMATION
+KW  - DNA METHYLATION
+KW  - DISEASE
+KW  - HYPERINTENSITIES
+KW  - PARTICLES
+KW  - DAMAGE
+KW  - RISK
+KW  - ASSOCIATIONS
+AB  - Background Air pollution, especially fine particulate matter (PM), can cause brain damage, cognitive decline, and an increased risk of neurodegenerative disease, especially alzheimer's disease (AD). Typical pathological findings of amyloid and tau protein accumulation have been detected in the brain after exposure in animal studies. However, these observations were based on high levels of PM exposure, which were far from the WHO guidelines and those present in our environment. In addition, white matter involvement by air pollution has been less reported. Thus, this experiment was designed to simulate the true human world and to discuss the possible white matter pathology caused by air pollution. Results 6 month-old female 3xTg-AD mice were divided into exposure and control groups and housed in the Taipei Air Pollutant Exposure System (TAPES) for 5 months. The mice were subjected to the Morris water maze test after exposure and were then sacrificed with brain dissection for further analyses. The mean mass concentration of PM2.5 during the exposure period was 13.85 mu g/m(3). After exposure, there was no difference in spatial learning function between the two groups, but there was significant decay of memory in the exposure group. Significantly decreased total brain volume and more neuronal death in the cerebral and entorhinal cortex and demyelination of the corpus callosum were noted by histopathological staining after exposure. However, there was no difference in the accumulation of amyloid or tau on immunohistochemistry staining. For the protein analysis, amyloid was detected at significantly higher levels in the cerebral cortex, with lower expression of myelin basic protein in the white matter. A diffuse tensor image study also revealed insults in multiple white matter tracts, including the optic tract. Conclusions In conclusion, this pilot study showed that even chronic exposure to low PM2.5 concentrations still caused brain damage, such as gross brain atrophy, cortical neuron damage, and multiple white matter tract damage. Typical amyloid cascade pathology did not appear prominently in the vulnerable brain region after exposure. These findings imply that multiple pathogenic pathways induce brain injury by air pollution, and the optic nerve may be another direct invasion route in addition to olfactory nerve.
+AD  - Natl Taiwan Univ Hosp, Dept Neurol, Taipei, TaiwanAD  - Natl Taiwan Univ, Inst Environm & Occupat Hlth Sci, Coll Publ Hlth, Room 720,Rd 17, Xuzhou 100, Jiangsu, TaiwanAD  - Natl Taiwan Univ, Dept Publ Hlth, Coll Publ Hlth, Taipei, TaiwanAD  - Natl Hlth Res Inst, Inst Biomed Engn & Nanomed, Miaoli, TaiwanAD  - Natl Taiwan Univ, Inst Med Device & Imaging, Coll Med, Taipei, TaiwanAD  - Acad Sinica, Res Ctr Environm Changes, Taipei, TaiwanAD  - Univ Calif San Francisco, Dept Neurol, Memory & Aging Ctr, San Francisco, CA 94143 USADA  - JUN 30
+PY  - 2022
+VL  - 19
+IS  - 1
+C7  - 44
+DO  - 10.1186/s12989-022-00485-8
+AN  - WOS:000818757500001
+N1  - Times Cited in Web of Science Core Collection:  8
+Total Times Cited:  9
+ER  -
+
+TY  - JOUR
+AU  - Dilek, M
+AU  - Orallar, H
+AU  - Cetinkaya, A
+AU  - Bozat, G
+AU  - Pehlivan, F
+AU  - Bekdas, M
+AU  - Kabakus, N
+TI  - Can Excessive Oxygen Cause Hyperactive Behavior Disorder in Preterm Children? Cognitive Effects of Hyperoxia in the Preterm Brain of Rats
+T2  - NEUROPHYSIOLOGY
+KW  - preterm birth
+KW  - hyperoxia
+KW  - cognitive function
+KW  - brain injury model
+KW  - hyperactive behavioral disorder
+KW  - CELL-DEATH
+KW  - RISK-FACTORS
+KW  - HYPOXIA
+KW  - INJURY
+KW  - NUTRITION
+KW  - DAMAGE
+AB  - There is a paucity of data on the effects of hyperoxia-induced brain damage on learning and such psychosocial phenomenon as anxiety. Preterm infants encounter hyperoxia within a relatively early stage of life (leaving the intrauterine environment earlier than was expected) and are exposed to high-level hyperoxic stress due to the insufficiency of their antioxidant defense mechanisms. In an experimental rat model, we investigated the effects of early postnatal hyperoxia on learning, anxiety, and depression in the early adulthood period. Rat nestlings (n = 7) were exposed to about 80% oxygen for the first 5 days after birth to create a rat model of hyperoxia, and these nestlings and those of the control group (n = 7) were subjected to behavioral tests (Morris water tank, open-field test, elevated plus maze, and Porsolt test) at 30 days old. Video recordings of the tests were captured, and indices of the tests in the experimental groups were compared with the Mann-Whitney U-test. In the Morris water navigation task, the latency and distance required to locate the platform were greater (P = 0.018 and 0.025, respectively) in the hyperoxia group than in the control group, suggesting that exposure to hyperoxia during the development of the brain can exert a negative effect on the learning function. There was no difference in the time spent in the open center area of the open-field test (anxiety), while the rats in the hyperoxia group spent more time in the enclosed area in the elevated plus maze test, suggesting a higher level of anxiety (P = 0.048). In the Porsolt test, rats in the hyperoxia group moved faster (P = 0.013) and travelled a longer distance (P = 0.048). Although this finding suggests less depressive behavior in the mentioned group, which was contrary to the expectations, this may also explain the tendency of preterm infants to hyperactivity at later ages. Thus, it has been demonstrated experimentally that exposure of neonates to oxygen exceeding physiological needs may cause behavioral problems, such as impaired learning, anxiety, and hyperactivity.
+AD  - Abant Izzet Baysal Univ, Fac Med, Bolu, TurkeyDA  - JUL
+PY  - 2019
+VL  - 51
+IS  - 4
+SP  - 259
+EP  - 265
+DO  - 10.1007/s11062-019-09819-3
+C6  - DEC 2019
+AN  - WOS:000500342900002
+N1  - Times Cited in Web of Science Core Collection:  2
+Total Times Cited:  2
+ER  -
+
+TY  - JOUR
+AU  - Toyama, H
+AU  - Kawamoto, H
+AU  - Sankai, Y
+TI  - Cybernic robot hand-arm that realizes cooperative work as a new hand-arm for people with a single upper-limb dysfunction
+T2  - FRONTIERS IN ROBOTICS AND AI
+KW  - assistive robots
+KW  - single upper-limb dysfunction
+KW  - cooperative work
+KW  - human-machine interaction
+KW  - cybernics
+KW  - cybernic robot hand-arm
+KW  - MANIPULATION
+AB  - A robot hand-arm that can perform various tasks with the unaffected arm could ease the daily lives of patients with a single upper-limb dysfunction. A smooth interaction between robot and patient is desirable since their other arm functions normally. If the robot can move in response to the user's intentions and cooperate with the unaffected arm, even without detailed operation, it can effectively assist with daily tasks. This study aims to propose and develop a cybernic robot hand-arm with the following features: 1) input of user intention via bioelectrical signals from the paralyzed arm, the unaffected arm's motion, and voice; 2) autonomous control of support movements; 3) a control system that integrates voluntary and autonomous control by combining 1) and 2) to thus allow smooth work support in cooperation with the unaffected arm, reflecting intention as a part of the body; and 4) a learning function to provide work support across various tasks in daily use. We confirmed the feasibility and usefulness of the proposed system through a pilot study involving three patients. The system learned to support new tasks by working with the user through an operating function that does not require the involvement of the unaffected arm. The system divides the support actions into movement phases and learns the phase-shift conditions from the sensor information about the user's intention. After learning, the system autonomously performs learned support actions through voluntary phase shifts based on input about the user's intention via bioelectrical signals, the unaffected arm's motion, and by voice, enabling smooth collaborative movement with the unaffected arm. Experiments with patients demonstrated that the system could learn and provide smooth work support in cooperation with the unaffected arm to successfully complete tasks they find difficult. Additionally, the questionnaire subjectively confirmed that cooperative work according to the user's intention was achieved and that work time was within a feasible range for daily life. Furthermore, it was observed that participants who used bioelectrical signals from their paralyzed arm perceived the system as part of their body. We thus confirmed the feasibility and usefulness of various cooperative task supports using the proposed method.
+AD  - Univ Tsukuba, Ctr Cybern Res, Tsukuba, JapanAD  - CYBERDYNE Inc, Tsukuba, JapanAD  - Univ Tsukuba, Fac Engn Informat & Syst, Tsukuba, JapanDA  - OCT 22
+PY  - 2024
+VL  - 11
+C7  - 1455582
+DO  - 10.3389/frobt.2024.1455582
+AN  - WOS:001347411300001
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  0
+ER  -
+
+TY  - JOUR
+AU  - Ding, W
+AU  - Cai, C
+AU  - Zhu, XM
+AU  - Wang, J
+AU  - Jiang, Q
+TI  - Parthenolide ameliorates neurological deficits and neuroinflammation in mice with traumatic brain injury by suppressing STAT3/NF-κB and inflammasome activation
+T2  - INTERNATIONAL IMMUNOPHARMACOLOGY
+KW  - Parthenolide
+KW  - Traumatic brain injury
+KW  - Inflammation
+KW  - Microglial activation
+KW  - STAT3
+KW  - MICROGLIA
+KW  - HYPOXIA
+KW  - PATHWAY
+KW  - APOPTOSIS
+KW  - GROWTH
+KW  - NLRC4
+KW  - NLRP3
+KW  - STAT3
+AB  - Background: Traumatic brain injury (TBI) triggers a set of complex inflammation that results in secondary injury. Parthenolide (PTN) is a sesquiterpene lactone extracted from the herb Tanacetum parthenium (Feverfew) and has potent anti-inflammatory, anti-apoptosis and anti-oxidative stress effects in the central nervous system (CNS)related diseases. This study focuses on investigating the potential neuroprotective effect of PTN on TBI and the related mechanism.
+   Methods: Bv2 microglia, primary microglia were stimulated by LPS, and HT22 neuron cells were stimulated by OGD/R, and they were treated with different doses of PTN. The expression profiles of pro-inflammatory cytokines, proteins, oxidative stress mediators, STAT3/NF-kappa B pathway, inflammasomes were detected. Forty male/female C57BL/6 mice were randomly divided into the sham, PTN, TBI, and TBI + PTN groups (10 mice per group). A mouse TBI model was set up with a controlled cortical impact (CCI) device. The modified nerve severity score (mNSS) was implemented to check short-term neurological impairment in mice, and the mice's memory and learning were assessed by the Morris water maze test. The water content in the mice's brains was measured by the dry-wet method. Hematoxylin-eosin (H&E) staining, Nissl staining and terminal deoxynucleotidyl transferase-mediated dUTP-biotin nick end labeling (TUNEL) assay were applied for neuronal apoptosis.
+   Results: PTN dramatically alleviated LPS-induced inflammation in microglia, and OGD-mediated neuronal apoptosis and oxidative stress. In addition, PTN repressed LPS- or OGD-modulated STAT3/NF-kappa B and NLR family pyrin domain containing 1 (NLRP1), NLRP3, NLR family CARD domain containing 4 (NLRC4) inflammasomes activation. Administering the STAT3 inhibitor Stattic or NF-kappa B inhibitor Bay 11-7082 attenuated PTN-mediated effects. In vivo, PTN treatment relieved neural function deficits, brain edema and neuron apoptosis and improved the memory and learning function of TBI mice. Additionally, PTN impeded microglial activation and reduced the production of pro-inflammatory cytokines in brain lesions of TBI mice. Furthermore, PTN hindered STAT3/NF-kappa B and inflammasome activation.
+   Conclusion: PTN can curb microglial activation and neuron apoptosis by dampening the STAT3/NF-kappa B pathway, thus exerting neuroprotective effects in TBI mice.
+AD  - Wuhan Univ Sci & Technol, Tianyou Hosp, Dept Neurosurg, Wuhan 430000, Peoples R ChinaAD  - Huazhong Agr Univ, Coll Anim Sci & Vet Med, State Key Lab Agr Microbiol, Wuhan 430070, Peoples R ChinaAD  - Guangxi Univ Chinese Med, Dept Neurol, Nanning 530200, Guangxi, Peoples R ChinaAD  - Univ Sci & Technol, Tongji Hosp, Tongji Med Coll, Dept Neurosurg, Wuhan 430030, Peoples R ChinaAD  - Univ Sci & Technol, Liyuan Hosp, Tongji Med Coll, Dept Neurosurg, Wuhan 430030, Peoples R ChinaDA  - JUL
+PY  - 2022
+VL  - 108
+C7  - 108913
+DO  - 10.1016/j.intimp.2022.108913
+AN  - WOS:000833441000003
+N1  - Times Cited in Web of Science Core Collection:  29
+Total Times Cited:  30
+ER  -
+
+TY  - JOUR
+AU  - Zhu, YH
+AU  - Zhang, CX
+AU  - Yu, DJ
+AU  - Zhang, Y
+TI  - Integrating unsupervised language model with triplet neural networks for protein gene ontology prediction
+T2  - PLOS COMPUTATIONAL BIOLOGY
+KW  - SEQUENCE
+KW  - DATABASE
+KW  - GENERATION
+KW  - ANNOTATION
+KW  - ALGORITHM
+KW  - SERVER
+KW  - TOOL
+AB  - Accurate identification of protein function is critical to elucidate life mechanisms and design new drugs. We proposed a novel deep-learning method, ATGO, to predict Gene Ontology (GO) attributes of proteins through a triplet neural-network architecture embedded with pre-trained language models from protein sequences. The method was systematically tested on 1068 non-redundant benchmarking proteins and 3328 targets from the third Critical Assessment of Protein Function Annotation (CAFA) challenge. Experimental results showed that ATGO achieved a significant increase of the GO prediction accuracy compared to the state-of-the-art approaches in all aspects of molecular function, biological process, and cellular component. Detailed data analyses showed that the major advantage of ATGO lies in the utilization of pre-trained transformer language models which can extract discriminative functional pattern from the feature embeddings. Meanwhile, the proposed triplet network helps enhance the association of functional similarity with feature similarity in the sequence embedding space. In addition, it was found that the combination of the network scores with the complementary homology-based inferences could further improve the accuracy of the predicted models. These results demonstrated a new avenue for high-accuracy deep-learning function prediction that is applicable to large-scale protein function annotations from sequence alone.
+   Author summary
+   In the post-genome sequencing era, a major challenge in computational molecular biology is to annotate the biological functions of all genes and gene products, which have been classified, in the context of the widely used Gene Ontology (GO), into three aspects of molecular function, biological process, and cellular component. In this work, we proposed a new open-source deep-learning architecture, ATGO, to deduce GO terms of proteins from the primary amino acid sequence, through the integration of the triplet neural-network with pre-trained language models of protein sequences. Large benchmark tests showed that, when powered with transformer embeddings of the language model, ATGO achieved a significantly improved performance than other state-of-the-art approaches in all the GO aspect predictions. Following the rapid progress of self-attention neural network techniques, which have demonstrated remarkable impacts on natural language processing and multi-sensory data process, and most recently on protein structure prediction, this study showed the significant potential of attention transformer language models on protein function annotations.
+AD  - Nanjing Univ Sci & Technol, Sch Comp Sci & Engn, Nanjing, Peoples R ChinaAD  - Univ Michigan, Dept Computat Med & Bioinformat, Ann Arbor, MI 48109 USAAD  - Univ Michigan, Dept Biol Chem, Ann Arbor, MI 48109 USADA  - DEC
+PY  - 2022
+VL  - 18
+IS  - 12
+C7  - e1010793
+DO  - 10.1371/journal.pcbi.1010793
+AN  - WOS:000925192800004
+N1  - Times Cited in Web of Science Core Collection:  23
+Total Times Cited:  25
+ER  -
+
+TY  - JOUR
+AU  - Vorechovsky, M
+TI  - Reliability analysis of discrete-state performance functions via adaptive sequential sampling with detection of failure surfaces
+T2  - COMPUTER METHODS IN APPLIED MECHANICS AND ENGINEERING
+KW  - Categorical limit state function
+KW  - criterion for experimental design extension
+KW  - Failure surface refinement
+KW  - Nearest neighbor surrogate model
+KW  - Importance sampling
+KW  - Global sensitivity
+KW  - SUPPORT VECTOR MACHINE
+KW  - STRUCTURAL RELIABILITY
+KW  - LEARNING-FUNCTION
+KW  - ASYMPTOTIC APPROXIMATIONS
+KW  - EFFICIENT
+KW  - SIMULATION
+KW  - ENTROPY
+KW  - PROBABILITIES
+KW  - ALGORITHMS
+KW  - TRANSFORMATION
+AB  - The paper presents a new efficient and robust method for rare event probability estimation for computational models of an engineering product or a process returning categorical information only, for example, either success or failure. For such models, most of the methods designed for the estimation of failure probability, which use the numerical value of the outcome to compute gradients or to estimate the proximity to the failure surface, cannot be applied. Even if the performance function provides more than just binary output, the state of the system may be a non-smooth or even a discontinuous function defined in the domain of continuous input variables. This often happens because the mathematical model features non-smooth components or discontinuities (e.g., in the constitutive laws), bifurcations, or even domains in which no reasonable model response is obtained. In these cases, the classical gradient-based methods usually fail. We propose a simple yet efficient algorithm, which performs a sequential adaptive selection of points from the input domain of random variables to extend and refine a simple distance-based surrogate model. Two different tasks can be accomplished at any stage of sequential sampling: (i) estimation of the failure probability, and (ii) selection of the best possible candidate for the subsequent model evaluation if further improvement is necessary. The proposed criterion for selecting the next point for model evaluation maximizes the expected probability classified by using the candidate. Therefore, the perfect balance between global exploration and local exploitation is maintained automatically. If there are more rare events such as failure modes, the method can be generalized to estimate the probabilities of all these event types. Moreover, when the numerical value of model evaluation can be used to build a smooth surrogate, the algorithm can accommodate this information to increase the accuracy of the estimated probabilities. Lastly, we define a new simple yet general geometrical measure of the global sensitivity of the rare-event probability to individual variables, which is obtained as a by-product of the proposed refinement algorithm.(c) 2022 Elsevier B.V. All rights reserved.
+AD  - Brno Univ Technol, Inst Struct Mech, Veveri 331 95, Brno 60200, Czech RepublicDA  - NOV 1
+PY  - 2022
+VL  - 401
+C7  - 115606
+DO  - 10.1016/j.cma.2022.115606
+C6  - OCT 2022
+AN  - WOS:000872540500004
+N1  - Times Cited in Web of Science Core Collection:  11
+Total Times Cited:  11
+ER  -
+
+TY  - JOUR
+AU  - Adelöf, J
+AU  - Andersson, M
+AU  - Porritt, M
+AU  - Petersen, A
+AU  - Zetterberg, M
+AU  - Wiseman, J
+AU  - Hernebring, M
+TI  - PA28 overexpression enhances learning and memory of female mice without inducing 20S proteasome activity
+T2  - BMC NEUROSCIENCE
+KW  - PA28 alpha beta
+KW  - Learning and memory
+KW  - F2 hybrid transgenic mice
+KW  - Behavioral phenotyping
+KW  - 20S proteasome
+KW  - Proteasome capacity
+KW  - K48-linked protein ubiquitination
+KW  - MAJOR HISTOCOMPATIBILITY COMPLEX
+KW  - LONG-TERM POTENTIATION
+KW  - FREE-RADICAL SCAVENGER
+KW  - OXIDATIVE-STRESS
+KW  - SYNAPTIC PLASTICITY
+KW  - PROTEIN-SYNTHESIS
+KW  - ANIMAL-MODEL
+KW  - DEGRADATION
+KW  - EXPRESSION
+KW  - PA28-ALPHA-BETA
+AB  - BackgroundThe proteasome system plays an important role in synaptic plasticity. Induction and maintenance of long term potentiation is directly dependent on selective targeting of proteins for proteasomal degradation. The 20S proteasome activator PA28 activates hydrolysis of small nonubiquitinated peptides and possesses protective functions upon oxidative stress and proteinopathy. The effect of PA28 activity on behavior and memory function is, however, not known. We generated a mouse model that overexpresses PA28 (PA28OE) to understand PA28 function during healthy adult homeostasis via assessment of physiological and behavioral profiles, focusing on female mice.ResultsPA28 and PA28 protein levels were markedly increased in all PA28OE tissues analyzed. PA28OE displayed reduced depressive-like behavior in the forced swim test and improved memory/learning function assessed by intersession habituation in activity box and shuttle box passive avoidance test, with no significant differences in anxiety or general locomotor activity. Nor were there any differences found when compared to WT for body composition or immuno-profile. The cognitive effects of PA28OE were female specific, but could not be explained by alterations in estrogen serum levels or hippocampal regulation of estrogen receptor . Further, there were no differences in hippocampal protein expression of neuronal or synaptic markers between PA28OE and WT. Biochemical analysis of hippocampal extracts demonstrated that PA28 overexpression did not increase PA28-20S peptidase activity or decrease K48-polyubiquitin levels. Instead, PA28OE exhibited elevated efficiency in preventing aggregation in the hippocampus.ConclusionsThis study reveals, for the first time, a connection between PA28 and neuronal function. We found that PA28 overexpressing female mice displayed reduced depressive-like behavior and enhanced learning and memory. Since the positive effects of PA28 overexpression arose without an activation of 20S proteasome capacity, they are likely independent of PA28's role as a 20S proteasome activator and instead depend on a recognized chaperone-like function. These findings suggest that proteostasis in synaptic plasticity is more diverse than previously reported, and demonstrates a novel function of PA28 in the brain.
+AD  - Univ Gothenburg, Sahlgrenska Acad, Inst Neurosci & Physiol, Dept Clin Neurosci, Gothenburg, SwedenAD  - AstraZeneca, IMED Biotech Unit, Discovery Biol, Discovery Sci, Gothenburg, SwedenAD  - Lund Univ, Epilepsy Ctr, Dept Clin Sci, Lund, SwedenDA  - NOV 6
+PY  - 2018
+VL  - 19
+C7  - 70
+DO  - 10.1186/s12868-018-0468-2
+AN  - WOS:000449356800002
+N1  - Times Cited in Web of Science Core Collection:  11
+Total Times Cited:  11
+ER  -
+
+TY  - JOUR
+AU  - Nguyen, KA
+AU  - Stewart, RA
+AU  - Zhang, H
+TI  - An autonomous and intelligent expert system for residential water end-use classification
+T2  - EXPERT SYSTEMS WITH APPLICATIONS
+KW  - Water end-use event
+KW  - Water micro-component
+KW  - Residential water flow trace disaggregation
+KW  - Hidden Markov Model
+KW  - Dynamic time warping algorithm
+KW  - Gradient Vector Filtering
+KW  - Adaptive analysis
+KW  - Adaptive function
+KW  - Water demand management
+KW  - PROBABILISTIC FUNCTIONS
+KW  - MARKOV
+KW  - RECOGNITION
+AB  - Intelligent metering technology combined with advanced numerical techniques enable a paradigm shift in the current level of water consumption information provision that is available to the customer and the water business. The aim of this study was to develop an autonomous and intelligent system for residential water end-use classification that could interface with customers and water business managers via a user-friendly web-based application. Water flow data collected directly from smart water meters includes both single (e.g., a shower event occurring alone) and combined (i.e., an event that comprises several overlapping single events) water end use events. The authors recently developed intelligent algorithms to solve the complex problem of autonomously categorising residential water consumption data into a registry of single and combined events using a hybrid combination of techniques including Hidden Markov Model (HMM), Dynamic Time Warping (DTW) algorithm, time-of-day probability functions, threshold values and various physical features. However, the issue still remained, which is the focus of this current paper, on how to integrate self-learning functionality into the visioned expert system, in order that it can learn from newly collected datasets from different cities, regions and countries, to that collected for the training data. Such versatility and adaptive capacity is essential to make the expert system widely applicable. Through applying alternate forms of HMM and DTW in association with a frequency analysis technique, a suitable self-learning methodology was formulated and tested on three independent households located in Melbourne, Australia with a prediction accuracy of between 80% and 90% for the major end-use categories. The three principle flow data processing modules (i.e., single and combined event recognition and self-learning function) were integrated into a prototype software application for performing autonomous water end-use analysis and its functionality is presented in the latter sections of this paper. The developed expert system has profound implications for government, water businesses and consumers, seeking to better manage precious urban water resources. (C) 2013 Elsevier Ltd. All rights reserved.
+AD  - Griffith Univ, Griffith Sch Engn, Nathan, Qld 4222, AustraliaAD  - Griffith Univ, Ctr Infrastruct Engn & Management, Gold Coast Campus, Qld 4222, AustraliaDA  - FEB 1
+PY  - 2014
+VL  - 41
+IS  - 2
+SP  - 342
+EP  - 356
+DO  - 10.1016/j.eswa.2013.07.049
+AN  - WOS:000327279900011
+N1  - Times Cited in Web of Science Core Collection:  43
+Total Times Cited:  49
+ER  -
+
+TY  - JOUR
+AU  - Zhou, YF
+TI  - Antistroke Network Pharmacological Prediction of Xiaoshuan Tongluo Recipe Based on Drug-Target Interaction Based on Deep Learning
+T2  - COMPUTATIONAL AND MATHEMATICAL METHODS IN MEDICINE
+KW  - STROKE
+AB  - Stroke is a common cerebrovascular disease that threatens human health, and the search for therapeutic drugs is the key to treatment. New drug discovery was driven by many accidental factors in the early stage. With the deepening of research, disease-related target discovery and computer-aided drug design constitute a more rational drug discovery process. The deep learning model was constructed by using recurrent neural network, and then, the classification and prediction of compound-protein interactions were studied. In this study, the network pharmacological prediction of stroke based on deep learning is obtained. (1) In the case of discrete time, a distributed optimization algorithm with finite time convergence is applied. A distributed exact first-order algorithm for the case where the objective function is smooth. On the basis of the DGD algorithm, an additional cumulative correction term is added to correct the error caused by the fixed step size of DGD. Solve multiple optimization problems with equality constraints by using Lagrangian functions. Alternately update the original variable and the dual variable to get the solution of a large global problem. It converges to the optimal solution in an asymptotic or exponential way; that is, the node can reach the optimal solution more accurately when the time tends to infinity. (2) Deep learning, also sometimes called representation learning, has a set of algorithms that can automatically discover the desired classification or detection by feeding it into a machine using raw datasets. Multiple levels of abstraction are abstracted through the use of nonlinear models. This simplifies finding solutions to complex and nonlinear functions. Based on the automatic learning function, it provides the functions of modularization and transfer learning. Deep architectures, which usually contain hidden layers, differ from traditional machine learning, which requires a large amount of data to train the network. There are many levels of modules that are nonlinear and transform the information present on the first level into higher levels which are more abstract in nature and are basically used for feature extraction and transformation. (3) The accuracy rate of the framework based on the multitask deep learning algorithm is 91.73%, and the recall rate reaches 96.13%. The final model was predicted and analyzed using real sample data. In the inference problem, it has the advantages of fast training and low cost; in the generation problem, it also has the advantages of fast training, high stability, high diversity, and high quality of image reconstruction.
+AD  - Chongqing Ind Polytech Coll, Sch Chem & Pharmaceut Engn, Chongqing 401120, Peoples R ChinaDA  - AUG 2
+PY  - 2022
+VL  - 2022
+C7  - 6095964
+DO  - 10.1155/2022/6095964
+AN  - WOS:000861042500001
+N1  - Times Cited in Web of Science Core Collection:  2
+Total Times Cited:  2
+ER  -
+
+TY  - JOUR
+AU  - Kumar, P
+AU  - Waiter, G
+AU  - Ahearn, T
+AU  - Milders, M
+AU  - Reid, I
+AU  - Steele, JD
+TI  - Abnormal temporal difference reward-learning signals in major depression
+T2  - BRAIN
+KW  - major depressive disorder
+KW  - temporal difference signals
+KW  - reward-learning
+KW  - citalopram
+KW  - VENTRAL TEGMENTAL AREA
+KW  - PREDICTION ERRORS
+KW  - ANTIDEPRESSANT DRUGS
+KW  - DOPAMINERGIC-NEURONS
+KW  - UNIPOLAR DEPRESSION
+KW  - INCENTIVE SALIENCE
+KW  - SEROTONIN
+KW  - PSYCHOSIS
+KW  - STRIATUM
+KW  - FEEDBACK
+AB  - Anhedonia is a core symptom of major depressive disorder (MDD), long thought to be associated with reduced dopaminergic function. However, most antidepressants do not act directly on the dopamine system and all antidepressants have a delayed full therapeutic effect. Recently, it has been proposed that antidepressants fail to alter dopamine function in antidepressant unresponsive MDD. There is compelling evidence that dopamine neurons code a specific phasic (short duration) reward-learning signal, described by temporal difference (TD) theory. There is no current evidence for other neurons coding a TD reward-learning signal, although such evidence may be found in time. The neuronal substrates of the TD signal were not explored in this study. Phasic signals are believed to have quite different properties to tonic (long duration) signals. No studies have investigated phasic reward-learning signals in MDD. Therefore, adults with MDD receiving long-term antidepressant medication, and comparison controls both unmedicated and acutely medicated with the antidepressant citalopram, were scanned using fMRI during a reward-learning task. Three hypotheses were tested: first, patients with MDD have blunted TD reward-learning signals; second, controls given an antidepressant acutely have blunted TD reward-learning signals; third, the extent of alteration in TD signals in major depression correlates with illness severity ratings. The results supported the hypotheses. Patients with MDD had significantly reduced reward-learning signals in many non-brainstem regions: ventral striatum (VS), rostral and dorsal anterior cingulate, retrosplenial cortex (RC), midbrain and hippocampus. However, the TD signal was increased in the brainstem of patients. As predicted, acute antidepressant administration to controls was associated with a blunted TD signal, and the brainstem TD signal was not increased by acute citalopram administration. In a number of regions, the magnitude of the abnormal signals in MDD correlated with illness severity ratings. The findings highlight the importance of phasic reward-learning signals, and are consistent with the hypothesis that antidepressants fail to normalize reward-learning function in antidepressant-unresponsive MDD. Whilst there is evidence that some antidepressants acutely suppress dopamine function, the long-term action of virtually all antidepressants is enhanced dopamine agonist responsiveness. This distinction might help to elucidate the delayed action of antidepressants. Finally, analogous to recent work in schizophrenia, the finding of abnormal phasic reward-learning signals in MDD implies that an integrated understanding of symptoms and treatment mechanisms is possible, spanning physiology, phenomenology and pharmacology.
+AD  - Univ Aberdeen, Dept Mental Hlth, Aberdeen AB25 2ZH, ScotlandAD  - Univ Aberdeen, Dept Med Phys, Aberdeen AB25 2ZH, ScotlandAD  - Univ Aberdeen, Dept Radiol, Aberdeen AB25 2ZH, ScotlandAD  - Univ Aberdeen, Dept Psychol, Aberdeen AB25 2ZH, ScotlandDA  - AUG
+PY  - 2008
+VL  - 131
+SP  - 2084
+EP  - 2093
+DO  - 10.1093/brain/awn136
+AN  - WOS:000258329900016
+N1  - Times Cited in Web of Science Core Collection:  273
+Total Times Cited:  310
+ER  -
+
+TY  - JOUR
+AU  - Ye, XZ
+AU  - Jing, L
+AU  - Kansen, M
+AU  - Wang, JB
+AU  - Ota, K
+AU  - Cheng, ZX
+TI  - A Support Method with Changeable Training Strategies Based on Mutual Adaptation between a Ubiquitous Pet and a Learner
+T2  - IEICE TRANSACTIONS ON INFORMATION AND SYSTEMS
+KW  - ubiquitous learning
+KW  - training support
+KW  - ubiquitous pet
+KW  - mutually adaptation
+KW  - changeable support strategies
+AB  - With the progress of ubiquitous technology, ubiquitous learning presents new opportunities to learners Situations of a learner can be grasped through analyzing the learner's actions collected by sensors. RF-IDs, or cameras in order to provide support at proper time. proper place. and proper situation Training for acquiring skills and enhancing physical abilities through exercise and experience in the real world is an important domain in u-learning A training program may last for several days and has one or more training units (exercises) for a day A learner's performance in a unit is considered as short term slate The performance in a series of units may change with patterns progress, plateau, and decline Long term stale in a series of units is accumulatively computed based on short term states In a learning/training program, it is necessary to apply different support strategies to adapt to different states of the learner Adaptation in learning support is significant, because a learner loses his/her interests easily without adaptation Systems with the adaptive support usually provide stimulators to a learner. and a learner can have a great motivation in learning. at beginning However, when the stimulators reach some levels. the learner may lose his/her motivation because the long term state of the learner changes dynamically, which means a progress state may change to a plateau state or a decline state In different long term learning states, different types of stimulators are needed However, the stimulators and advice provided by the existing systems are monotonic without changeable support strategies We propose a mutual adaptive support The mutual adaptation means each of the system and the learner has their own suites On one hand. the system tries to change its state to adapt to the learner's state for providing adaptive support On the other hand the learner can change its performance following the advice given based on the state of the system We create a ubiquitous pet (u-pet) as a metaphor of our system A u-pet is always with the learner and encourage the leaner to start training at proper time and to do training smoothly The u-pet can perform actions with the learner in training. change its own attributes based on the learner's attributes. and adjust its own learning rate by a learning function The u-pet grasps the state of the learner and adopts different training support strategies to the learner's training based on the learner's short and long term states.
+AD  - Univ Aizu, Univ Business Innovat Ctr, Aizu Wakamatsu, Fukushima 9658580, JapanAD  - Univ Aizu, Sch Comp Sci & Engn, Aizu Wakamatsu, Fukushima 9658580, JapanAD  - Univ Aizu, Grad Sch Comp Sci & Engn, Aizu Wakamatsu, Fukushima 9658580, JapanDA  - APR
+PY  - 2010
+VL  - E93D
+IS  - 4
+SP  - 858
+EP  - 872
+DO  - 10.1587/transinf.E93.D.858
+AN  - WOS:000276848600018
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  0
+ER  -
+
+TY  - JOUR
+AU  - Liu, HJ
+AU  - Zhang, B
+AU  - Zhang, YZ
+AU  - Song, KS
+AU  - Wang, ZM
+AU  - Li, F
+AU  - Hu, MG
+TI  - Soil taxonomy on the basis of reflectance spectral characteristics
+T2  - SPECTROSCOPY AND SPECTRAL ANALYSIS
+KW  - spectral reflectance
+KW  - soil taxonomy
+KW  - continuum removal
+KW  - hyperspectral
+KW  - MOISTURE
+AB  - Soil spectral reflectance is the comprehensive representation of soil physical and chemical parameters, and its study is the physical basis for soil remote sensing and provides a new way and standard for soil properties themselves' research. Soil room spectra significantly correlate with that derived from hyperspectral images. So the room spectra are very important for soil taxonomy and investigation. To seek for the feasibility of soil taxonomy on the basis of topsoil reflectance spectral characteristics, and provide the theory foundation for quick soil taxonomy based on remote sensing methods, the spectral reflectance in the visible and near infrared region (400-2 500 nm) of 248 soil samples (black soil, chernozemrn, meadow soil, blown soil, alluvial soil) collected from Nongan county, Jilin province was measured with a hyperspectral device in room, and the soil spectral characteristics were determined with continuum removal method, and soil spectral indices (spectral absorption area, depth and asymmetry) were computed, which were introduced into BP network models as external input variables. The models consist of three layers (input, output and hidden layer), the training function is "'TRAINLM", learning function "LEARNGDM", and transferring function "TANSIG". The results showed that: (1) There are some differences among different soils in their spectral characteristics, but with similar parental matrix and climate, the spectral differences of soils in Nongan county are not significant. So it's difficult to analyze soil spectral characteristics based on soil reflectance. (2) The curves after continuum removal strengthened soil spectral absorption characteristics, and simplified soil spectral analysis. The soil spectral curves in Nongan county mainly have five spectral absorption vales at 494, 658, 1 415, 1 913 and 2 206 run, and the former two vales are caused by soil organic matter, Fe, and mechanical composition, the latter three are due to soil moisture; the differences of the latter three vales among different soils are not apparent, and the significant differences are in the former two vales region. (3) Soil reflectance is sensitive to organic matter, soil moisture Fe, mechanical composition, roughness, and so on. The sensitivity of soil spectral indices derived with continuum removing method is decreased. Then the models with these indices as input variables are more stable and general. As the input variables were external, the BP network model based on the former two vales' shape characteristics was better than that based on reflectance values or all five vales, the classifying accuracy of the main three soils (chernozem, meadow soil, blown soil) was bigger than 60%, and the model could be used for soil taxonomy. However, this work still needs further study, and to improve classifying accuracy, auxiliary data, such as topography, vegetation, and land use should be introduced.
+AD  - Chinese Acad Sci, NE Inst Geog & Agr Ecol, Changchun 130012, Peoples R ChinaAD  - Grad Univ, Chinese Acad Sci, Beijing 100039, Peoples R ChinaAD  - Chinese Univ Hong Kong, Inst Space & Earth Informat Sci, Hong Kong, Hong Kong, Peoples R ChinaDA  - MAR
+PY  - 2008
+VL  - 28
+IS  - 3
+SP  - 624
+EP  - 628
+AN  - WOS:000256273800035
+N1  - Times Cited in Web of Science Core Collection:  14
+Total Times Cited:  40
+ER  -
+
+TY  - JOUR
+AU  - Wu, J
+AU  - Hu, JB
+AU  - Liu, Q
+AU  - Tang, Y
+AU  - Liu, YG
+AU  - Xiang, W
+AU  - Sun, SH
+AU  - Suo, ZR
+TI  - First principles molecular dynamics simulation and thermal decomposition kinetics study of CL-20
+T2  - JOURNAL OF MOLECULAR MODELING
+KW  - CL-20
+KW  - Thermal decomposition mechanism
+KW  - Cluster
+KW  - Product
+KW  - First principles molecular dynamics
+KW  - Machine learning
+KW  - REAXFF
+KW  - MECHANISM
+KW  - CRYSTAL
+AB  - Context2,4,6,8,10, 12-hexanitro-2,4,6,8,10, 12-hexazepane (CL-20) is a new energetic material with high performance and low sensitivity. In-depth study of the thermal decomposition mechanism of CL-20 is a necessary condition to improve its performance, ensure its safety, and optimize its application. On the basis of a large number of empirical force fields used in molecular dynamics simulation in the past, the machine learning augmented first-principles molecular dynamics method was used for the first time to simulate the thermal decomposition reaction of CL-20 at 2200 K, 2500 K, 2800 K, and 3000 K isothermal temperature. The main stable resulting compounds are N2, CO2, CO, H2O, andH2, where CO2 and H2O continue to decompose at higher temperatures. The initial decomposition pathways are denitration by N-N fracture, ring-opening by C-N bond fracture, and redox reaction involving NO2 and CL-20. After ring opening, two main compounds, fused tricyclic pyrazine and azadicyclic, were formed, which were decomposed continuously to form monocyclic pyrazine and pyrazole ring structures. The most common fragments formed during decomposition are those containing two, three, four, and six carbons. The formation rule and quantity of main small molecule intermediates and resulting stable products under different simulated temperatures were analyzed.MethodsBased on ab initio Bayesian active learning algorithm, efficient and accurate prediction of CL-20 is made using the dynamic machine learning function of Vienna Ab-Initio Simulation Package (VASP), which constructs the energy potential surface by learning a large number of data based on AIMD calculations. The result is a machine learning force field (MLFF). Then the molecular dynamics of CL-20 was simulated using the trained MLFF model. PAW pseudopotentials and generalized gradient approximation (GGA), namely, Perdew-Burke-Ernzerhof (PBE) functional, are used in the calculation. The plane wave truncation energy (ENCUT) is set to 550 eV, and using the Gaussian broadening, the thermal broadening size of the single-electron orbital is 0.05 eV. A van der Waals revision of the system with Grimme Version 3. The energy convergence accuracy (EDIFF) of electron self-consistent iteration is set to 1E-5 eV and 1E-6 eV, respectively. The two-step structure optimization is carried out using 1 ' 1 ' 1 k point grid and conjugate gradient method. The ENCUT was changed to 500 eV and EDIFF to 1E-5 eV, and NVT integration (ISIF = 2) of Langevin thermostat was used for machine learning force field training and AIMD simulation of the system.
+AD  - Southwest Univ Sci & Technol, Anal & Testing Ctr, Mianyang 621010, Peoples R ChinaAD  - China Acad Engn Phys, Inst Fluid Phys, Mianyang 621900, Peoples R ChinaDA  - FEB
+PY  - 2024
+VL  - 30
+IS  - 2
+C7  - 33
+DO  - 10.1007/s00894-024-05833-3
+AN  - WOS:001141556800002
+N1  - Times Cited in Web of Science Core Collection:  1
+Total Times Cited:  1
+ER  -
+
+TY  - JOUR
+AU  - Yun, WY
+AU  - Lu, ZZ
+AU  - Jiang, X
+AU  - Zhang, LG
+AU  - He, PF
+TI  - AK-ARBIS: An improved AK-MCS based on the adaptive radial-based importance sampling for small failure probability
+T2  - STRUCTURAL SAFETY
+KW  - Adaptive radial-based importance sampling
+KW  - Kriging model
+KW  - Candidate sampling pool
+KW  - Training time
+KW  - Small failure probability
+KW  - RELIABILITY-ANALYSIS
+KW  - STRUCTURAL RELIABILITY
+KW  - LEARNING-FUNCTION
+KW  - SIMULATION METHOD
+KW  - MOMENT METHODS
+KW  - ALGORITHM
+KW  - MODEL
+AB  - The pivotal problem in reliability analysis is how to use a smaller number of model evaluations to get more accurate failure probabilities. To achieve this aim, an iterative method based on the Monte Carlo simulation and the adaptive Kriging (AK) model (abbreviated as AK-MCS) has been proposed in 2011 by Echard et al. But for small failure probability, the number of the candidate points is extremely large for convergent solution. These points need to be evaluated by the current Kriging model to select the best next sample for updating the Kriging model in AK-MCS method, and the large candidate points will make the adaptive updating process of Kriging model much more time-consuming. Therefore, to improve the applicability of the AK-MCS method for small failure probability, the adaptive radial-based importance sampling (ARBIS) is employed to reduce the number of candidate points in the AK-MCS method, and an ARBIS combined with AK model method (abbreviated as AK-ARBIS) is proposed. The idea of the ARBIS is adaptively to find the optimal -sphere, i.e., the largest sphere of the safe domain, and then samples inside the optimal -sphere is directly recognized as safety and do not need to call the true limit state function to judge their states (safe or failed). During the adaptive process of finding the optimal -sphere, the Kriging model is ceaselessly updated layer after layer based on the U learning scheme in each sampling pool which only contains the samples between the current spherical rings. The updating process of Kriging model stops until the optimal -sphere is adaptively found and the convergent condition is satisfied. By finding the optimal -sphere, the total number of candidate samples is reduced which only includes the samples outside the optimal -sphere. Besides, the whole candidate sampling pool is partitioned into several sub-candidate sampling pool sequentially. The proposed method not only inherits the advantage of the AK-MCS but also reduces the reliability analysis time of the AK-MCS from two aspects. One is the size reduction of the candidate sampling pool, the other is the reduction of the actual limit state function evaluations because the sampling points locating inside the adaptively searched optimal -sphere do not need to participate in the training process. By analyzing a highly nonlinear numerical case, a non-linear oscillator system, a simplified wing box structural model, an aero-engine turbine disk and a planar ten-bar structure, the effectiveness and the accuracy of the proposed AK-ARBIS method for estimating the small failure probability are verified.
+AD  - Northwestern Polytech Univ, Sch Aeronaut, Xian 710072, Shaanxi, Peoples R ChinaAD  - Tongji Univ, Sch Aerosp Engn & Appl Mech, Shanghai 200092, Peoples R ChinaAD  - Chinese Flight Test Estab, Aircraft Flight Test Technol Inst, Xian 710089, Shaanxi, Peoples R ChinaAD  - China Acad Launch Vehicle Technol, Beijing 100076, Peoples R ChinaPY  - 2020
+VL  - 82
+C7  - 101891
+DO  - 10.1016/j.strusafe.2019.101891
+AN  - WOS:000498319500006
+N1  - Times Cited in Web of Science Core Collection:  94
+Total Times Cited:  98
+ER  -
+
+TY  - CPAPER
+AU  - Tyagi, P
+AU  - Demisse, W
+AU  - Savadkoohi, M
+AU  - Gemeda, T
+A1  - ASME
+TI  - POSITIVE INTELLIGENCE TRAINING TO DEVELOP SELF-AWARENESS FOR ENHANCING STUDENT LEARNING POTENTIAL DURING HIGHER EDUCATION
+T2  - PROCEEDINGS OF THE ASME 2020 INTERNATIONAL MECHANICAL ENGINEERING CONGRESS AND EXPOSITION, IMECE2020, VOL 9
+CP  - ASME International Mechanical Engineering Congress and Exposition (IMECE)
+AB  - Positive intelligence (PI) training can produce a transformative impact on college students. PI, a branch of human psychology, provides a tool to identify significant compulsive habits that can inhibit students' learning potential and ability to understand others. This paper discusses the two training methods adopted for teaching graduate and undergraduate students. It is considered that including such training is fundamentally crucial for developing 21st century STEM workforce with a well-rounded personality. However, PI training may consume a significant class time allocated for covering course contents under the degree-specific curriculums. Starting a new course may increase the credit overload beyond the approved BS and graduate credits. This paper discusses introducing different modules in the existing classes to foster PI training. The PI training method for undergraduate students focuses on self-education via online videos and freely available content and self-assessment tests. Undergraduate students were given a set of questions to guide them about the important PI topics and to pay attention while self-learning the PI elements. The PI assignment starts with the familiarization of the Maslow hierarchy of needs governing the motivation behind human actions. This assignment mainly focuses on understanding the "sage" mode in which a human tends to utilize his/her latent and earned skills towards the attainment of goals and living life purposefully. The PI assignment had several questions on self-sabotaging "saboteurs" and judging traits that almost everyone develops as a survival mechanism while facing emotional and physical survival challenges for an extended period. During class discussion, students were exposed to their hidden/invisible saboteurs which could be easily triggered by unrealistic mental threats and thus compromise their learning function and performance. Students were asked to take free online self-assessment saboteur test to find the numerical values of their traits and do self-evaluation and plan to counteract the effect of self-sabotaging habits. PI training fulfills ABET student learning outcomes focusing on developing their life-long learning skills. This paper mainly discusses the PI training for graduate students under the mechanical engineering department. PI training is one of the first and essential modules in the mandatory MECH 500 Research Methods and Technical Communication course. Graduate students enrolled in this course are first introduced to the importance of PI and its potential impact in developing self-efficacy. After the initial introduction, graduate students are asked to do the following (a) Complete the abovementioned assignment given to the undergraduate student, (b) prepare a presentation on PI by including their insights for class discussion. After the PI training, students were asked to reflect on their competence in PI and the ability to apply it. In the survey and direct feedback, students expressed the value and appreciation for the PI training. Students also expressed the need to provide this training to large masses for developing an emotionally mature society of parents, teachers, and students, producing creative, innovative, and emphatic civilization.
+AD  - Univ Dist Columbia, Mech Engn, Washington, DC 20523 USAPY  - 2020
+C7  - V009T09A035
+AN  - WOS:001234767400035
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  0
+ER  -
+
