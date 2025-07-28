@@ -1,0 +1,27 @@
+# R
+.Rhistory
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+
+# Notebooks
+*.ipynb_checkpoints/
+
+# Archivos pesados
+*.zip
+*.rds
+*.csv
+*.sav
+*.xlsx
+*.mp4
+*.mov
+
+# Editor
+.DS_Store
+.vscode/
+
+# HTML build
+*.log
+node_modules/
