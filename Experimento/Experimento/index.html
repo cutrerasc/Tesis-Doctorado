@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consentimiento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido/a al estudio</h1>
+  </header>
+  <main>
+    <form id="ConsentimientoInformado">
+      <p>Este estudio tiene como objetivo entender cómo las emociones influyen en el aprendizaje sobre el proceso de jubilación en Chile.</p>
+      <p><strong>Duración estimada:</strong> Aproximadamente 30 minutos.</p>
+      <p>Su participación es completamente anónima...</p>
+      <p>Contacto: <a href="mailto:cutrerasc@udd.cl">correo</a></p>
+
+      <!-- En local no puedes incrustar PDF con ${this.files[...]}, usa una ruta válida si quieres -->
+      <iframe src="Consentimiento-Informado.pdf" class="iframeObject"></iframe>
+
+      <div class="myContainer">
+        <input type="checkbox" id="checkbox" name="consent" required>
+        <label for="checkbox">He leído el consentimiento y quiero participar</label>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <button form="ConsentimientoInformado" type="submit" class="continueButton">Continuar</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

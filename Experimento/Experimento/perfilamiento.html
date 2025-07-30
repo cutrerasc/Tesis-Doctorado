@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consentimiento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 class="h1"> Preguntas de Perfilamiento</h1>
+</header>
+<main>
+  <form id="PreguntasPerfilamiento">
+    <p class="paragraph"> A continuación usted deberá contestar algunas preguntas respecto a su situación actual, estas preguntas servirán para posicionarlo en algun perfil de aprendizaje. </p>
+
+<p> <b>¿Cómo se describiría a si mismo?</b> </p>
+  <input type="radio" id="gender_1" name="gender" value="1" required><label class="labelInputs" for="gender_1">Hombre</label><br>
+  <input type="radio" id="gender_2" name="gender" value="2"><label class="labelInputs" for="gender_2">Mujer</label><br>
+  <input type="radio" id="gender_3" name="gender" value="3"><label class="labelInputs" for="gender_3">No binario/ tercer género</label><br>
+  <input type="radio" id="gender_4" name="gender" value="4"><label class="labelInputs" for="gender_4">Otro</label>:
+  <input id="description" type="text" name="gender_text" disabled><br>
+  <input type="radio" id="gender_5" name="gender" value="5"><label class="labelInputs" for="gender_5">Prefiero no decirlo</label><br>
+
+
+<p> <b>¿Qué edad tiene?</b> </p>
+  <input type="radio" id="age_1" name="age" value="1" required><label class="labelInputs" for="age_1">Menos de 18</label><br>
+  <input type="radio" id="age_2" name="age" value="2"><label class="labelInputs"  for="age_2">18-30</label><br>
+  <input type="radio" id="age_3" name="age" value="3"><label class="labelInputs"  for="age_3">31-40</label><br>
+  <input type="radio" id="age_4" name="age" value="4"><label class="labelInputs" for="age_4">41-50</label><br>
+  <input type="radio" id="age_5" name="age" value="5"><label class="labelInputs"  for="age_5">51-60</label><br>
+  <input type="radio" id="age_6" name="age" value="6"><label class="labelInputs" for="age_6">+61 años</label><br>
+
+
+
+<p> <b> ¿Tiene cónyuge o esta unido/a civilmente?</b></p>
+<!-- Si la respuesta es si, se va a Bl -->
+<input type="radio" id="estadoCivil_1" name="estadoCivil" value="1" required><label class="labelInputs" for="estadoCivil_1"> Si</label><br>
+<input type="radio" id="estadoCivil_2" name="estadoCivil" value="2"><label class="labelInputs" for="estadoCivil_2"> No</label><br>
+
+<p> <b> ¿Tiene hijos menores de 18 años o menores de 24 años que se encuentren estudiando?</b></p>
+<!-- Si la respuesta es si, se va a Bl -->
+<input type="radio" id="hijos_1" name="hijos" value="1" required><label class="labelInputs" for="hijos_1"> Si</label><br>
+<input type="radio" id="hijos_2" name="hijos" value="2"><label class="labelInputs" for="hijos_2"> No</label><br>
+
+<p> <b> ¿Ha ahorrado en el sistema previsional Chileno AFP? </b></p>
+<input type="radio" id="ahorros_1" name="ahorros" value="1" required><label class="labelInputs" for="ahorros_1"> Si</label><br>
+<input type="radio" id="ahorros_2" name="ahorros" value="2"><label class="labelInputs" for="ahorros_2"> No</label><br>
+
+<p> <b> Aproximadamente, ¿Cual ha sido su nivel de ingresos promedio los últimos 5 años? </b></p>
+<!-- Para esta pregunta tendré que escoger a las personas que ganan sobre 500 mil pesos para posicionarlos en el grupo de si SCOMP -->
+<input type="radio" id="nivelIngreso_1" name="nivelIngreso" value="1" required><label class="labelInputs" for="nivelIngreso_1"> Menos de $250.000</label><br>
+<input type="radio" id="nivelIngreso_2" name="nivelIngreso" value="2"><label class="labelInputs" for="nivelIngreso_2">$250.000 – $500.000 </label><br>
+<input type="radio" id="nivelIngreso_3" name="nivelIngreso" value="3"><label class="labelInputs" for="nivelIngreso_3">$500.001 – $750.000 </label><br>
+<input type="radio" id="nivelIngreso_4" name="nivelIngreso" value="4"><label class="labelInputs" for="nivelIngreso_4">750.001 – $1.000.000 </label><br>
+<input type="radio" id="nivelIngreso_5" name="nivelIngreso" value="5"><label class="labelInputs" for="nivelIngreso_5">Más de $1.000.000 </label><br>
+<input type="radio" id="nivelIngreso_5" name="nivelIngreso" value="5"><label class="labelInputs" for="nivelIngreso_5">Prefiero no responder </label><br>
+<!--
+<p> <b> ¿Qué tan cómodo/a se siente enfrentando situaciones en las que debe aprender algo nuevo?</b></p>
+<input type="radio" id="apredizaje_1" name="aprendizaje" value="1" required><label class="labelInputs" for="aprendizaje_1"> Muy cómodo/a><br>
+<input type="radio" id="apredizaje_2" name="aprendizaje" value="2" required><label class="labelInputs" for="aprendizaje_2"> Algo cómodo/a><br>
+<input type="radio" id="apredizaje_3" name="aprendizaje" value="3" required><label class="labelInputs" for="aprendizaje_3"> Neutral><br>
+<input type="radio" id="apredizaje_4" name="aprendizaje" value="4" required><label class="labelInputs" for="aprendizaje_4"> Algo incómodo/a ><br>
+<input type="radio" id="apredizaje_5" name="aprendizaje" value="5" required><label class="labelInputs" for="aprendizaje_5"> Muy incómodo/a><br>
+-->
+<p> <b>Cuando necesita aprender algo nuevo (por ejemplo, usar una aplicación, entender un trámite o aprender un proceso), ¿cómo suele sentirse?</b></p>
+<input type="radio" id="comodidad_1" name="comodidad" value="1" required><label class="labelInputs" for="comodidad_1"> Me entusiasma y aprendo rápido</label> <br>
+<input type="radio" id="comodidad_2" name="comodidad" value="2"><label class="labelInputs" for="comodidad_2"> Me lo tomo con calma, pero lo logro sin dificultad</label> <br>
+<input type="radio" id="comodidad_3" name="comodidad" value="3" ><label class="labelInputs" for="comodidad_3"> A veces necesito ayuda, pero lo consigo</label> <br>
+<input type="radio" id="comodidad_4" name="comodidad" value="4" ><label class="labelInputs" for="comodidad_4"> Me cuesta bastante y me frustro fácilmente</label> <br>
+<input type="radio" id="comodidad_5" name="comodidad" value="5" ><label class="labelInputs" for="comodidad_5"> Trato de evitarlo o prefiero que alguien más lo haga por mí</label> <br>
+
+
+<p> <b> ¿Alguna vez ha acompañado a alguien en su proceso de pensión o ha realizado el proceso para si mismo/a? </b></p>
+  <input type="radio" id="acompañamiento_1" name="acompañamiento" value="1" required><label class="labelInputs" for="acompañamiento_1"> Si</label> <br>
+  <input type="radio" id="acompañamiento_2" name="acompañamiento" value="2" ><label class="labelInputs" for="acompañamiento_2"> No</label> <br>
+
+<p> <b> ¿Qué tanto cree usted que conoce sobre el proceso de pensiones en Chile? </b></p>
+<input type="radio" id="conocimiento_1" name="conocimiento" value="1" required><label class="labelInputs" for="conocimiento_1"> Lo conozco muy bien y podría explicárselo a otra persona</label> <br>
+<input type="radio" id="conocimiento_2" name="conocimiento" value="2" ><label class="labelInputs" for="conocimiento_2"> Lo entiendo en términos generales</label> <br>
+<input type="radio" id="conocimiento_3" name="conocimiento" value="3" ><label class="labelInputs" for="conocimiento_3"> Conozco algunas partes, pero no el proceso completo </label><br>
+<input type="radio" id="conocimiento_4" name="conocimiento" value="4" ><label class="labelInputs" for="conocimiento_4"> He escuchado sobre el tema, pero no lo entiendo bien </label><br>
+<input type="radio" id="conocimiento_5" name="conocimiento" value="5" ><label class="labelInputs" for="conocimiento_5"> No sé prácticamente nada sobre el proceso </label><br>
+  </form>
+</main>
+
+
+
+<footer>
+    <button form="PreguntasPerfilamiento" id="continuar" class="continueButton" type="button">Continuar</button>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
