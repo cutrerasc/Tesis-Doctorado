@@ -3,13 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Preguntas de Conocimiento</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
     <h1 class="h1"> Preguntas de Conocimiento</h1>
   </header>
   <main>
+    <!-- Preguntas comunes para todos los perfiles -->
+<div id="form_comun">
+  <form id="PreguntasConocimientoComunes">
+    <p class="paragraph"> A continuación usted deberá contestar algunas preguntas de conocimiento sobre el proceso de jubilación </p>
+    <p><b>Pregunta común 1. ¿Qué es una pensión?</b></p>
+    <input type="radio" name="comun1" value="1" required> Una mensualidad para la jubilación<br>
+    <input type="radio" name="comun1" value="0"> Un subsidio estatal<br>
+    <input type="radio" name="comun1" value="0"> Un fondo de inversión voluntario<br><br>
+
+    <p><b>Pregunta común 2. ¿Quién regula el sistema de pensiones en Chile?</b></p>
+    <input type="radio" name="comun2" value="1" required> Superintendencia de Pensiones<br>
+    <input type="radio" name="comun2" value="0"> La CMF<br>
+    <input type="radio" name="comun2" value="0"> Las AFP directamente<br><br>
+
+    <!-- Agrega aquí más preguntas comunes si las tienes -->
+  </form>
+</div>
+
     <!-- 🔹 Formulario A: SCOMP=1 y Beneficiarios=1 -->
 <div id="form_A" class="formulario" style="display:none;">
   <form id="PreguntasConocimientoScompBl">
@@ -71,7 +89,6 @@
     <!-- 🔹 Formulario B: SCOMP=0 y Beneficiarios=1 -->
 <div id="form_B" class="formulario" style="display:none;">
 <form id="PreguntasConocimientosinScompBl">
-<p class="paragraph"> A continuación usted deberá contestar algunas preguntas de conocimiento sobre el proceso de jubilación </p>
 
 <p><b>1. ¿Qué debes hacer primero para iniciar el proceso de pensión si no puedes acceder al SCOMP?</b></p>
 <input type="radio" id="Bpreg1_1" name="Bpreg1" value="0" required> <label class="labelInputs" for="Bpreg1_1">Solicitar tu certificado de nacimiento</label><br>
@@ -129,7 +146,6 @@
     <!-- 🔹 Formulario C: SCOMP=1 y Beneficiarios=0 -->
 <div id="form_C" class="formulario" style="display:none;">
 <form id="PreguntasConocimientoScomp">
-<p class="paragraph"> A continuación usted deberá contestar algunas preguntas de conocimiento sobre el proceso de jubilación </p>
 
 <p><b>1. ¿Puedes optar por renta vitalicia sin declarar beneficiarios?</b></p>
 <input type="radio" id="Spreg1_1" name="Spreg1" value="0" required> <label class="labelInputs" for="Spreg1_1">No, es obligatorio declarar beneficiarios</label><br>
@@ -187,7 +203,6 @@
     <!-- 🔹 Formulario D: SCOMP=0 y Beneficiarios=0 -->
 <div id="form_D" class="formulario" style="display:none;">
 <form id="PreguntasConocimientosinScompniBl">
-<p class="paragraph"> A continuación usted deberá contestar algunas preguntas de conocimiento sobre el proceso de jubilación </p>
 
 <p><b>1. ¿Qué modalidad de pensión es más común para quienes no tienen derecho a SCOMP?</b></p>
 <input type="radio" id="preg1_1" name="preg1" value="0" required> <label class="labelInputs" for="preg1_1">Renta vitalicia</label><br>
@@ -245,6 +260,6 @@
 <footer>
     <button class="continueButton" type="button">Continuar</button>
 </footer>
-  <script src="script.js"></script>
+  <script src="../Pantallas_Script/preguntasConocimiento.js"></script>
 </body>
 </html>
