@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modalidades de Pensión</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Modalidades de Pensión</h2>
+  <p>Selecciona una modalidad para conocer más detalles:</p>
+  <button class="boton" onclick="cargarContenido('renta_vitalicia.html')">Renta Vitalicia</button>
+  <button class="boton" onclick="cargarContenido('retiro_programado.html')">Retiro Programado</button>
+  <button class="boton" onclick="cargarContenido('renta_temporal_diferida.html')">Renta Temporal + Vitalicia Diferida</button>
+  <button class="boton" onclick="cargarContenido('mixta.html')">Renta Mixta</button>
+
+  <!-- Contenedor donde se cargan los contenidos -->
+  <iframe id="visorContenido" src=""></iframe>
+
+
+  <script>
+    function cargarContenido(archivo) {
+      document.getElementById('visorContenido').src = archivo;
+    }
+  </script>
+</body>
+</html>

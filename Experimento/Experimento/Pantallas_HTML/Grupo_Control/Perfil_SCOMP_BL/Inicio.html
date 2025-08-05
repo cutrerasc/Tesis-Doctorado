@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal de Pensiones - Perfil A</title>
+  <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Portal de Pensiones</h1>
+    <p>Selecciona los temas que quieras explorar. Puedes navegar libremente.</p>
+  </header>
+
+  <main class="tarjetas-container">
+    <div class="tarjeta" onclick="abrirPopup('popupGenerales')">📊 Conceptos Generales</div>
+    <div class="tarjeta" onclick="abrirPopup('popupEntidades')">💰 Entidades Relacionadas</div>
+    <div class="tarjeta" onclick="abrirPopup('popupAportes')">💰 Aportes y Cotizaciones</div>
+    <div class="tarjeta" onclick="abrirPopup('popupProceso')">🎁 Proceso de Pensión</div>
+    <div class="tarjeta" onclick="abrirPopup('popupModalidades')">💼 Modalidades de Pensión</div>
+    <div class="tarjeta" onclick="abrirPopup('popupBeneficiarios')">🎉 Beneficiarios Legales y Pensión de Sobrevivencia</div>
+    <div class="tarjeta" onclick="abrirPopup('popupHerencia')">📋 Herencia</div>
+    <div class="tarjeta" onclick="abrirPopup('popupAportesVoluntarios')">💵 Aportes Voluntarios</div>
+    <div class="tarjeta" onclick="abrirPopup('popupAportesELD')">🤝 Excedentes de Libre Disposición</div>
+    <div class="tarjeta" onclick="abrirPopup('popupComisiones')"> Comisiones </div>
+  </main>
+
+  <!-- Popup Conceptos Generales -->
+  <div id="popupGenerales" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupGenerales')">&times;</span>
+      <iframe src="contenidos/generales/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Conceptos Entidades -->
+  <div id="popupEntidades" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupEntidades')">&times;</span>
+      <iframe src="contenidos/entidades/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+
+    <!-- Popup Aportes y Cotizaciones -->
+    <div id="popupAportes" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupAportes')">&times;</span>
+      <iframe src="contenidos/aportes/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Proceso de Pensión -->
+    <div id="popupProceso" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupProceso')">&times;</span>
+      <iframe src="contenidos/proceso/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    </div>
+
+  <!-- Popup Modalidades -->
+  <div id="popupModalidades" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupModalidades')">&times;</span>
+      <iframe src="contenidos/modalidades/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Beneficiarios -->
+    <div id="popupBeneficiarios" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupBeneficiarios')">&times;</span>
+      <iframe src="contenidos/beneficiarios/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Herencia --> 
+    <div id="popupHerencia" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupHerencia')">&times;</span>
+      <iframe src="contenidos/herencia/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+  
+    <!-- Popup Aportes Voluntarios -->
+    <div id="popupAportesVoluntarios" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupAportesVoluntarios')">&times;</span>
+      <iframe src="contenidos/aportes_voluntarios/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    </div>
+
+    <!-- Popup Excedentes de Libre Disposición -->
+    <div id="popupAportesELD" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupAportesELD')">&times;</span>
+      <iframe src="contenidos/excedentes_libre_disposicion/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Comisiones -->
+    <div id="popupComisiones" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" onclick="cerrarPopup('popupComisiones')">&times;</span>
+      <iframe src="contenidos/comisiones/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    </div>
+    
+    
+  <script src="../../../Pantallas_Script/Grupo_Control/Perfil_SCOMP_BL/inicio.js"></script>
+</body>
+</html>
