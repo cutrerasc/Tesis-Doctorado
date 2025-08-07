@@ -1,14 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Renta Vitalicia</title>
-  <style>
-    body { font-family: Arial; padding: 20px; text-align: left; }
-  </style>
+ <link rel="stylesheet" href="/Experimento/Experimento/style.css">
 </head>
 <body>
+
   <h2>Renta Vitalicia</h2>
-  <p>Es un contrato con una compañía de seguros que se compromete a pagarte una pensión fija mensual durante toda tu vida.</p>
+  <p>A continuación se presentan los conceptos asociados:</p>
+
+  <!-- Copia y pega bloques como este para cada concepto -->
+  <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Renta Vitalicia
+    </div>
+    <div class="acordeon-contenido">
+      <p>Contrato con una compañía de seguros que entrega una pensión fija mensual de por vida,
+expresada en UF. Es una modalidad irrevocable y predecible, donde la aseguradora asume
+el riesgo de longevidad y rentabilidad. En caso de fallecimiento del titular, los pagos pueden
+continuar hacia los beneficiarios legales si los hubiera.</p>
+    </div>
+  </div>
+
+    <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Requisitos Renta Vitalicia
+    </div>
+    <div class="acordeon-contenido">
+      <p>Para acceder a una Renta Vitalicia, el afiliado debe cumplir con los requisitos para
+pensionarse. Además de haber solicitado ofertas a través del SCOMP. También debe contar
+con los fondos suficientes para financiar una renta vitalicia simple mayor a 2 UF.</p>
+    </div>
+  </div>
+
+      <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Condiciones Especiales Renta Vitalicia
+    </div>
+    <div class="acordeon-contenido">
+      <p>Contratos de renta vitalicia pueden incluir cláusulas adicionales como:
+        <ul>
+<li>Periodo garantizado de pago</li> 
+<li>Cláusula de aumento de pensión de sobrevivencia</li>
+<li>Cláusula de aumento temporal de pensión (escalonada), aplicable solo para pensiones de vejez o invalidez, y solo en modalidad de renta vitalicia inmediata.</li>
+        </ul>
+Estas cláusulas mejoran cobertura a los beneficiarios, pero implican condiciones y costos
+adicionales.</p>
+    </div>
+  </div>
+
+      <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Periodo Garantizado de pago
+    </div>
+    <div class="acordeon-contenido">
+      <p>Esta condición especial de cobertura implica que si la afiliada o el afiliado fallece antes del
+término del periodo garantizado, la CSV le garantiza el pago del 100% de la pensión
+contratada distribuida entre sus beneficiarias y/o beneficiarios legales, por todo el tiempo
+remanente. Al término de dicho periodo, el pago de las pensiones de sobrevivencia se hará
+en los porcentajes que establece la ley.</p>
+    </div>
+  </div>
+
+        <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Clausula Incremento Sobrevivencia
+    </div>
+    <div class="acordeon-contenido">
+      <p>Consiste en que al fallecimiento de la afiliada o el afiliado, la CSV pagará a su cónyuge y
+demás beneficiarias y/o beneficiarios el monto de la renta vitalicia contratada, pero en un
+porcentaje superior al que establece la ley para las y los beneficiarios de pensión de
+sobrevivencia. Esta opción sólo puede ser solicitada por una afiliada o un afiliado que tenga
+cónyuge.</p>
+    </div>
+  </div>
+
+          <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Aumento Temporal
+    </div>
+    <div class="acordeon-contenido">
+      <p>Cláusula que permite recibir una renta mayor durante los primeros meses tras la jubilación
+(por ejemplo, 12–60 meses) y luego reducirla al monto de la pensión vitalicia seleccionada.
+Solo disponible con renta vitalicia inmediata y contratada junto al periodo garantizado.</p>
+    </div>
+  </div>
+
+            <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Calculo Renta Vitalicia
+    </div>
+    <div class="acordeon-contenido">
+      <p>EJEMPLO NO DEFINICIÓN: Se calcula a partir de una prima única transferida a la
+aseguradora. La pensión fija mensual depende de: edad del afiliado, monto transferido, tasa
+de interés técnica vigente y coberturas contratadas. A diferencia del Retiro Programado, el
+monto no varía y es seguro de por vida.</p>
+    </div>
+  </div>
+
+
+<script>
+  function toggleAcordeon(elemento) {
+    const contenido = elemento.nextElementSibling;
+    const yaVisible = contenido.style.display === "block";
+    document.querySelectorAll('.acordeon-contenido').forEach(div => div.style.display = 'none');
+    if (!yaVisible) contenido.style.display = "block";
+  }
+</script>
+
 </body>
 </html>

@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Retiro Programado</title>
-  <style>
-    body { font-family: Arial; padding: 20px; text-align: left; }
-  </style>
+ <link rel="stylesheet" href="/Experimento/Experimento/style.css">
 </head>
 <body>
   <h2>Retiro Programado</h2>
   <p>La AFP paga tu pensión mes a mes desde tu cuenta individual. El monto se recalcula anualmente en función de tu saldo y expectativa de vida.</p>
+
+  <script>
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      parent.cerrarPopup('popupContenidoConcepto');
+    }
+  });
+</script>
+
 </body>
 </html>

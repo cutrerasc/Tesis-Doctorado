@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Renta Mixta</title>
-  <style>
-    body { font-family: Arial; padding: 20px; text-align: left; }
-  </style>
+   <link rel="stylesheet" href="/Experimento/Experimento/style.css">
 </head>
 <body>
   <h2>Renta Vitalicia Inmediata con Retiro Programado</h2>
   <p>Una parte de tu pensión es financiada con retiro programado (AFP) y otra parte con una renta vitalicia inmediata (aseguradora).</p>
+
+  <script>
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      parent.cerrarPopup('popupContenidoConcepto');
+    }
+  });
+</script>
+
+
 </body>
 </html>

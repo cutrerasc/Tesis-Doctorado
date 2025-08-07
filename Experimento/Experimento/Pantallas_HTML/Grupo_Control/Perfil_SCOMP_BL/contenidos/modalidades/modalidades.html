@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modalidades de Pensión</title>
+  <link rel="stylesheet" href="/Experimento/Experimento/style.css">
+</head>
+<body>
+
+<h2>Modalidades de Pensión</h2>
+
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Modalidades de Pensiones</div>
+  <div class="acordeon-contenido">
+    <p>Al llenar el formulario del SCOMP, el afiliado puede elegir entre distintas modalidades de pensión...</p>
+
+    <p>Tipos de modalidad:</p>
+    <div class="sub-botones">
+      <button onclick="abrirPopup('popup_renta_vitalicia')">Renta Vitalicia</button>
+      <button onclick="abrirPopup('popup_retiro_programado')">Retiro Programado</button>
+      <button onclick="abrirPopup('popup_renta_temporal_diferida')">Renta Temporal + Diferida</button>
+      <button onclick="abrirPopup('popup_renta_mixta')">Renta Mixta</button>
+    </div>
+  </div>
+</div>
+
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Comparación de Modalidades</div>
+  <div class="acordeon-contenido">
+    <p>Comparativa clara entre las principales modalidades:
+• Retiro Programado (RP): la AFP administra el saldo y lo paga periódicamente, ajustando anualmente el monto según saldo, expectativa de vida y tasa de interés técnica.
+• Renta Vitalicia (RV): la aseguradora recibe los fondos y paga una renta fija mensual de por vida, asumiendo el riesgo de longevidad.
+• Modalidades combinadas: pueden incluir parte en RP y parte en RV (por ejemplo, Renta Vitalicia con Retiro Programado).</p>
+  </div>
+</div>
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Expectativa de Vida</div>
+  <div class="acordeon-contenido">
+    <p>Estimación del número de años que se espera que viva un afiliado tras jubilar. En Retiro Programado, sirve para dividir el saldo disponible en anualidades. En Renta Vitalicia, la aseguradora asume ese riesgo, por lo que la pensión es fija aun si se vive más de lo estimado.</p>
+  </div>
+</div>
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Riesgo de Longevidad</div>
+  <div class="acordeon-contenido">
+    <p>El riesgo de longevidad se refiere a la posibilidad de que una persona viva más años de lo previsto al momento de jubilar, lo que puede implicar que sus fondos previsionales se agoten antes de fallecer. 
+Este riesgo es particularmente relevante en modalidades como el Retiro Programado, donde los pagos mensuales dependen del saldo disponible en la cuenta individual. 
+En contraste, en una Renta Vitalicia, dicho riesgo es asumido por la compañía de seguros, la cual debe garantizar pagos durante toda la vida del pensionado, independientemente de su duración.</p>
+  </div>
+</div>
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Riesgo de Rentabilidad</div>
+  <div class="acordeon-contenido">
+    <p>El riesgo de rentabilidad corresponde a la variación que pueden experimentar los fondos previsionales debido a cambios en los mercados financieros. 
+Dado que los recursos se invierten en instrumentos de renta fija y variable, los resultados pueden ser positivos o negativos, afectando directamente el saldo acumulado. 
+Esta volatilidad implica que el monto final de la pensión no está garantizado, especialmente en modalidades como el Retiro Programado. 
+Por esta razón, el sistema ofrece multifondos con diferentes niveles de riesgo, permitiendo una gestión acorde al perfil y etapa de vida del afiliado.</p>
+  </div>
+</div>
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Tasa de Interés Técnica de Retiro Programado</div>
+  <div class="acordeon-contenido">
+    <p>Son tasas que se usan para calcular cuánto recibirás cada mes si eliges una modalidad de pensión llamada Retiro Programado o una Renta Temporal.
+
+Estas tasas las publica la Superintendencia de Pensiones regularmente y reflejan una estimación de cuánto podrían rentar tus ahorros en el tiempo. Ayudan a proyectar el monto mensual que podrías recibir.</p>
+  </div>
+</div>
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Tasa de Interés</div>
+  <div class="acordeon-contenido">
+    <p>Es el porcentaje que usa la aseguradora para calcular cuánto dinero mensual puede pagarle al afiliado, considerando el dinero que recibe (el saldo de pensión) y cuánto podría ganar invirtiéndolo.</p>
+  </div>
+</div>
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Cambio de Modalidad</div>
+  <div class="acordeon-contenido">
+    <p>Quienes optan inicialmente por Retiro Programado pueden cambiar posteriormente a una Renta Vitalicia u otra modalidad, siempre que aún existan fondos en su cuenta individual.
+No es posible revertir desde RV a RP por ser irrevocable.</p>
+  </div>
+</div>
+
+<!-- Popups para cada modalidad -->
+<div id="popup_renta_vitalicia" class="popup">
+  <div class="popup-contenido">
+    <span class="cerrar" onclick="cerrarPopup('popup_renta_vitalicia')">&times;</span>
+    <iframe src="renta_vitalicia.html" ></iframe>
+  </div>
+</div>
+
+<div id="popup_retiro_programado" class="popup">
+  <div class="popup-contenido">
+    <span class="cerrar" onclick="cerrarPopup('popup_retiro_programado')">&times;</span>
+    <iframe src="retiro_programado.html" ></iframe>
+  </div>
+</div>
+
+<div id="popup_renta_temporal_diferida" class="popup">
+  <div class="popup-contenido">
+    <span class="cerrar" onclick="cerrarPopup('popup_renta_temporal_diferida')">&times;</span>
+    <iframe src="renta_temporal_diferida.html"></iframe>
+  </div>
+</div>
+
+<div id="popup_renta_mixta" class="popup">
+  <div class="popup-contenido">
+    <span class="cerrar" onclick="cerrarPopup('popup_renta_mixta')">&times;</span>
+    <iframe src="mixta.html" ></iframe>
+  </div>
+</div>
+
+<script src="modalidades.js"></script>
+</body>
+</html>
