@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\geometry{margin=2.5cm}
+\onehalfspacing
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\fancyhf{} % Limpia los encabezados y pies de página
+\renewcommand{\headrulewidth}{0.4pt} % Línea bajo el encabezado
+\renewcommand{\footrulewidth}{0pt} % Sin línea sobre el pie de página
+
+% Definición del encabezado
+\fancyhead[L]{\includegraphics[height=1.5cm]{logo_universidad.png}}
+\fancyhead[C]{\small{
+    \begin{tabular}{c}
+        \textbf{Universidad [Nombre de la Universidad]} \\
+        Facultad de [Nombre de la Facultad] \\
+        Departamento de [Nombre del Departamento]
+    \end{tabular}
+}}
+\fancyhead[R]{}
+
+% Definición del pie de página
+\fancyfoot[L]{Proyecto de Tesis Doctoral}
+\fancyfoot[R]{\thepage}
+
+\begin{document}
+
+% Título y datos del estudiante
+\begin{center}
+    \vspace*{2cm}
+    
+    {\LARGE \textbf{Título del Proyecto de Tesis Doctoral}}
+    
+    \vspace{1.5cm}
+    
+    \textbf{Nombre del Estudiante}
+    
+    \vspace{1cm}
+    
+    Proyecto de tesis doctoral presentado para la obtención del grado de Doctor en [Campo de Estudio]
+    
+    \vspace{2cm}
+    
+    [Mes, Año]
+    
+    \vspace{2cm}
+\end{center}
+
+\thispagestyle{fancy} % Aplica el estilo 'fancy' a la primera página
+
+% Índice
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+Presenta una visión general del tema de investigación, su relevancia y contexto.
+
+\section{Justificación}
+
+Explica la importancia del estudio y por qué es necesario investigar este tema.
+
+\section{Objetivos}
+
+\subsection{Objetivo General}
+
+Enuncia el objetivo principal de la investigación.
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+    \item Objetivo específico 1
+    \item Objetivo específico 2
+    \item Objetivo específico 3
+\end{itemize}
+
+\section{Marco Teórico}
+
+Desarrolla las teorías y conceptos fundamentales relacionados con el tema.
+
+\section{Metodología}
+
+Describe el diseño de investigación, métodos, técnicas y procedimientos que se utilizarán.
+
+\section{Cronograma}
+
+Presenta un plan de trabajo detallado con las etapas y tiempos estimados.
+
+\section{Referencias}
+
+\bibliographystyle{apalike}
+\bibliography{bibliografia}
+
+\end{document}

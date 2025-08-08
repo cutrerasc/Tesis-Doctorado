@@ -1,0 +1,289 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{comment}
+\usepackage{etoolbox}
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+
+% To make cites and references
+%\usepackage{natbib}
+\usepackage[hidelinks,pdfusetitle,pdfdisplaydoctitle]{hyperref}
+\usepackage[notocbib]{apacite} 
+\usepackage{doi}
+\renewcommand{\doitext}{}
+
+%Para las tablas 
+\usepackage{array}
+\usepackage{longtable}
+%\usepackage{nopageno}
+\date{}
+\title{Preguntas de Investigación}
+\begin{document}
+\maketitle
+
+Se supone que yo debo tener dos proyectos para presentar de aquí a diciembre. Mis ideas son 2: 
+
+\begin{itemize}
+    \item En primer lugar, un estudio teórico que intente determinar cual es la secuencia óptima de aprendizaje en adultos sobre la temática de pensiones. Referencias a partir del estudio de Óscar Vázquez. 
+
+    \item En segundo lugar un estudio de corte experimental que busque determinar si las emociones (y cuales emociones) podrían mejorar la atención dentro de la secuencia óptima de aprendizaje descrita anteriormente. 
+\end{itemize}
+
+Debo crear además, una carta gantt para cada proyecto, considerando los principales hitos y las personas que podrían apoyar en cada etapa. 
+
+\section{Estudio 1}
+
+Este estudio esta inspirado en el estudio de Óscar Vásquez quien propone una variante del problema clásico de la mochila, que introduce la noción de programación de artículos y la variabilidad de sus contribuciones al beneficio total dependiendo de su posición en la mochila, considerando funciones convexas no monotónicas que varían en función de la posición del artículo en la mochila. 
+
+En el contexto de aprendizaje en pensiones los modelos y enfoques presentados en el artículo sobre el problema de la mochila con artículos programados podrían ser útiles para estructurar y optimizar una secuencia de aprendizaje para adultos. Aunque el problema de la mochila es un problema clásico de optimización combinatoria aplicado en escenarios de recursos limitados, hay paralelismos claros que podrías aplicar a la optimización de secuencias de aprendizaje.
+
+Primero a través de la asignación óptima de recursos como por ejemplo, el tiempo y los esfuerzos cognitivos. En específico el problema genérico se podría modelar como: 
+\begin{itemize}
+    \item Índices: 
+    \begin{itemize}
+        \item $i$: Contenido
+        \item $j$: Posición 
+    \end{itemize}
+    \item Parámetros: 
+    \begin{itemize}
+        \item $T_i$: Tiempo estimado en comprender el contenido i  
+        \item $EC_i$: Esfuerzo cognitivo estimado en comprender el contenido i
+        \item $W_{ij}$: Peso estimado del contenido $i$ en la posición $j$ (Definir los pesos no es tarea fácil) 
+        \item $A_i$: Aprendizaje esperado del contenido i, corresponde a una función por definir. 
+    \end{itemize}
+    \item Variables de Decisión 
+    \begin{itemize}
+         \item $x_{ij} = 1$: si decido colocar el objetivo de aprendizaje i en la posición j.
+    \end{itemize}
+       
+    \item Función Obj
+    \begin{align*}
+        \text{Max Aprendizaje}= \sum{A_i*x_{ij}}
+    \end{align*}
+    \item Restricciones
+    \begin{itemize}
+        \item No superar el 100\% del esfuerzo cognitivo
+        \item No superar el 100\% de tiempo disponible 
+        \item No superar el 100\% del espacio
+    \end{itemize}
+\end{itemize}
+
+Entonces, a través de un modelo similar al anterior, es posible  maximizar el valor educativo total (Aprendizaje) dentro de un límite (por ejemplo, el tiempo disponible o la capacidad cognitiva). Así, el modelo debería seleccionar y ordenar los contenidos de manera que aporten el mayor valor posible dentro de estos límites.
+
+Segundo, utilizando funciones no lineales, se podrían modelar cómo ciertos temas de pensiones se benefician de ser presentados antes o después que otros. Por ejemplo, aprender primero sobre pensiones públicas y cómo se obtienen podría aumentar la retención de información sobre otros temas como por ejemplo pensiones privadas y sus condiciones, lo que representa una función de beneficio que varía según el orden de los temas.
+
+Tercero, utilizando algoritmos de Greedy se podrían seleccionar los temas más importantes y secuenciarlos de manera que el contenido con mayor "beneficio" educativo (por ejemplo, temas más relevantes o de mayor impacto) se enseñe en los momentos más efectivos. El algoritmo también permitiría ajustar la secuencia si existen restricciones adicionales (como un tiempo limitado para cada tema o variaciones en la capacidad cognitiva de las personas).
+
+\subsection{Revisión de Literatura}
+Para la revisión de la literatura, buscar: 
+\begin{enumerate}
+    \item Problema de la mochila (Knapsack Problem):
+    \begin{itemize}
+    \item "Knapsack Problems" por Kellerer, Pferschy, y Pisinger (2004): Este libro ofrece una revisión completa de las variantes del problema de la mochila. Es considerado una de las fuentes más exhaustivas sobre este tema, abarcando desde el problema clásico hasta las extensiones más complejas, como el problema de la mochila no lineal y el problema de la mochila multidimensional.
+    \item "The Quadratic Knapsack Problem: A Survey" por David Pisinger (2007): Este artículo ofrece una revisión de las variantes cuadráticas del problema de la mochila, un tema muy relacionado con problemas de optimización en secuencias donde las interacciones entre elementos juegan un rol importante.
+\end{itemize}
+    \item Optimización en Secuencias de Aprendizaje
+    \begin{itemize}
+        \item "Dynamic Programming" por Richard Bellman (1957): Aunque no es directamente sobre el problema de la mochila, Bellman es uno de los pioneros en la optimización de procesos secuenciales, lo que influye en la creación de secuencias óptimas de aprendizaje. Su enfoque de programación dinámica es crucial para el diseño de modelos que optimizan la secuencia de decisiones en el tiempo, y se puede aplicar al diseño de currículos o secuencias de aprendizaje.
+        \item "Scheduling Algorithms" por Peter Brucker (1998): Aunque este libro aborda problemas de programación más generales, proporciona herramientas y algoritmos que son aplicables a la creación de secuencias de aprendizaje. Muchas de las técnicas de programación utilizadas en la enseñanza están basadas en la optimización de recursos, un campo que Brucker explora en detalle.
+    \end{itemize}
+    \item Teorías de Aprendizaje y Optimización
+    \begin{itemize}
+        \item "Instructional Design Theories and Models" por Charles M. Reigeluth (1983): Aunque este trabajo se centra más en la teoría de la instrucción que en la optimización matemática, es un referente clave en la estructuración de secuencias de aprendizaje. Reigeluth discute cómo organizar contenidos educativos de manera que maximicen el aprendizaje, lo que podría complementarse con un enfoque de optimización.
+    \end{itemize}
+    \item  Aplicaciones del problema de la mochila en educación
+    \begin{itemize}
+        \item "Optimization of Educational Systems Using Knapsack Problem" por Nasim Zandi Atashbar and Fahimeh Rahimi (2012): Este artículo presenta una aplicación directa del problema de la mochila en el campo de la educación, en este contexto, el objetivo es seleccionar el material educativo que maximice el beneficio del estudiante dentro de las limitaciones de tiempo disponibles. El modelo toma en cuenta el rendimiento del estudiante y el tiempo necesario para cada elemento de aprendizaje, y luego optimiza la selección de contenido utilizando el enfoque de mochila para mejorar el aprendizaje dentro de esas restricciones.
+    \end{itemize}
+    \item Teorías de secuenciación de aprendizaje
+    \begin{itemize}
+        \item "The Conditions of Learning" por Robert Gagné (1965): Este trabajo clásico de Gagné es fundamental para cualquier discusión sobre cómo organizar y secuenciar el aprendizaje. Gagné plantea que el aprendizaje ocurre en fases, y que cada nueva fase depende de la correcta adquisición de la fase anterior. Esto se puede conectar con un enfoque de optimización donde se busca la secuencia más eficiente para enseñar.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Estado del Arte}
+
+Para el estado del arte revisar: 
+\begin{enumerate}
+    \item Uso de la optimización para secuenciar el aprendizaje en la actualidad
+    \begin{itemize}
+        \item Optimización de secuencias de aprendizaje con metaheurísticas: \begin{itemize}
+            \item "Learning path recommendation based on modified variable length genetic algorithm" (2018) propone una adaptación de los algoritmos genéticos para recomendar rutas de aprendizaje personalizadas, optimizando la secuenciación de contenidos en función de las características individuales del estudiante, como su nivel de conocimiento y estilo de aprendizaje. Este enfoque mejora la eficiencia del aprendizaje ajustando la secuencia de acuerdo a las necesidades de cada estudiante. 
+            \item "Personalized course generation and evolution based on genetic algorithms" (2019) explora la generación y evolución de cursos personalizados utilizando algoritmos genéticos. Este artículo se enfoca en la adaptación dinámica de los cursos según el rendimiento del estudiante a lo largo del tiempo, optimizando el contenido y su orden para maximizar la retención y la comprensión
+            \item "An enhanced genetic algorithm for solving learning path adaptation problem" (2019) trata sobre la optimización de secuencias de aprendizaje mediante un algoritmo genético mejorado, que aborda los desafíos de la adaptación de rutas de aprendizaje en sistemas de e-learning. El algoritmo se utiliza para ajustar dinámicamente los recursos educativos, adaptándose a los cambios en el comportamiento del estudiante
+        \end{itemize}
+        \item Inteligencia artificial y secuencias de aprendizaje adaptativo: 
+        \begin{itemize}
+            \item "A Personalized Learning Path Recommendation Method for Learning Objects with Diverse Coverage Levels" (2023): Este estudio aplica técnicas de optimización basadas en algoritmos genéticos y teoría de grafos para recomendar objetos de aprendizaje personalizados, ajustándose a diferentes niveles de conocimiento y cobertura de los temas. Es relevante para la optimización en sistemas de educación personalizados.
+            \item "Deep Reinforcement Learning: Fundamentals, Research, and Applications" (2020), que ofrece una excelente introducción y aplicación práctica del aprendizaje por refuerzo profundo en diversas áreas, incluidas las recomendaciones personalizadas para el aprendizaje. Este enfoque combina redes neuronales profundas con aprendizaje por refuerzo, lo que permite a los sistemas de aprendizaje adaptarse en tiempo real a las necesidades y comportamiento de los estudiantes, optimizando así las rutas de aprendizaje.
+        \end{itemize}
+        \item Modelos híbridos y el problema de la mochila: 
+        \begin{itemize}
+            \item Metaheuristic-based adaptive curriculum sequencing: Este artículo revisa el uso de algoritmos metaheurísticos (incluyendo algoritmos genéticos, enjambre de partículas y optimización basada en colonias de hormigas) en la secuenciación adaptativa del currículo. Estos enfoques buscan generar rutas óptimas de aprendizaje personalizadas según las características individuales de los estudiantes y las necesidades pedagógicas. Los métodos como el Genetic Algorithm (GA) y Particle Swarm Optimization (PSO) son comúnmente utilizados en estos contextos para mejorar la experiencia educativa y optimizar la entrega del contenido
+            \item Group-Theoretic Particle Swarm Optimization for Adaptive Curriculum Sequencing: Este trabajo propone un enfoque basado en optimización por enjambre de partículas (PSO) para resolver el problema de secuenciación de currículos (CS). La secuenciación adaptativa permite personalizar las rutas de aprendizaje de acuerdo con los objetivos de los usuarios, lo que mejora la eficiencia del aprendizaje en sistemas educativos en línea. Este tipo de algoritmo ofrece una forma de abordar problemas complejos de secuenciación, asegurando que los estudiantes reciban el contenido más relevante en función de sus antecedentes y objetivos educativos
+        \end{itemize}
+    \end{itemize}
+    \item Optimización de currículos y planificación educativa en línea
+    \begin{itemize}
+        \item Algoritmos de optimización en plataformas educativas: "Optimizing Learning Content Recommendation in Massive Open Online Courses (MOOCs) Using Multi-Objective Optimization" (2022): En este trabajo, se aplican técnicas de optimización multiobjetivo para recomendar contenido educativo en plataformas MOOC. El modelo optimiza el equilibrio entre la dificultad de los temas, el tiempo de estudio y el progreso del estudiante.
+    \end{itemize}
+    \item Optimización para el aprendizaje de adultos
+    \begin{itemize}
+        \item Developing Personalized Education: A Dynamic Framework: Investigaciones sobre educación personalizada, como las revisiones de frameworks dinámicos y adaptativos en la enseñanza de adultos, que se enfocan en medir continuamente las características del aprendiz para adaptar las rutas de aprendizaje de manera más efectiva
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Pregunta de Investigación}
+
+¿Cuál es la secuencia óptima de aprendizaje para adultos sobre la temática de pensiones utilizando modelos de optimización, maximizando la comprensión y atención dentro de las limitaciones cognitivas y de tiempo?
+
+\subsection{Objetivos}
+\subsubsection{Objetivo general}
+Diseñar y validar una secuencia óptima de aprendizaje para adultos sobre la temática de pensiones, utilizando modelos de optimización, con el fin de maximizar la comprensión y atención, teniendo en cuenta las $limitaciones cognitivas$ y de tiempo de los usuarios adultos.
+
+\subsubsection{Objetivos Específicos}
+
+\begin{enumerate}
+    \item Identificar y analizar los Objetivos de Aprendizaje (OA) sobre pensiones que deben ser incluidos en la secuencia de aprendizaje.
+    \item Identificar y analizar el recurso de aprendizaje (RA) para cada OA que servirá como insumo al desarrollo de contenido de la secuencia. 
+    \item Estimar y verificar el tiempo que tarda en ser adquirido el conocimiento necesario de cada OA según el RA. (Revisar)
+    %\item Estimar la carga cognitiva de cada OA según RA. (Revisar)
+    \item Aplicar modelos de optimización, como el problema de la mochila, para seleccionar y ordenar los contenidos educativos de manera que maximicen la eficiencia del aprendizaje dentro de las limitaciones de tiempo disponibles.
+    \item Evaluar la efectividad de la secuencia de aprendizaje diseñada mediante pruebas piloto con adultos, midiendo la comprensión, retención y satisfacción con el material.
+    \item Comparar el rendimiento de la secuencia óptima con otras secuencias convencionales, para validar si el enfoque basado en modelos de optimización mejora los resultados de aprendizaje.
+\end{enumerate}
+
+\subsection{Gantt}
+
+
+\section{Estudio 2}
+
+Como consecuencia del primer estudio donde se espera encontrar una secuencia óptima de aprendizaje sobre pensiones que logre maximizar la comprensión y atención dentro de restricciones de tiempo y esfuerzo cognitivo, surge la pregunta de si otros factores como las emociones pueden influir positivamente a la comprensión y atención de los usuarios.
+
+\subsection{Revisión de literatura}
+
+Algunas teorías claves a revisar: 
+
+\begin{enumerate}
+    \item Teoría de la carga cognitiva (Esto podría servir también para el estudio 1) 
+    \item Efecto de las Emociones en la Cognición
+    \item Teoría de la Ampliación y Construcción de las Emociones Positivas
+    \item Ley de Yerkes-Dodson
+    \item Neurociencia Afectiva
+    \item Inteligencia Emocional
+    \item Teoría de la Autodeterminación
+    \item Aprendizaje Emocional en Adultos
+    \item Emociones y Atención Selectiva
+    \item Emoción y Memoria
+    \item Educación Financiera y Emociones
+    \item Modelo de Procesamiento de Información Emocional 
+\end{enumerate}
+
+\subsection{Estado del Arte}
+Algunos papers y estudios interesantes: 
+
+\begin{enumerate}
+    \item Emociones y Aprendizaje en Adultos:
+    \begin{itemize}
+        \item Pekrun, R., \& Linnenbrink-Garcia, L. (Eds.). (2014). International Handbook of Emotions in Education. Routledge. Este manual ofrece una revisión exhaustiva de cómo las emociones afectan el aprendizaje y la enseñanza, incluyendo aspectos como la atención, la motivación y la autorregulación en contextos educativos.
+        \item Tyng, C. M., Amin, H. U., Saad, M. N. M., \& Malik, A. S. (2017). "The Influences of Emotion on Learning and Memory." Frontiers in Psychology, 8, 1454. Este artículo revisa cómo diferentes emociones pueden afectar los procesos de aprendizaje y memoria, destacando la importancia de las emociones positivas y negativas en la retención de información.
+    \end{itemize}
+    \item Emociones Específicas y Procesos Cognitivos:
+    \begin{itemize}
+        \item Um, E., Plass, J. L., Hayward, E. O., \& Homer, B. D. (2012). "Emotional Design in Multimedia Learning." Journal of Educational Psychology, 104(2), 485–498. Investiga cómo el diseño emocional de materiales educativos multimedia puede inducir emociones positivas que mejoran la comprensión y la motivación de los estudiantes.
+        \item Loderer, K., Pekrun, R., \& Lester, J. C. (2020). "Beyond Cold Technology: A Systematic Review and Meta-Analysis on Emotions in Technology-Based Learning Environments." Learning and Instruction, 70, 101162. Ofrece una revisión sistemática sobre cómo las emociones afectan el aprendizaje en entornos tecnológicos, lo cual es relevante si tu secuencia óptima incluye componentes digitales.
+    \end{itemize}
+    \item Educación Financiera y Emociones:
+    \begin{itemize}
+        \item Tang, N., \& Baker, A. (2016). "Self-Esteem, Financial Knowledge and Financial Behavior." Journal of Economic Psychology, 54, 164–176. Explora cómo la autoestima y las emociones relacionadas con la confianza en uno mismo afectan el comportamiento financiero y la toma de decisiones.
+        \item Aren, S., \& Aydemir, S. D. (2020). "The Moderating Role of Financial Literacy on the Relationship Between Individual Factors and Risky Investment Intention." International Journal of Bank Marketing, 38(5), 1187–1213. Este artículo explora cómo la alfabetización financiera modera la relación entre factores individuales (como emociones y percepciones de riesgo) y la intención de realizar inversiones riesgosas. Los hallazgos pueden ofrecer perspectivas valiosas sobre cómo las emociones influyen en el aprendizaje y decisiones financieras relacionadas con pensiones.
+    \end{itemize}
+    \item Emociones Negativas y Aprendizaje:
+    \begin{itemize}
+        \item Schwabe, L., \& Wolf, O. T. (2013). "Stress and Multiple Memory Systems: From 'Thinking' to 'Doing'." Trends in Cognitive Sciences, 17(2), 60–68. Examina cómo el estrés y las emociones negativas pueden cambiar el uso de diferentes sistemas de memoria, afectando la atención y el aprendizaje.
+        \item Vogel, S., \& Schwabe, L. (2016). "Learning and Memory Under Stress: Implications for the Classroom." npj Science of Learning, 1, 16011. Discute las implicaciones del estrés en el aprendizaje y cómo puede manejarse en entornos educativos.
+    \end{itemize}
+    \item Atención y Emociones en el Aprendizaje:
+    \begin{itemize}
+        \item Pool, E., Brosch, T., Delplanque, S., \& Sander, D. (2016). "Attentional Bias for Positive Emotional Stimuli: A Meta-Analytic Investigation." Psychological Bulletin, 142(1), 79–106. Realiza un meta-análisis sobre cómo las emociones positivas pueden atraer la atención y facilitar el procesamiento de información.
+        \item Sutton, R. E., \& Wheatley, K. F. (2003). "Teachers' Emotions and Teaching: A Review of the Literature and Directions for Future Research." Educational Psychology Review, 15(4), 327–358. Aunque enfocado en docentes, ofrece perspectivas sobre cómo las emociones en entornos educativos afectan la atención y el aprendizaje.
+    \end{itemize}
+    \item Diseño Instruccional y Emociones:
+    \begin{itemize}
+        \item Plass, J. L., \& Kaplan, U. (2016). "Emotional Design in Digital Media for Learning." En S. Y. Tettegah \& M. Gartmeier (Eds.), Emotions, Technology, Design, and Learning (pp. 131–161). Academic Press. Explora cómo el diseño de materiales educativos puede inducir emociones que mejoren el aprendizaje y la motivación.
+        \item Heidig, S., Müller, J., \& Reichelt, M. (2015). "Emotional Design in Multimedia Learning: Differentiation on Relevant Design Features and Their Effects on Emotions and Learning." Computers in Human Behavior, 44, 81–95. Investiga cuáles características del diseño multimedia afectan las emociones y cómo esto influye en el aprendizaje.
+    \end{itemize}
+    \item Neuroeducación y Emociones:
+    \begin{itemize}
+        \item Immordino-Yang, M. H., Darling-Hammond, L., \& Krone, C. R. (2018). The Brain Basis for Integrated Social, Emotional, and Academic Development: How Emotions and Social Relationships Drive Learning. Aspen Institute. Analiza cómo las emociones y las relaciones sociales están integradas en el proceso de aprendizaje desde una perspectiva neurocientífica.
+        \item Howard-Jones, P. A. (2014). "Neuroscience and Education: Myths and Messages." Nature Reviews Neuroscience, 15(12), 817–824. Desmitifica conceptos erróneos sobre la neuroeducación y destaca la importancia de las emociones en el aprendizaje.
+    \end{itemize}
+    \item Motivación Emocional y Aprendizaje:
+    \begin{itemize}
+        \item Linnenbrink-Garcia, L., Patall, E. A., \& Pekrun, R. (2016). "Adaptive Motivation and Emotion in Education: Research and Principles for Instructional Design." En L. Corno \& E. M. Anderman (Eds.), Handbook of Educational Psychology (3ª ed., pp. 65–75). Routledge. Discute cómo la motivación y las emociones se pueden aprovechar en el diseño instruccional para mejorar el aprendizaje.
+        \item Ainley, M. (2017). "Interest: Dynamic, Emergent, and Sustained." En K. A. Renninger \& S. E. Hidi (Eds.), The Power of Interest for Motivation and Engagement (pp. 3–19). Routledge. Explora cómo el interés como emoción puede ser fomentado y sostenido para mejorar la atención y el aprendizaje.
+    \end{itemize}
+    \item Emociones y Aprendizaje en Entornos Digitales:
+    \begin{itemize}
+        \item Harley, J. M., Lajoie, S. P., Frasson, C., \& Hall, N. C. (2017). "Developing Emotion-Aware, Advanced Learning Technologies: A Taxonomy of Approaches and Features." International Journal of Artificial Intelligence in Education, 27(2), 268–297. Revisa cómo la tecnología educativa puede adaptarse para ser sensible a las emociones y mejorar el aprendizaje.
+        \item D'Mello, S., \& Graesser, A. (2012). "Dynamics of Affective States During Complex Learning." Learning and Instruction, 22(2), 145–157. Analiza cómo las emociones cambian durante el aprendizaje complejo y cómo esto afecta la comprensión y la retención.
+    \end{itemize}
+    \item Intervenciones Emocionales en Educación de Adultos:
+    \begin{itemize}
+        \item Dirkx, J. M. (2012). "Self-Formation and Transformative Learning: A Sociocultural Approach." Adult Education Quarterly, 62(4), 399–405. Profundiza en cómo las experiencias emocionales profundas pueden conducir a un aprendizaje transformativo en adultos.
+        \item Brookfield, S. (2015). The Skillful Teacher: On Technique, Trust, and Responsiveness in the Classroom (3ª ed.). Jossey-Bass. Ofrece estrategias prácticas para educadores de adultos sobre cómo manejar y aprovechar las emociones en el aula para mejorar el aprendizaje.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Pregunta de Investigación}
+¿Cuál es el impacto de la inducción experimental de emociones positivas y negativas específicas, en la atención y comprensión de adultos durante la secuencia óptima de aprendizaje sobre pensiones, en comparación con emociones neutras, considerando las limitaciones cognitivas y de tiempo?
+
+\subsection{Objetivos}
+\subsubsection{Objetivo general}
+Determinar el impacto de la inducción experimental de emociones positivas y negativas específicas en la atención y comprensión de adultos durante la secuencia óptima de aprendizaje sobre pensiones, en comparación con emociones neutras, considerando las limitaciones cognitivas y de tiempo.
+
+\subsubsection{Objetivos Específicos}
+\begin{enumerate}
+    \item Evaluar el efecto de la inducción de emociones positivas específicas en la atención y comprensión de adultos durante la secuencia óptima de aprendizaje sobre pensiones.
+    \item Evaluar el efecto de la inducción de emociones negativas específicas en la atención y comprensión de adultos durante la misma secuencia de aprendizaje.
+    \item Comparar los efectos de las emociones positivas, negativas y neutras en la atención y comprensión de los participantes, identificando diferencias significativas entre ellas.
+    %\item Proponer recomendaciones para el diseño de estrategias educativas que incorporen la inducción de emociones para optimizar la atención y comprensión en el aprendizaje de adultos sobre pensiones.
+\end{enumerate}
+
+\subsection{Gantt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
