@@ -3,18 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Retiro Programado</title>
- <link rel="stylesheet" href="/Experimento/Experimento/style.css">
+ <link rel="stylesheet" href="/Experimento/style.css">
 </head>
 <body>
-  <h2>Retiro Programado</h2>
-  <p>La AFP paga tu pensión mes a mes desde tu cuenta individual. El monto se recalcula anualmente en función de tu saldo y expectativa de vida.</p>
 
-  <script>
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      parent.cerrarPopup('popupContenidoConcepto');
-    }
-  });
+  <h2>Retiro Programado</h2>
+  <p>A continuación se presentan los conceptos asociados:</p>
+
+  <!-- Copia y pega bloques como este para cada concepto -->
+  <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Retiro Programado
+    </div>
+    <div class="acordeon-contenido">
+      <p>Modalidad de pensión en la que el afiliado mantiene la propiedad de sus fondos en la AFP y
+recibe pagos mensuales que se recalculan cada año, considerando el saldo disponible, la
+tasa de interés técnica y su expectativa de vida.</p>
+    </div>
+  </div>
+
+    <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Requisitos Retiro Programado
+    </div>
+    <div class="acordeon-contenido">
+      <p>Para optar por el Retiro Programado, el afiliado debe cumplir con los requisitos generales
+de pensión (edad mínima y saldo financiero mínimo en la cuenta individual) y tener fondos
+suficientes para financiar una pensión según las reglas del SCOMP</p>
+    </div>
+  </div>
+
+    <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Calculo Retiro Programado
+    </div>
+    <div class="acordeon-contenido">
+      <p>EJEMPLO NO DEFINICIÓN: En esta modalidad, la pensión se calcula anualmente sobre la base del saldo de la cuenta
+individual, la expectativa de vida del afiliado y la tasa de interés técnica vigente. A diferencia
+de la renta vitalicia, el monto puede variar cada año conforme cambian estos factores.</p>
+    </div>
+  </div>
+
+
+<script>
+  function toggleAcordeon(elemento) {
+    const contenido = elemento.nextElementSibling;
+    const yaVisible = contenido.style.display === "block";
+    document.querySelectorAll('.acordeon-contenido').forEach(div => div.style.display = 'none');
+    if (!yaVisible) contenido.style.display = "block";
+  }
 </script>
 
 </body>

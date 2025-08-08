@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Beneficiarios</title>
+  <link rel="stylesheet" href="/Experimento/style.css">
+</head>
+<body>
+
+<h2>Beneficiarios</h2>
+
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Beneficiarios Legales</div>
+  <div class="acordeon-contenido">
+    <p>Personas que, según la ley chilena, tienen derecho a recibir la pensión de sobrevivencia
+cuando fallece un afiliado o pensionado. Esto incluye:</p>
+<ul>
+  <li>Cónyuge o conviviente civil: Persona casada o en unión civil con el afiliado al momento de su fallecimiento.</li>
+  <li>Hijos solteros menores de 18 años, o hasta 24 años si son estudiantes regulares</li>
+  <li>Hijos con invalidez (cualquier edad)</li>
+  <li>Padres de hijos fuera del matrimonio, si eran dependientes</li>
+  <li>Padres del afiliado, si no existen beneficiarios anteriores y si eran carga familiar reconocida</li>
+  </ul>
+  </div>
+</div>
+
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Declaración Beneficiarios</div>
+  <div class="acordeon-contenido">
+    <p>Formulario legal obligatorio en el que el afiliado declara a sus beneficiarios legales
+(cónyuge, hijos, padres, conviviente). La información se valida con datos del Registro Civil.
+Es requisito para que puedan acceder al beneficio en caso de fallecimiento.</p>
+  </div>
+</div>
+
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Pensión Sobrevivencia</div>
+  <div class="acordeon-contenido">
+    <p>Beneficio mensual que reciben los beneficiarios legales cuando fallece el afiliado o
+pensionado. Puede ser pagado por AFP o aseguradoras, según la modalidad elegida. Elmonto depende del tipo de relación y condición del beneficiario, aplicado sobre una pensión
+de referencia basada en ingresos del causante.</p>
+  </div>
+</div>
+
+<div class="acordeon-item">
+  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Ejemplo Calculo Pensión Sobrevivencia</div>
+  <div class="acordeon-contenido">
+    <p>Ejemplo: El monto se calcula utilizando la pensión de referencia, que equivale al 70% del ingreso
+base imponible promedio del causante (activo o pensionado).
+Luego se aplica el porcentaje que corresponde a cada tipo de beneficiario:
+• Cónyuge sin hijos: 60%
+• Cónyuge con hijos comunes: 50%
+• Conviviente civil sin hijos comunes o hijos solo del causante: 60%
+• Conviviente civil con hijos comunes: 50%; si son hijos solo del causante: 15%
+• Hijos solteros menores de 18 o estudiantes (hasta 24): 15% cada uno
+• Hijos con invalidez parcial mayores de 24: 11%
+• Madre o padre de hijo no matrimonial sin hijos con derecho: 36%; si hay hijos con
+derecho: 30%
+• Padres del causante (si no hay otros beneficiarios): 50%</p>
+  </div>
+</div>
+
+<script src="beneficiarios.js"></script>
+</body>
+</html>

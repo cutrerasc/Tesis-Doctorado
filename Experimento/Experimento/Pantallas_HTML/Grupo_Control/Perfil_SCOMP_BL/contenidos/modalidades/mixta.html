@@ -1,22 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Renta Mixta</title>
-   <link rel="stylesheet" href="/Experimento/Experimento/style.css">
+  <title>Modalidades Mixtas</title>
+ <link rel="stylesheet" href="/Experimento/style.css">
 </head>
 <body>
-  <h2>Renta Vitalicia Inmediata con Retiro Programado</h2>
-  <p>Una parte de tu pensión es financiada con retiro programado (AFP) y otra parte con una renta vitalicia inmediata (aseguradora).</p>
 
-  <script>
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      parent.cerrarPopup('popupContenidoConcepto');
-    }
-  });
+  <h2>Modalidades Mixtas</h2>
+  <p>A continuación se presentan los conceptos asociados:</p>
+
+  <!-- Copia y pega bloques como este para cada concepto -->
+  <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Renta Vitalicia Inmediata con Retiro Programado
+    </div>
+    <div class="acordeon-contenido">
+      <p>Modalidad combinada en que el afiliado destina parte de su saldo a una Renta Vitalicia
+Inmediata con una aseguradora y la parte restante a un Retiro Programado administradopor la AFP. Así recibe dos pensiones simultáneas, diversificando riesgo y preservando cierta
+propiedad de fondos.</p>
+    </div>
+  </div>
+
+    <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Requisitos Renta Vitalicia Inmediata con Retiro Programado
+    </div>
+    <div class="acordeon-contenido">
+      <p>Para optar por esta modalidad combinada, el afiliado debe cumplir los requisitos generales
+de pensión (edad mínima legal y saldo mínimo), contar con fondos suficientes para financiar
+ambas partes (RV y RP) y haber tramitado ofertas a través del SCOMP.</p>
+    </div>
+  </div>
+
+      <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Renta Temporal con Renta Vitalicia Diferida
+    </div>
+    <div class="acordeon-contenido">
+      <p>Modalidad combinada donde el afiliado recibe primero una Renta Temporal de la AFP (por
+lo general más alta), mientras mantiene saldo suficiente para financiar una Renta Vitalicia
+Diferida que comenzará posteriormente con una aseguradora.</p>
+    </div>
+  </div>
+
+      <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Periodo Diferimiento
+    </div>
+    <div class="acordeon-contenido">
+      <p>Tiempo entre la jubilación y el inicio del pago de la Renta Vitalicia Diferida, durante el cual
+se recibe una renta temporal desde la AFP.</p>
+    </div>
+  </div>
+
+        <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Requisitos Renta Temporal con Renta Vitalicia Diferida
+    </div>
+    <div class="acordeon-contenido">
+      <p>Para esta modalidad combinada, se requiere saldo suficiente para financiar la renta
+temporal y la renta diferida, además de cumplir con la edad mínima, cotizaciones legales y
+realizar la solicitud de ofertas a través del SCOMP. Todos los requisitos legales aplican tanto
+para la parte temporal como para la parte vitalicia.</p>
+    </div>
+  </div>
+
+          <div class="acordeon-item">
+    <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+      Calculo Rentas Combinadas
+    </div>
+    <div class="acordeon-contenido">
+      <p>El monto total de pensión en modalidades combinadas se calcula sumando dos partes:
+          <ul>
+            <li>Renta Temporal, calculada sobre el saldo retenido en AFP a través de fórmula anual.</li>
+            <li>Renta Vitalicia Diferida o Inmediata, según la prima transferida a la aseguradora y los parámetros técnicos.</li>
+          </ul> 
+        El total corresponde a la suma de ambas pensiones proyectadas.</p>
+
+    </div>
+  </div>
+
+<script>
+  function toggleAcordeon(elemento) {
+    const contenido = elemento.nextElementSibling;
+    const yaVisible = contenido.style.display === "block";
+    document.querySelectorAll('.acordeon-contenido').forEach(div => div.style.display = 'none');
+    if (!yaVisible) contenido.style.display = "block";
+  }
 </script>
-
 
 </body>
 </html>
