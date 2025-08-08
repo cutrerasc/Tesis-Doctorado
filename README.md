@@ -4,12 +4,12 @@ Este repositorio contiene el desarrollo, análisis, resultados y materiales rela
 
 ## Estructura
 
-- `notebooks/`: Jupyter Notebooks con análisis, simulaciones y pruebas
-- `scripts/`: Scripts de procesamiento en R, Python
-- `datos/`: Bases de datos crudas o limpias
-- `resultados/`: Gráficos, salidas de modelos, tablas
-- `html/`: Prototipos web, archivos HTML, CSS, JS
-- `documentos/`: Informes, entregas, reportes o versiones formales
+- `Experimento/`: Todo lo relacionado con le experimento sobre pensiones, código HTML, JS, CSS
+- `Modelo/`: Todo lo relacionado con el modelo de optimización, dentro tiene 3 carpetas
+-   `Datos/`: Matrices de adyacencia
+-   `Código/`: Códigos de manipulación, limpieza y otros.
+-   `Resulatdos`: Resultados del modelo. 
+- `documentos/`: Informes, entregas, reportes o versiones formales, Validación con SP. 
 - `referencias/`: Papers y archivos de bibliografía (.pdf, .bib)
 
 ## Contacto
