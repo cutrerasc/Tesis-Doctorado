@@ -12,9 +12,7 @@ __pycache__/
 # Archivos pesados
 *.zip
 *.rds
-*.csv
 *.sav
-*.xlsx
 *.mp4
 *.mov
 
