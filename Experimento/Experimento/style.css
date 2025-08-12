@@ -197,7 +197,10 @@ footer {
 }
 
 .continueButton:disabled {
-  opacity: 0.6;
+  background-color: #cccccc; /* gris claro */
+  color: #666666; /* texto gris oscuro */
+  border: none;
+  opacity: 1; /* que no se vea semi-transparente */
   cursor: not-allowed;
 }
 

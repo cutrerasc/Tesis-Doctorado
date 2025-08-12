@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Grupo asignado:", grupo);
 
     // Redirección a pantalla correspondiente
-    if (grupo === "control") {
-      window.location.href = "contenido_control.html";
+    if (grupo === "control" && perfil === "A") {
+      window.location.href = "./Grupo_Control/Perfil_SCOMP_BL/Inicio.html";
     } else {
       window.location.href = "contenido_tratamiento.html";
     }

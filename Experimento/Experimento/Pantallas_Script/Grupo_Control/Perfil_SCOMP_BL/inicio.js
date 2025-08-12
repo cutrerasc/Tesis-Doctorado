@@ -47,3 +47,36 @@ function abrirConcepto(rutaHtml) {
   iframe.src = rutaHtml;
   abrirPopup('popupContenidoConcepto');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnContinuar = document.getElementById("continuarBtn");
+
+  if (btnContinuar) {
+    const TIEMPO_MINIMO = 300000; // 5 minutos en milisegundos
+    const claveTiempo = "inicio_pagina_perfilA";
+
+    // Siempre reinicia el contador al entrar
+    let inicioPagina = Date.now();
+    localStorage.setItem(claveTiempo, inicioPagina);
+
+    const intervalo = setInterval(() => {
+      const ahora = Date.now();
+      const transcurrido = ahora - inicioPagina;
+      const restante = TIEMPO_MINIMO - transcurrido;
+
+      if (restante > 0) {
+        const minutos = Math.floor(restante / 60000);
+        const segundos = Math.floor((restante % 60000) / 1000);
+        btnContinuar.textContent = `Continuar (${minutos}:${segundos.toString().padStart(2, "0")})`;
+      } else {
+        btnContinuar.disabled = false;
+        btnContinuar.textContent = "Continuar";
+        clearInterval(intervalo);
+      }
+    }, 1000);
+
+    btnContinuar.addEventListener("click", () => {
+      window.location.href = "../../../Pantallas_HTML/exportar.html";
+    });
+  }
+});

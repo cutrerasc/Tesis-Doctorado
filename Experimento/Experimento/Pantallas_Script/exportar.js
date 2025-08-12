@@ -36,24 +36,37 @@ document.addEventListener("DOMContentLoaded", () => {
       "score_inicial"
     ];
 
+    // 1. Datos del usuario
     const datos = {};
     claves.forEach(k => {
       datos[k] = localStorage.getItem(k) ?? "";
     });
 
-    const encabezados = claves.join(",") + "\n";
-    const fila = claves.map(k => datos[k]).join(",") + "\n";
+    // 2. Recuperar clicks del tracking global
+    const clicks = JSON.parse(localStorage.getItem("registro_clicks") || "[]");
 
-    const contenidoCSV = encabezados + fila;
+    // 3. Encabezados y fila de datos de usuario
+    let contenidoCSV = claves.join(",") + "\n";
+    contenidoCSV += claves.map(k => datos[k]).join(",") + "\n\n";
 
+    // 4. Agregar historial de clics
+    contenidoCSV += "--- Registro de clics ---\n";
+    contenidoCSV += "boton,tiempo,pagina,segs_desde_inicio,segs_desde_click_anterior\n";
+    clicks.forEach(c => {
+      contenidoCSV += `${c.boton},${c.tiempo},${c.pagina},${c.segs_desde_inicio},${c.segs_desde_click_anterior || ""}\n`;
+    });
+
+    // 5. Descargar CSV
     const blob = new Blob([contenidoCSV], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
-
     const enlace = document.createElement("a");
     enlace.setAttribute("href", url);
     enlace.setAttribute("download", "respuestas_usuario.csv");
     document.body.appendChild(enlace);
     enlace.click();
     document.body.removeChild(enlace);
+    localStorage.removeItem("registro_clicks");
+    localStorage.removeItem("inicio_experimento");
+    localStorage.removeItem("ultimo_click");
   });
 });
