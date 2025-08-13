@@ -10,21 +10,21 @@
 <h2>Modalidades de Pensión</h2>
 
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Modalidades de Pensiones</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Modalidades_Pension" onclick="toggleAcordeon(this)">Modalidades de Pensiones</div>
   <div class="acordeon-contenido">
     <p>Al llenar el formulario del SCOMP, el afiliado puede elegir entre distintas modalidades de pensión...</p>
 
     <p>Tipos de modalidad:</p>
     <div class="sub-botones">
-      <button onclick="abrirPopup('popup_renta_vitalicia')">Renta Vitalicia</button>
-      <button onclick="abrirPopup('popup_retiro_programado')">Retiro Programado</button>
-      <button onclick="abrirPopup('popup_renta_mixta')">Renta Mixta</button>
+      <button data-id="Popup:Renta_Vitalicia" onclick="abrirPopup('popup_renta_vitalicia')">Renta Vitalicia</button>
+      <button data-id="Popup:Retiro_Programado" onclick="abrirPopup('popup_retiro_programado')">Retiro Programado</button>
+      <button data-id="Popup:Renta_Mixta" onclick="abrirPopup('popup_renta_mixta')">Renta Mixta</button>
     </div>
   </div>
 </div>
 
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Comparación de Modalidades</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Comparación_Modalidades" onclick="toggleAcordeon(this)">Comparación de Modalidades</div>
   <div class="acordeon-contenido">
     <p>Comparativa clara entre las principales modalidades:
 • Retiro Programado (RP): la AFP administra el saldo y lo paga periódicamente, ajustando anualmente el monto según saldo, expectativa de vida y tasa de interés técnica.
@@ -33,13 +33,13 @@
   </div>
 </div>
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Expectativa de Vida</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Expectativa_Vida" onclick="toggleAcordeon(this)">Expectativa de Vida</div>
   <div class="acordeon-contenido">
     <p>Estimación del número de años que se espera que viva un afiliado tras jubilar. En Retiro Programado, sirve para dividir el saldo disponible en anualidades. En Renta Vitalicia, la aseguradora asume ese riesgo, por lo que la pensión es fija aun si se vive más de lo estimado.</p>
   </div>
 </div>
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Riesgo de Longevidad</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Riesgo_Longevidad" onclick="toggleAcordeon(this)">Riesgo de Longevidad</div>
   <div class="acordeon-contenido">
     <p>El riesgo de longevidad se refiere a la posibilidad de que una persona viva más años de lo previsto al momento de jubilar, lo que puede implicar que sus fondos previsionales se agoten antes de fallecer. 
 Este riesgo es particularmente relevante en modalidades como el Retiro Programado, donde los pagos mensuales dependen del saldo disponible en la cuenta individual. 
@@ -47,7 +47,7 @@ En contraste, en una Renta Vitalicia, dicho riesgo es asumido por la compañía 
   </div>
 </div>
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Riesgo de Rentabilidad</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Riesgo_Rentabilidad" onclick="toggleAcordeon(this)">Riesgo de Rentabilidad</div>
   <div class="acordeon-contenido">
     <p>El riesgo de rentabilidad corresponde a la variación que pueden experimentar los fondos previsionales debido a cambios en los mercados financieros. 
 Dado que los recursos se invierten en instrumentos de renta fija y variable, los resultados pueden ser positivos o negativos, afectando directamente el saldo acumulado. 
@@ -56,7 +56,7 @@ Por esta razón, el sistema ofrece multifondos con diferentes niveles de riesgo,
   </div>
 </div>
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Tasa de Interés Técnica de Retiro Programado</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Tasa_Interes_Tecnica" onclick="toggleAcordeon(this)">Tasa de Interés Técnica de Retiro Programado</div>
   <div class="acordeon-contenido">
     <p>Son tasas que se usan para calcular cuánto recibirás cada mes si eliges una modalidad de pensión llamada Retiro Programado o una Renta Temporal.
 
@@ -64,13 +64,13 @@ Estas tasas las publica la Superintendencia de Pensiones regularmente y reflejan
   </div>
 </div>
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Tasa de Interés</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Tasa_Interes" onclick="toggleAcordeon(this)">Tasa de Interés</div>
   <div class="acordeon-contenido">
     <p>Es el porcentaje que usa la aseguradora para calcular cuánto dinero mensual puede pagarle al afiliado, considerando el dinero que recibe (el saldo de pensión) y cuánto podría ganar invirtiéndolo.</p>
   </div>
 </div>
 <div class="acordeon-item">
-  <div class="acordeon-titulo" onclick="toggleAcordeon(this)">Cambio de Modalidad</div>
+  <div class="acordeon-titulo" data-id="Acordeon:Cambio_Modalidad" onclick="toggleAcordeon(this)">Cambio de Modalidad</div>
   <div class="acordeon-contenido">
     <p>Quienes optan inicialmente por Retiro Programado pueden cambiar posteriormente a una Renta Vitalicia u otra modalidad, siempre que aún existan fondos en su cuenta individual.
 No es posible revertir desde RV a RP por ser irrevocable.</p>
@@ -80,33 +80,33 @@ No es posible revertir desde RV a RP por ser irrevocable.</p>
 <!-- Popups para cada modalidad -->
 <div id="popup_renta_vitalicia" class="popup">
   <div class="popup-contenido">
-    <span class="cerrar" onclick="cerrarPopup('popup_renta_vitalicia')">&times;</span>
+    <span class="cerrar" data-id="Cerrar:Renta_Vitalicia" onclick="cerrarPopup('popup_renta_vitalicia')">&times;</span>
     <iframe src="renta_vitalicia.html" ></iframe>
   </div>
 </div>
 
 <div id="popup_retiro_programado" class="popup">
   <div class="popup-contenido">
-    <span class="cerrar" onclick="cerrarPopup('popup_retiro_programado')">&times;</span>
+    <span class="cerrar" data-id="Cerrar:Retiro_Programado" onclick="cerrarPopup('popup_retiro_programado')">&times;</span>
     <iframe src="retiro_programado.html" ></iframe>
   </div>
 </div>
 
 <div id="popup_renta_temporal_diferida" class="popup">
   <div class="popup-contenido">
-    <span class="cerrar" onclick="cerrarPopup('popup_renta_temporal_diferida')">&times;</span>
+    <span class="cerrar" data-id="Cerrar:renta_temporal_diferida" onclick="cerrarPopup('popup_renta_temporal_diferida')">&times;</span>
     <iframe src="renta_temporal_diferida.html"></iframe>
   </div>
 </div>
 
 <div id="popup_renta_mixta" class="popup">
   <div class="popup-contenido">
-    <span class="cerrar" onclick="cerrarPopup('popup_renta_mixta')">&times;</span>
+    <span class="cerrar" data-id="Cerrar:Renta_Mixta" onclick="cerrarPopup('popup_renta_mixta')">&times;</span>
     <iframe src="mixta.html" ></iframe>
   </div>
 </div>
 
 <script src="modalidades.js"></script>
-<script scr="../../../Pantallas_Script/tracking.js"></script>
+<script src="../../../../../Pantallas_Script/tracking.js"></script>
 </body>
 </html>

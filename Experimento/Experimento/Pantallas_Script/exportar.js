@@ -45,16 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // 2. Recuperar clicks del tracking global
     const clicks = JSON.parse(localStorage.getItem("registro_clicks") || "[]");
 
-    // 3. Encabezados y fila de datos de usuario
+    // 3. Construir CSV con datos de usuario
     let contenidoCSV = claves.join(",") + "\n";
     contenidoCSV += claves.map(k => datos[k]).join(",") + "\n\n";
 
     // 4. Agregar historial de clics
     contenidoCSV += "--- Registro de clics ---\n";
     contenidoCSV += "boton,tiempo,pagina,segs_desde_inicio,segs_desde_click_anterior\n";
-    clicks.forEach(c => {
-      contenidoCSV += `${c.boton},${c.tiempo},${c.pagina},${c.segs_desde_inicio},${c.segs_desde_click_anterior || ""}\n`;
-    });
+
+    if (clicks.length > 0) {
+      clicks.forEach(c => {
+        contenidoCSV += `${c.boton},${c.tiempo},${c.pagina},${c.segs_desde_inicio},${c.segs_desde_click_anterior || ""}\n`;
+      });
+    } else {
+      contenidoCSV += "Sin clics registrados\n";
+    }
 
     // 5. Descargar CSV
     const blob = new Blob([contenidoCSV], { type: "text/csv;charset=utf-8;" });
@@ -65,6 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(enlace);
     enlace.click();
     document.body.removeChild(enlace);
+
+    // 6. Limpiar tracking y tiempos para el siguiente usuario
     localStorage.removeItem("registro_clicks");
     localStorage.removeItem("inicio_experimento");
     localStorage.removeItem("ultimo_click");

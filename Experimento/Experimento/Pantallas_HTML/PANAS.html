@@ -12,10 +12,13 @@
 
   <main>
     <form id="PANAS">
-           <p class="paragraph">Por favor, para cada descripción (fila), seleccione un único número entre 1 y 4, donde 1 representa "No describe en absoluto lo que sentí" y 4 representa "Describe perfectamente lo que sentí".</p>
+      <p class="paragraph">
+        Por favor, para cada descripción (fila), seleccione un único número entre 1 y 4, 
+        donde 1 representa "No describe en absoluto lo que sentí" y 4 representa "Describe perfectamente lo que sentí".
+      </p>
 
       <div>
-        <table border="1" cellspacing="0" cellpadding="5">
+        <table>
           <thead>
             <tr>
               <th></th>
@@ -26,81 +29,91 @@
             </tr>
           </thead>
           <tbody>
+            <!-- ====== Fila 1 ====== -->
             <tr>
-      <td><b>Felicidad</b></td>
-      <td><input type="radio" name="emo_1" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_1" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_1" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_1" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Tristeza</b></td>
-      <td><input type="radio" name="emo_2" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_2" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_2" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_2" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Ansiedad</b></td>
-      <td><input type="radio" name="emo_3" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_3" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_3" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_3" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Miedo</b></td>
-      <td><input type="radio" name="emo_4" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_4" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_4" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_4" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Alivio</b></td>
-      <td><input type="radio" name="emo_5" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_5" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_5" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_5" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Rabia o Frustración</b></td>
-      <td><input type="radio" name="emo_6" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_6" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_6" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_6" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Diversión</b></td>
-      <td><input type="radio" name="emo_7" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_7" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_7" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_7" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Satisfacción</b></td>
-      <td><input type="radio" name="emo_8" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_8" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_8" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_8" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Alegría</b></td>
-      <td><input type="radio" name="emo_9" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_9" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_9" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_9" value="4" class="emocion"></td>
-    </tr>
-    <tr>
-      <td><b>Preocupación</b></td>
-      <td><input type="radio" name="emo_10" value="1" class="emocion" required></td>
-      <td><input type="radio" name="emo_10" value="2" class="emocion"></td>
-      <td><input type="radio" name="emo_10" value="3" class="emocion"></td>
-      <td><input type="radio" name="emo_10" value="4" class="emocion"></td>
-    </tr>
-    <tr></tr>
+              <td><b>Felicidad</b></td>
+              <td><label><input type="radio" name="emo_1" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_1" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_1" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_1" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 2 ====== -->
+            <tr>
+              <td><b>Tristeza</b></td>
+              <td><label><input type="radio" name="emo_2" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_2" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_2" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_2" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 3 ====== -->
+            <tr>
+              <td><b>Ansiedad</b></td>
+              <td><label><input type="radio" name="emo_3" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_3" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_3" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_3" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 4 ====== -->
+            <tr>
+              <td><b>Miedo</b></td>
+              <td><label><input type="radio" name="emo_4" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_4" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_4" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_4" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 5 ====== -->
+            <tr>
+              <td><b>Alivio</b></td>
+              <td><label><input type="radio" name="emo_5" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_5" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_5" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_5" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 6 ====== -->
+            <tr>
+              <td><b>Rabia o Frustración</b></td>
+              <td><label><input type="radio" name="emo_6" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_6" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_6" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_6" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 7 ====== -->
+            <tr>
+              <td><b>Diversión</b></td>
+              <td><label><input type="radio" name="emo_7" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_7" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_7" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_7" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 8 ====== -->
+            <tr>
+              <td><b>Satisfacción</b></td>
+              <td><label><input type="radio" name="emo_8" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_8" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_8" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_8" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 9 ====== -->
+            <tr>
+              <td><b>Alegría</b></td>
+              <td><label><input type="radio" name="emo_9" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_9" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_9" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_9" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
+            <!-- ====== Fila 10 ====== -->
+            <tr>
+              <td><b>Preocupación</b></td>
+              <td><label><input type="radio" name="emo_10" value="1" class="emocion" required><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_10" value="2" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_10" value="3" class="emocion"><span class="radio-custom"></span></label></td>
+              <td><label><input type="radio" name="emo_10" value="4" class="emocion"><span class="radio-custom"></span></label></td>
+            </tr>
           </tbody>
         </table>
       </div>
     </form>
+
     <p class="paragraph" id="mensajeAviso" style="color: red;"></p><br>
   </main>
 
@@ -108,7 +121,6 @@
     <button id="botonContinuar" form="PANAS" class="continueButton" type="submit" disabled>Continuar</button>
   </footer>
 
-  <!-- 🔗 Conexión con script.js -->
   <script src="../Pantallas_Script/panas.js"></script>
 </body>
 </html>

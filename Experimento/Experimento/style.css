@@ -256,3 +256,105 @@ input[type="radio"] {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+
+/* ====== 9. TABLA PANAS ====== */
+#PANAS table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed; /* Todas las columnas igual de anchas */
+}
+
+#PANAS th, #PANAS td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#PANAS th:first-child,
+#PANAS td:first-child {
+  text-align: left; /* Primera columna a la izquierda */
+}
+
+#PANAS input[type="radio"] {
+  display: none; /* Ocultar radio nativo */
+}
+
+#PANAS td label {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-custom {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+#PANAS input[type="radio"]:checked + .radio-custom {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+/* ====== Versión móvil PANAS ====== */
+@media (max-width: 600px) {
+  #PANAS table, 
+  #PANAS thead, 
+  #PANAS tbody, 
+  #PANAS th, 
+  #PANAS td, 
+  #PANAS tr {
+    display: block;
+    width: 100%;
+  }
+
+  #PANAS thead {
+    display: none; /* Ocultar encabezado en móvil */
+  }
+
+  #PANAS tr {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+
+  #PANAS td {
+    border: none;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  #PANAS td:first-child {
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  /* Contenedor para las opciones de radio en móvil */
+  #PANAS td label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Círculo y número debajo si quieres */
+    gap: 5px;
+  }
+
+  /* Alinear las 4 opciones en fila */
+  #PANAS tr td:not(:first-child) {
+    display: inline-block;
+    width: 24%;
+    padding: 10px 0;
+  }
+}

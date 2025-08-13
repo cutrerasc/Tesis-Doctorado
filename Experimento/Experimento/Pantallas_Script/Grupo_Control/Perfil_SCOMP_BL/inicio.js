@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnContinuar = document.getElementById("continuarBtn");
 
   if (btnContinuar) {
-    const TIEMPO_MINIMO = 300000; // 5 minutos en milisegundos
+    const TIEMPO_MINIMO = 10000; // 5 minutos en milisegundos
     const claveTiempo = "inicio_pagina_perfilA";
 
     // Siempre reinicia el contador al entrar
