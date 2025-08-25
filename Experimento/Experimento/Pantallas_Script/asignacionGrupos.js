@@ -24,10 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Grupo asignado:", grupo);
 
     // Redirección a pantalla correspondiente
-    if (grupo === "control" && perfil === "A") {
-      window.location.href = "./Grupo_Control/Perfil_SCOMP_BL/Inicio.html";
-    } else {
-      window.location.href = "contenido_tratamiento.html";
-    }
-  });
+    if (grupo === "control") {
+  if (perfil === "A") {
+    window.location.href = "./Grupo_Control/Perfil_SCOMP_BL/Inicio.html";
+  } else if (perfil === "C") {
+    window.location.href = "./Grupo_Control/Perfil_SCOMP/Inicio.html";
+  } else {
+    window.location.href = "contenido_tratamiento.html";
+  }
+} else {
+  window.location.href = "contenido_tratamiento.html";
+}
+});
 });

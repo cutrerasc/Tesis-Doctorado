@@ -358,3 +358,31 @@ input[type="radio"] {
     padding: 10px 0;
   }
 }
+
+
+/* ====== Estilos scopeados solo a la infografía ====== */
+      .infografia-pension{--brand:#0D47A1;--accent:#2E7D32;--ring:rgba(13,71,161,.15);
+        --ink:#0F172A;--muted:#334155;--radius:14px}
+      .infografia-pension *{box-sizing:border-box;font-family:inherit}
+      .infografia-pension .sheet{background:#fff;border:1px solid var(--ring);
+        border-radius:var(--radius);padding:16px}
+      .infografia-pension .banner{display:flex;align-items:center;gap:8px;
+        background:var(--brand);color:#fff;border-radius:12px;padding:10px 12px;margin-bottom:10px}
+      .infografia-pension .banner h3{margin:0;font-weight:800;font-size:1.1rem}
+      .infografia-pension .lead{margin:6px 0 10px 0;color:#eef2ff;opacity:.95;font-size:.96rem}
+      .infografia-pension .card{display:flex;gap:10px;align-items:flex-start;
+        border:1px solid var(--ring);border-radius:12px;padding:10px;background:#fff}
+      .infografia-pension .icon{flex:0 0 42px;width:42px;height:42px;border-radius:10px;
+        display:grid;place-items:center;border:1px solid var(--ring);
+        background:radial-gradient(120% 120% at 0% 0%,rgba(46,125,50,.18),rgba(13,71,161,.18))}
+      .infografia-pension .icon svg{width:24px;height:24px;stroke:#0D47A1}
+      .infografia-pension .content h4{margin:2px 0 4px 0;font-size:1rem;color:var(--ink)}
+      .infografia-pension .content p{margin:0;color:var(--muted);font-size:.95rem}
+      .infografia-pension .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+      @media (max-width:700px){.infografia-pension .grid{grid-template-columns:1fr}}
+      .infografia-pension .bullets{margin:6px 0 0 0;padding-left:1rem}
+      .infografia-pension .bullets li{margin:.15rem 0}
+      .infografia-pension .note{margin-top:10px;border-left:6px solid var(--accent);
+        background:rgba(46,125,50,.08);padding:10px;border-radius:10px;font-weight:560;color:var(--ink)}
+      .infografia-pension .fuente{margin-top:8px;font-size:.9rem;color:var(--muted)}
+      .infografia-pension .fuente a{color:#0D47A1;text-underline-offset:3px}

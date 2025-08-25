@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal de Pensiones - Perfil A</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+  <header>
+    <h1>Portal de Pensiones</h1>
+    <p>Selecciona los temas que quieras explorar. Puedes navegar libremente.</p>
+  </header>
+
+  <main class="tarjetas-container">
+    <div class="tarjeta" data-id="Tarjeta:Generales" onclick="abrirPopup('popupMenuGenerales')">📊 Conceptos Generales</div>
+    <div class="tarjeta" data-id="Tarjeta:Entidades" onclick="abrirPopup('popupMenuEntidades')">💰 Entidades Relacionadas</div>
+    <div class="tarjeta" data-id="Tarjeta:Cotizaciones" onclick="abrirPopup('popupMenuAportes')">💰 Aportes y Cotizaciones</div>
+    <div class="tarjeta" data-id="Tarjeta:ProcesoPension" onclick="abrirPopup('popupMenuProceso')">🎁 Proceso de Pensión</div>
+    <div class="tarjeta" data-id="Tarjeta:Modalidades" onclick="abrirPopup('popupMenuModalidades')">💼 Modalidades de Pensión</div>
+    <div class="tarjeta" data-id="Tarjeta:Beneficiarios" onclick="abrirPopup('popupMenuBeneficiarios')">🎉 Beneficiarios Legales y Pensión de Sobrevivencia</div>
+    <div class="tarjeta" data-id="Tarjeta:Herencia" onclick="abrirPopup('popupMenuHerencia')">📋 Herencia</div>
+    <div class="tarjeta" data-id="Tarjeta:aportes_voluntarios" onclick="abrirPopup('popupMenuAportesVoluntarios')">💵 Aportes Voluntarios</div>
+    <div class="tarjeta" data-id="Tarjeta:ELD" onclick="abrirPopup('popupMenuAportesELD')">🤝 Excedentes de Libre Disposición</div>
+    <div class="tarjeta" data-id="Tarjeta:Comisiones" onclick="abrirPopup('popupMenuComisiones')"> Comisiones </div>
+  </main>
+
+  <!-- Popup Conceptos Generales -->
+  <div id="popupMenuGenerales" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Generales" onclick="cerrarPopup('popupMenuGenerales')">&times;</span>
+      <iframe src="contenidos/generales/generales.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Conceptos Entidades -->
+  <div id="popupMenuEntidades" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Entidades" onclick="cerrarPopup('popupMenuEntidades')">&times;</span>
+      <iframe src="contenidos/entidades/entidades.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+
+    <!-- Popup Aportes y Cotizaciones -->
+    <div id="popupMenuAportes" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Cotizaciones" onclick="cerrarPopup('popupMenuAportes')">&times;</span>
+      <iframe src="contenidos/aportes/aportes.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Proceso de Pensión -->
+    <div id="popupMenuProceso" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:ProcesoPension" onclick="cerrarPopup('popupMenuProceso')">&times;</span>
+      <iframe src="contenidos/proceso/menu.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    </div>
+
+  <!-- Popup Modalidades -->
+  <div id="popupMenuModalidades" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Modalidades" onclick="cerrarPopup('popupMenuModalidades')">&times;</span>
+      <iframe src="contenidos/modalidades/modalidades.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Beneficiarios -->
+    <div id="popupMenuBeneficiarios" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Beneficiarios" onclick="cerrarPopup('popupMenuBeneficiarios')">&times;</span>
+      <iframe src="contenidos/beneficiarios/beneficiarios.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Herencia --> 
+    <div id="popupMenuHerencia" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Herencia" onclick="cerrarPopup('popupMenuHerencia')">&times;</span>
+      <iframe src="contenidos/herencia/herencia.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+  
+    <!-- Popup Aportes Voluntarios -->
+    <div id="popupMenuAportesVoluntarios" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Aportes" onclick="cerrarPopup('popupMenuAportesVoluntarios')">&times;</span>
+      <iframe src="contenidos/aportes_voluntarios/aportes_voluntarios.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    </div>
+
+    <!-- Popup Excedentes de Libre Disposición -->
+    <div id="popupMenuAportesELD" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:ELD" onclick="cerrarPopup('popupMenuAportesELD')">&times;</span>
+      <iframe src="contenidos/excedentes_libre_disposicion/excedentes_libre_disposicion.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+  </div>
+
+    <!-- Popup Comisiones -->
+    <div id="popupMenuComisiones" class="popup">
+    <div class="popup-contenido">
+      <span class="cerrar" data-id="Cerrar:Comisiones" onclick="cerrarPopup('popupMenuComisiones')">&times;</span>
+      <iframe src="contenidos/comisiones/comisiones.html" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    </div>
+    
+    <!-- Popup para contenido específico -->
+<div id="popupContenidoConcepto" class="popup">
+  <div class="popup-contenido">
+    <span class="cerrar" onclick="cerrarPopup('popupContenidoConcepto')">&times;</span>
+    <iframe id="iframeContenido" src="" width="100%" height="400px" frameborder="0"></iframe>
+  </div>
+</div>
+
+<!-- Botón para continuar -->
+<footer>
+    <button id="continuarBtn" type="button" data-id="Boton:Continuar" class="continueButton" disabled>Continuar</button>
+</footer>
+
+
+  <script src="../../../Pantallas_Script/Grupo_Control/Perfil_SCOMP/inicio.js"></script>
+  <script src="../../../Pantallas_Script/tracking.js"></script> 
+</body>
+</html>
