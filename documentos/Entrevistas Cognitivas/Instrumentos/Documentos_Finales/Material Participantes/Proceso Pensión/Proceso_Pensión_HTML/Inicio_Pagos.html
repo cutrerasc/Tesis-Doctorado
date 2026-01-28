@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inicio de Pagos</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{ width:100%; max-width:1320px; margin:24px auto; padding:0 12px; }
+  .sheet{background:var(--card);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet-header{padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px}
+  .section{padding:22px}
+
+  /* Grid autoajustable: ocupa todo el ancho sin huecos */
+  .grid{
+    display:grid; gap:16px; margin-top:14px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items:stretch;
+  }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;display:flex;gap:12px;align-items:flex-start;height:100%;
+  }
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  /* Bullets con sangría corta */
+  .card ul, .card ol{ margin:.25rem 0 .5rem 0; padding-left:.9rem; list-style-position:outside; }
+  .card ul li + li{ margin-top:.22rem; }
+
+  .callout{margin-top:16px;border-radius:16px;border:1px solid #dfe7e2;background:var(--success-bg);padding:14px}
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-inicio">
+    <div class="sheet" role="region" aria-label="Módulo: Inicio de Pagos">
+      <div class="sheet-header" id="titulo-inicio">Inicio de Pagos</div>
+
+      <div class="section">
+        <p>
+          Tus fondos son <strong>transferidos a la institución elegida</strong>, que realizará tu <strong>primer pago de pensión</strong>.
+          Tras aceptar la oferta, comenzarás a recibir tu pensión dentro de los <strong>10 días hábiles</strong> siguientes.
+        </p>
+
+        <div class="grid" role="list">
+          
+          <article class="card" role="listitem" aria-labelledby="tit-transferencia">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="7.5" height="5" rx="1.2"></rect>
+                <rect x="13.5" y="14" width="7.5" height="5" rx="1.2"></rect>
+                <path d="M10.5 7.5h3.5"></path>
+                <path d="M12.5 6l1.8 1.5-1.8 1.5"></path>
+                <path d="M13.5 16.5h-3.5"></path>
+                <path d="M11.5 15l-1.8 1.5 1.8 1.5"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-transferencia">Transferencia de fondos</h2>
+              <p>La AFP transfiere los <strong>fondos</strong> a la <strong>AFP/Compañía de Seguros</strong> que seleccionaste para administrar tu pensión.</p>
+            </div>
+          </article>
+
+          
+          <article class="card" role="listitem" aria-labelledby="tit-plazo">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="7.5"></circle>
+                <line x1="12" y1="12" x2="12" y2="8.5"></line>
+                <line x1="12" y1="12" x2="14.4" y2="13.2"></line>
+                <text x="12" y="20" font-size="4" text-anchor="middle" fill="currentColor">10</text>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-plazo">¿Cuándo comienzan los pagos?</h2>
+              <p>Dentro de los <strong>10 días hábiles</strong> posteriores a la <strong>aceptación de la oferta</strong>.</p>
+            </div>
+          </article>
+
+          
+          <article class="card" role="listitem" aria-labelledby="tit-forma">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="7" width="17" height="10" rx="2"></rect>
+                <line x1="6" y1="11" x2="11" y2="11"></line>
+                <line x1="6" y1="14" x2="9" y2="14"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-forma">Formas de pago</h2>
+              <ul>
+                <li>Si registraste una <strong>cuenta bancaria</strong>, puedes recibir tu pensión por <strong>transferencia electrónica</strong>.</li>
+                <li>Consulta <strong>medios y fechas de pago</strong> con tu <strong>AFP</strong> o <strong>Compañía de Seguros</strong>.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout" role="note" aria-label="Sugerencia">
+          <strong>Tip:</strong> Verifica que tu <em>cuenta bancaria</em> y <em>datos de contacto</em> estén actualizados para evitar retrasos.
+        </div>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuente:</strong>
+          <a href="https://www.scomp.cl/scompsa/proceso-de-pension.html" target="_blank" rel="noopener">SCOMP – Proceso de pensión</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

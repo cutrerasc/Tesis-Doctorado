@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ejemplo de Cálculo — Retiro Programado</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --radius:18px; --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{ width:100%; max-width:1320px; margin:24px auto; padding:0 12px; }
+
+  .sheet{
+    background:var(--card);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    overflow:visible; /* evita que tooltips/callout queden “tapados” */
+  }
+  .sheet-header{
+    padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px;
+    border-top-left-radius:24px;border-top-right-radius:24px;
+  }
+  .section{padding:22px}
+
+  .grid{
+    display:grid;
+    gap:16px;
+    margin-top:14px;
+    grid-template-columns: 1fr; /* tarjetas hacia abajo */
+    align-items:stretch;
+  }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px 16px 16px 14px;
+    display:grid;
+    grid-template-columns: 54px 1fr;
+    gap:14px;
+    align-items:start;
+    height:auto; min-width:0;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+
+  .ic{
+    width:54px;height:54px;flex:0 0 54px;border-radius:14px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600);
+    border:1px solid rgba(31,111,211,.12);
+  }
+  .ic svg{
+    width:30px;height:30px;
+    stroke:currentColor; fill:none;
+    stroke-width:1.9;
+    stroke-linecap:round; stroke-linejoin:round;
+    vector-effect: non-scaling-stroke;
+    shape-rendering: geometricPrecision;
+  }
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  .card ul{
+    margin:.25rem 0 .1rem 0;
+    padding-left:1.05rem;
+    list-style-position:outside;
+  }
+  .card ul li + li{ margin-top:.22rem; }
+
+  .callout{
+    margin-top:22px;
+    border-radius:16px;border:1px solid #d9e6ff;background:#eef7ff;padding:14px;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .callout strong{color:var(--primary-600)}
+
+  /* ===== Tooltip términos (hover + click) ===== */
+  .term{
+    position:relative;
+    display:inline-block;
+    font-weight:700;
+    color:var(--primary-600);
+    cursor:help;
+    text-decoration:underline;
+    text-decoration-style:dotted;
+    text-underline-offset:3px;
+  }
+  .term-tooltip{
+    position:absolute;
+    left:0;
+    top:calc(100% + 8px);
+    z-index:9999;
+    width:min(520px, 88vw);
+    background:#111827;
+    color:#fff;
+    border-radius:12px;
+    padding:10px 12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    font-weight:500;
+    font-size:.95rem;
+    line-height:1.25;
+    display:none;
+  }
+  .term-tooltip::before{
+    content:"";
+    position:absolute;
+    top:-8px;
+    left:14px;
+    border-width:0 8px 8px 8px;
+    border-style:solid;
+    border-color:transparent transparent #111827 transparent;
+  }
+  .term.is-open .term-tooltip{ display:block; }
+  .term:focus{
+    outline:2px solid rgba(31,111,211,.45);
+    outline-offset:2px;
+    border-radius:6px;
+  }
+
+  /* ===== Gráfico grande ===== */
+  .bigchart{
+    margin-top:18px;
+    padding:16px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#fff;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .bigchart h3{
+    margin:0 0 10px 0;
+    font-size:1.02rem;
+    color:var(--ink);
+  }
+  .bigchart svg{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  .bigchart text{
+    font-size:14px;
+    fill: var(--muted);
+  }
+  .bigchart .axis{
+    stroke:#111;
+    stroke-width:2;
+    shape-rendering:crispEdges;
+  }
+  .bigchart .gridline{
+    stroke:#cfcfcf;
+    stroke-width:1;
+    shape-rendering:crispEdges;
+  }
+  .bigchart .series{
+    stroke:#111;
+    stroke-width:4;
+    fill:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .bigchart .marker{ fill:#111; stroke:none; }
+  .bigchart .legend{
+    font-size:14px;
+    fill:#111;
+    font-weight:700;
+  }
+
+  /* Glosario */
+  .glossary{
+    margin-top:18px;
+    padding:16px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#fff;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .glossary h3{ margin:0 0 10px 0; font-size:1.02rem; color:var(--ink); }
+  .glossary dl{ margin:0; }
+  .glossary .g-item{
+    padding:10px 12px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:#fff;
+  }
+  .glossary .g-item + .g-item{ margin-top:10px; }
+  .glossary dt{ font-weight:700; margin:0 0 4px 0; color:var(--ink); }
+  .glossary dd{ margin:0; color:var(--muted); }
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+    .sheet-header{ border-top-left-radius:16px;border-top-right-radius:16px; }
+    .card{ grid-template-columns: 52px 1fr; }
+    .ic{ width:52px; height:52px; }
+    .ic svg{ width:28px; height:28px; }
+    .bigchart text{ font-size:13px; }
+  }
+
+  @media print{
+    @page{ size:A4; margin:16mm; }
+    html, body{
+      background:#fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .wrap{ max-width:none; margin:0; padding:0; }
+    .sheet{ box-shadow:none !important; border-radius:0 !important; overflow:visible !important; }
+    .sheet-header{ border-radius:0 !important; }
+    .section{ padding:14px; }
+    .grid{ grid-template-columns:1fr; gap:10px; }
+
+    .term{ text-decoration:none; color:#000; }
+    .term-tooltip{ display:none !important; }
+
+    .card, .callout, .glossary, .bigchart{ break-inside:avoid; page-break-inside:avoid; }
+    .sources a{ color:#000; text-decoration:underline; }
+
+    .ic{ background:#fff; border:1px solid #cfd7e6; }
+
+    /* BN: grilla clara, serie negra */
+    .bigchart .axis{ stroke:#000; }
+    .bigchart .gridline{ stroke:#d0d0d0; }
+    .bigchart .series{ stroke:#000; }
+    .bigchart .legend{ fill:#000; }
+    .bigchart .marker{ fill:#000; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-ejemplo-rp">
+    <div class="sheet" role="region" aria-label="Módulo: Ejemplo de Cálculo — Retiro Programado">
+      <div class="sheet-header" id="titulo-ejemplo-rp">Ejemplos de Retiro Programado</div>
+
+      <div class="section">
+        <p>
+          Modalidad de pensión que <strong>paga la</strong>
+          <span class="term" tabindex="0" role="button" aria-label="Definición de AFP">
+            AFP
+            <span class="term-tooltip" role="tooltip">
+              Las Administradoras de Fondos de Pensiones (AFP) son las instituciones privadas encargadas de gestionar los ahorros previsionales para tu futura jubilación.
+            </span>
+          </span>
+          con cargo al
+          <span class="term" tabindex="0" role="button" aria-label="Definición de Saldo">
+            saldo
+            <span class="term-tooltip" role="tooltip">
+              Es el monto total de dinero que has acumulado en tu cuenta de capitalización individual a lo largo de tu vida laboral. Es, básicamente, "tu ahorro para la vejez".
+            </span>
+          </span>
+          de la cuenta individual. El monto se <strong>recalcula cada año</strong> y, en general, <strong>tiende a disminuir</strong> con el tiempo.
+        </p>
+
+        <div class="grid" role="list">
+
+          <!-- (1) BENEFICIA: flexibilidad + cambio de modalidad/mercado -->
+          <article class="card" role="listitem" aria-labelledby="tit-datos">
+            <div class="ic" aria-hidden="true">
+              <!-- Icono: flechas de cambio + calendario (cambiar más adelante / flexibilidad temporal) -->
+              <svg viewBox="0 0 24 24">
+                <path d="M7 7h7"></path>
+                <path d="M12 4l2 3-2 3"></path>
+                <path d="M17 17H10"></path>
+                <path d="M12 20l-2-3 2-3"></path>
+                <rect x="4.5" y="10" width="5.5" height="9" rx="1.4"></rect>
+                <line x1="5.7" y1="12.5" x2="8.8" y2="12.5"></line>
+                <line x1="5.7" y1="15" x2="8.8" y2="15"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-datos">Ejemplos donde la flexibilidad del Retiro Programado lo beneficia</h2>
+              <!-- NO CAMBIAR TEXTO -->
+              <ul>
+                <li>En el caso que usted espere <strong>vivir pocos años</strong>, el Retiro Programado le permite hacer 
+                  <strong>uso de una mayor cantidad de ahorros previsionales en vida</strong> y, otorgar flexibilidad 
+                  a sus beneficiarios para que decidan qué hacer con los ahorros restantes. Las decisiones
+                  que ellos puedan tomar dependerán de cuántos ahorros queden disponibles.</li>
+                <li>Si usted tiene la necesidad de jubilarse en un momento de <strong>inestabilidad económica</strong> en que, 
+                  por ejemplo, las ofertas de pensión de <strong>Rentas Vitalicias son muy bajas</strong>, se puede pensionar 
+                  con un Retiro Programado por un tiempo y <strong>cambiar de opción más adelante</strong> si mejora el mercado.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- (2) DESFAVORECE: longevidad + volatilidad mercado -->
+          <article class="card" role="listitem" aria-labelledby="tit-resultado">
+            <div class="ic" aria-hidden="true">
+              <!-- Icono: alerta + gráfico volátil (riesgo / crisis / caídas) -->
+              <svg viewBox="0 0 24 24">
+                <polyline points="4,16 8,12 11,14 15,9 20,12"></polyline>
+                <path d="M12 3l9 16H3L12 3z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <circle cx="12" cy="15.5" r="0.9" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-resultado">Ejemplos donde la flexibilidad del Retiro Programado lo desfavorece</h2>
+              <!-- NO CAMBIAR TEXTO -->
+              <ul>
+                <li>En el caso de que usted <strong>viva más tiempo de lo que tiene estimado</strong>, con el Retiro Programado 
+                  su pensión mensual irá <strong>disminuyendo anualmente</strong> hasta eventualmente quedarse <strong>sin ahorros</strong>.</li>
+                <li>El monto de su pensión dependerá de cuánto dinero genere para usted la AFP con la 
+                  administración de sus fondos y estará sujeto a los <span class="term" tabindex="0" role="button" aria-label="Definición de Vaivenes del mercado">
+                    <strong>vaivenes del mercado</strong>
+                    <span class="term-tooltip" role="tooltip">
+                      Es la variación de los fondos previsionales por cambios en los mercados financieros, lo que afecta directamente el saldo en la cuenta individual y, por ende, el monto de la pensión.
+                    </span>
+                  </span>. Si vienen crisis económicas, 
+                  sus fondos de pensión podrían sufrir <strong>bajas abruptas</strong> y, por ende, podría disminuir su pensión mensual 
+                  de forma inesperada.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- (3) ILUSTRATIVO: RP no garantiza UF por vida; parte en 15 UF y baja -->
+          <article class="card" role="listitem" aria-labelledby="tit-factores">
+            <div class="ic" aria-hidden="true">
+              <!-- Icono: regla/UF + línea descendente (ilustración de caída progresiva) -->
+              <svg viewBox="0 0 24 24">
+                <line x1="4" y1="18.5" x2="20" y2="18.5"></line>
+                <polyline points="5,15 9,11 12,13 16,8 19,10"></polyline>
+                <text x="4.5" y="8.2" font-size="5" fill="currentColor">UF</text>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-factores">Ejemplo ilustrativo</h2>
+              <!-- NO CAMBIAR TEXTO -->
+              <ul>
+                <li>
+                  La AFP <strong>no garantiza</strong> la pensión en UF de por vida, pero su <strong>pensión inicial podría
+                  ser más alta</strong> que una <span class="term" tabindex="0" role="button" aria-label="Definición de Renta Vitalicia">
+                    Renta Vitalicia
+                    <span class="term-tooltip" role="tooltip">
+                      Contrato con una Compañía de Seguros por una pensión mensual fija (en UF) para el resto de su vida.
+                    </span>
+                  </span>. Por ejemplo, si usted parte con una pensión de 15 UF al momento de jubilar,
+                  recibirá 15 UF el primer año y luego irá bajando progresivamente. 
+                </li>
+                <li>Podría ocurrir que los fondos para financiar su pensión se acaben antes de su fallecimiento 
+                  o el fallecimiento de sus beneficiarios.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ✅ Gráfico ajustado al “ejemplo ilustrativo”: parte en 15 UF y baja progresivamente -->
+        <section class="bigchart" aria-labelledby="tit-grafico-grande">
+          <h3 id="tit-grafico-grande">Proyección ilustrativa del monto en UF</h3>
+
+          <!-- Escala Y: 0–20 UF (como ya tenías)
+               Serie: 15 UF al inicio y descenso progresivo (ejemplo ilustrativo).
+               Eje X: edades 66–86.
+               Valores elegidos SOLO para ilustrar descenso: 15, 13, 12, 11, 10, 9 (UF).
+          -->
+          <svg viewBox="0 0 960 420" role="img" aria-label="Gráfico de línea decreciente de la pensión por Retiro Programado desde 15 UF a 9 UF entre las edades 66 y 86.">
+
+            <!-- ejes -->
+            <line class="axis" x1="70" y1="360" x2="930" y2="360"></line>
+            <line class="axis" x1="70" y1="40"  x2="70"  y2="360"></line>
+
+            <!-- grilla horizontal (0,5,10,15,20) -->
+            <g>
+              <line class="gridline" x1="70" y1="360" x2="930" y2="360"></line>
+              <line class="gridline" x1="70" y1="280" x2="930" y2="280"></line>
+              <line class="gridline" x1="70" y1="200" x2="930" y2="200"></line>
+              <line class="gridline" x1="70" y1="120" x2="930" y2="120"></line>
+              <line class="gridline" x1="70" y1="40"  x2="930" y2="40"></line>
+            </g>
+
+            <!-- etiquetas Y -->
+            <g>
+              <text x="55" y="365" text-anchor="end">0</text>
+              <text x="55" y="285" text-anchor="end">5</text>
+              <text x="55" y="205" text-anchor="end">10</text>
+              <text x="55" y="125" text-anchor="end">15</text>
+              <text x="55" y="45"  text-anchor="end">20</text>
+            </g>
+
+            <!-- grilla vertical + etiquetas X -->
+            <g>
+              <line class="gridline" x1="70"  y1="40" x2="70"  y2="360"></line>
+              <line class="gridline" x1="250" y1="40" x2="250" y2="360"></line>
+              <line class="gridline" x1="430" y1="40" x2="430" y2="360"></line>
+              <line class="gridline" x1="610" y1="40" x2="610" y2="360"></line>
+              <line class="gridline" x1="790" y1="40" x2="790" y2="360"></line>
+              <line class="gridline" x1="930" y1="40" x2="930" y2="360"></line>
+
+              <text x="70"  y="385" text-anchor="middle">66</text>
+              <text x="250" y="385" text-anchor="middle">70</text>
+              <text x="430" y="385" text-anchor="middle">74</text>
+              <text x="610" y="385" text-anchor="middle">78</text>
+              <text x="790" y="385" text-anchor="middle">82</text>
+              <text x="930" y="385" text-anchor="middle">86</text>
+
+              <text x="500" y="410" text-anchor="middle">Edad</text>
+              <text transform="translate(20,200) rotate(-90)" text-anchor="middle">Monto RP (UF)</text>
+            </g>
+
+            <!-- Serie: mapeo y = 360 - (UF/20)*320
+                 15 -> 120
+                 13 -> 152
+                 12 -> 168
+                 11 -> 184
+                 10 -> 200
+                  9 -> 216
+            -->
+            <polyline class="series"
+              points="
+                70,120
+                250,152
+                430,168
+                610,184
+                790,200
+                930,216
+              "></polyline>
+
+            <!-- marcadores -->
+            <circle class="marker" cx="70"  cy="120" r="4"></circle>
+            <circle class="marker" cx="250" cy="152" r="4"></circle>
+            <circle class="marker" cx="430" cy="168" r="4"></circle>
+            <circle class="marker" cx="610" cy="184" r="4"></circle>
+            <circle class="marker" cx="790" cy="200" r="4"></circle>
+            <circle class="marker" cx="930" cy="216" r="4"></circle>
+
+            <!-- etiqueta inicio -->
+            <text class="legend" x="86" y="112" text-anchor="start">Primera pensión: 15 UF (ilustrativo)</text>
+          </svg>
+        </section>
+
+        <div class="callout" role="note" aria-label="Notas">
+          <strong>Notas:</strong> Proyección <em>ilustrativa</em> basada en supuestos generales. El valor real dependerá de
+          rentabilidad, TITRP, saldo, beneficiarios y otros parámetros. Compara alternativas en <em>SCOMP</em>.
+        </div>
+
+        <!-- ✅ Glosario -->
+        <section class="glossary" aria-label="Glosario">
+          <h3>Glosario</h3>
+          <dl>
+            <div class="g-item">
+              <dt>AFP</dt>
+              <dd>Las Administradoras de Fondos de Pensiones (AFP) son las instituciones privadas encargadas de gestionar los ahorros previsionales para tu futura jubilación.</dd>
+            </div>
+            <div class="g-item">
+              <dt>Saldo</dt>
+              <dd>Es el monto total de dinero que has acumulado en tu cuenta de capitalización individual a lo largo de tu vida laboral. Es, básicamente, "tu ahorro para la vejez".</dd>
+            </div>
+            <div class="g-item">
+              <dt>Renta Vitalicia</dt>
+              <dd>Contrato con una Compañía de Seguros por una pensión mensual fija (en UF) para el resto de su vida.</dd>
+            </div>
+            <div class="g-item">
+              <dt>Vaivenes del mercado</dt>
+              <dd>Es la variación de los fondos previsionales por cambios en los mercados financieros, lo que afecta directamente el saldo en la cuenta individual y, por ende, el monto de la pensión.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuente:</strong>
+          <a href="https://www.cmfchile.cl/educa/621/w3-article-1739.html" target="_blank" rel="noopener">CMF Chile — Ejemplo de Retiro Programado</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const terms = document.querySelectorAll('.term');
+
+      function closeAll(exceptEl) {
+        terms.forEach(t => { if (t !== exceptEl) t.classList.remove('is-open'); });
+      }
+
+      terms.forEach(term => {
+        term.addEventListener('mouseenter', () => {
+          closeAll(term);
+          term.classList.add('is-open');
+        });
+
+        term.addEventListener('mouseleave', () => {
+          term.classList.remove('is-open');
+        });
+
+        term.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const willOpen = !term.classList.contains('is-open');
+          closeAll(term);
+          if (willOpen) term.classList.add('is-open');
+        });
+
+        term.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const willOpen = !term.classList.contains('is-open');
+            closeAll(term);
+            if (willOpen) term.classList.add('is-open');
+          }
+          if (e.key === 'Escape') term.classList.remove('is-open');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (![...terms].some(t => t.contains(e.target))) closeAll(null);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAll(null);
+      });
+    });
+  </script>
+</body>
+</html>

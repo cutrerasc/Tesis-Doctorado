@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Certificado de Ofertas (SCOMP)</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{ width:100%; max-width:1320px; margin:24px auto; padding:0 12px; }
+
+  .sheet{background:var(--card);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet-header{padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px}
+  .section{padding:22px}
+
+  /* ✅ Grid: tarjetas apiladas hacia abajo (1 columna siempre) */
+  .grid{
+    display:grid;
+    gap:16px;
+    margin-top:14px;
+    grid-template-columns: 1fr; /* clave: apiladas */
+    align-items:stretch;
+  }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;display:flex;gap:12px;align-items:flex-start;
+    min-width:0;
+  }
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  /* Bullets con sangría corta */
+  .card ul, .card ol{ margin:.25rem 0 .5rem 0; padding-left:.9rem; list-style-position:outside; }
+  .card ul li + li{ margin-top:.22rem; }
+
+  /* ✅ Tip separado y NUNCA “debajo” de una tarjeta: lo ponemos fuera del grid y con margen superior */
+  .callout{
+    margin-top:26px;             /* ✅ “un poco más abajo” */
+    border-radius:16px;
+    border:1px solid #dfe7e2;
+    background:var(--success-bg);
+    padding:14px;
+  }
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-co">
+    <div class="sheet" role="region" aria-label="Módulo: Certificado de Ofertas">
+      <div class="sheet-header" id="titulo-co">Certificado de Ofertas (SCOMP)</div>
+
+      <div class="section">
+        <p>
+          Con las propuestas enviadas por AFP y Compañías de Seguros, el <strong>SCOMP</strong> emite un
+          <strong>Certificado de Ofertas</strong> con las alternativas de pensión disponibles para la persona consultante.
+        </p>
+
+        <div class="grid" role="list">
+
+          <article class="card" role="listitem" aria-labelledby="tit-plazo">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="4.5" y="5.5" width="15" height="13" rx="2"></rect>
+                <line x1="8" y1="5.5" x2="8" y2="3.5"></line>
+                <line x1="16" y1="5.5" x2="16" y2="3.5"></line>
+                <circle cx="12" cy="12" r="3"></circle>
+                <line x1="12" y1="12" x2="12" y2="10.6"></line>
+                <line x1="12" y1="12" x2="13.2" y2="12.8"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-plazo">Plazo de ingreso y emisión</h2>
+              <ul>
+                <li>En máximo <strong>3 días hábiles</strong>, <strong>AFP</strong> y <strong>Compañías de Seguros</strong> ingresan sus propuestas al SCOMP.</li>
+                <li>Con esos antecedentes, el SCOMP <strong>emite el Certificado de Ofertas</strong> con alternativas según las <strong>4 modalidades vigentes</strong>.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-entrega">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="6" width="17" height="12" rx="2"></rect>
+                <path d="M4.5 8l7.5 5 7.5-5"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-entrega">Cómo se entrega</h2>
+              <ul>
+                <li>Se remite <strong>sólo por carta certificada</strong> al domicilio de la/el afiliada/o.</li>
+                <li>Puede enviarse <strong>copia por correo electrónico</strong> si la persona lo solicita.</li>
+                <li>Es <strong>gratuito</strong> y <strong>propiedad exclusiva</strong> de la/el afiliada/o.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-contenido">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="6" y="3.5" width="12" height="17" rx="1.8"></rect>
+                <polyline points="9,9 11,11 15,7"></polyline>
+                <polyline points="9,14 11,16 15,12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-contenido">¿Qué contiene?</h2>
+              <ul>
+                <li>Datos personales de la/el afiliada/o y de sus beneficiarias/os.</li>
+                <li>Datos de quien ingresó la <strong>Solicitud de Ofertas</strong>.</li>
+                <li>Características principales de <strong>Retiro Programado</strong> y <strong>Renta Vitalicia</strong>.</li>
+                <li>En <strong>Rentas Vitalicias</strong>: compañías oferentes según lo indicado en la Solicitud de Ofertas.</li>
+                <li>Información de <strong>Retiro Programado</strong> para el primer año en todas las administradoras.</li>
+                <li><strong>Proyección</strong> de Retiro Programado de la AFP de afiliación.</li>
+                <li>Si no hay ofertas de rentas vitalicias, se indicará <strong>“Sin ofertas”</strong>.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-vigencia">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="8" cy="12" r="3.2"></circle>
+                <line x1="8" y1="12" x2="8" y2="10.6"></line>
+                <line x1="8" y1="12" x2="9.6" y2="12.8"></line>
+                <polyline points="14,9 16,11 20,7"></polyline>
+                <line x1="14" y1="15.5" x2="20" y2="15.5"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-vigencia">Vigencia y qué puedes hacer</h2>
+              <ul>
+                <li>Vigencia de <strong>12 días hábiles</strong>.</li>
+                <li>Durante la vigencia, puedes <strong>aceptar</strong>, <strong>rechazar</strong> o <strong>solicitar remate</strong>.</li>
+                <li>Si vence, puedes solicitar uno nuevo, siempre que tu <strong>Certificado de Saldo</strong> esté <strong>vigente</strong>.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- ✅ Tip fuera del grid y más abajo -->
+        <div class="callout" role="note" aria-label="Tip">
+          <strong>Tip:</strong> Revisa con calma las alternativas y conserva el sobre de la carta certificada; es el canal oficial de entrega.
+        </div>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuente:</strong>
+          <a href="https://www.scomp.cl/scompsa/proceso-de-pension.html" target="_blank" rel="noopener">SCOMP – Proceso de pensión</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

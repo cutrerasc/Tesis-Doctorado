@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Evaluación de alternativas (SCOMP)</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{ width:100%; max-width:1320px; margin:24px auto; padding:0 12px; }
+
+  /* ✅ overflow visible: evita nota/tooltip “tapados” */
+  .sheet{
+    background:var(--card);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    overflow:visible; /* antes: hidden */
+  }
+  .sheet-header{
+    padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px;
+    border-top-left-radius:24px;border-top-right-radius:24px;
+  }
+  .section{padding:22px}
+
+  /* ✅ Tarjetas hacia abajo (1 columna) */
+  .grid{
+    display:grid;
+    gap:16px;
+    margin-top:14px;
+    grid-template-columns: 1fr;
+    align-items:stretch;
+  }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;display:flex;gap:12px;align-items:flex-start;
+    height:auto; min-width:0;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  .card ul, .card ol{ margin:.25rem 0 .5rem 0; padding-left:.9rem; list-style-position:outside; }
+  .card ul li + li{ margin-top:.22rem; }
+
+  /* ✅ Nota sin cortes */
+  .callout{
+    margin-top:22px;
+    border-radius:16px;border:1px solid #dfe7e2;background:var(--success-bg);padding:14px;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  /* ===== Tooltip términos (hover + click) ===== */
+  .term{
+    position:relative;
+    display:inline-block;
+    font-weight:700;
+    color:var(--primary-600);
+    cursor:help;
+    text-decoration:underline;
+    text-decoration-style:dotted;
+    text-underline-offset:3px;
+  }
+  .term-tooltip{
+    position:absolute;
+    left:0;
+    top:calc(100% + 8px);
+    z-index:9999;
+    width:min(420px, 86vw);
+    background:#111827;
+    color:#fff;
+    border-radius:12px;
+    padding:10px 12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    font-weight:500;
+    font-size:.95rem;
+    line-height:1.25;
+    display:none;
+  }
+  .term-tooltip::before{
+    content:"";
+    position:absolute;
+    top:-8px;
+    left:14px;
+    border-width:0 8px 8px 8px;
+    border-style:solid;
+    border-color:transparent transparent #111827 transparent;
+  }
+  .term.is-open .term-tooltip{ display:block; }
+  .term:focus{
+    outline:2px solid rgba(31,111,211,.45);
+    outline-offset:2px;
+    border-radius:6px;
+  }
+
+  /* Glosario */
+  .glossary{
+    margin-top:18px;
+    padding:16px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#fff;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .glossary h3{ margin:0 0 10px 0; font-size:1.02rem; color:var(--ink); }
+  .glossary dl{ margin:0; }
+  .glossary .g-item{
+    padding:10px 12px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:#fff;
+  }
+  .glossary .g-item + .g-item{ margin-top:10px; }
+  .glossary dt{ font-weight:700; margin:0 0 4px 0; color:var(--ink); }
+  .glossary dd{ margin:0; color:var(--muted); }
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet-header{ border-top-left-radius:16px;border-top-right-radius:16px; }
+  }
+
+  /* ✅ Impresión: 1 columna y sin burbujas */
+  @media print{
+    @page{ size:A4; margin:16mm; }
+    html, body{
+      background:#fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .wrap{ max-width:none; margin:0; padding:0; }
+    .sheet{ box-shadow:none !important; border-radius:0 !important; overflow:visible !important; }
+    .sheet-header{ border-radius:0 !important; }
+    .section{ padding:14px; }
+
+    .grid{ grid-template-columns:1fr; gap:10px; }
+
+    .term{ text-decoration:none; color:#000; }
+    .term-tooltip{ display:none !important; }
+
+    .card, .callout, .glossary{
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-eval">
+    <div class="sheet" role="region" aria-label="Módulo: Evaluación de alternativas (SCOMP)">
+      <div class="sheet-header" id="titulo-eval">Evaluación de alternativas (SCOMP)</div>
+
+      <div class="section">
+        <p>
+          Con tu <strong>Certificado de Ofertas</strong> puedes elegir entre distintas acciones sobre las
+          <span class="term" tabindex="0" role="button" aria-label="Definición de Ofertas">
+            ofertas
+            <span class="term-tooltip" role="tooltip">
+              Alternativas de pensión disponibles para la persona.
+            </span>
+          </span>
+          presentadas por el <span class="term" tabindex="0" role="button" aria-label="Definición de SCOMP">
+            SCOMP
+            <span class="term-tooltip" role="tooltip">
+              Es un sistema interconectado que transmite información entre AFP, Compañía de Seguros de Vida y asesoras/es previsionales, para que las personas afiliadas puedan comparar ofertas y decidir informadamente.
+            </span>
+          </span>.
+        </p>
+
+        <div class="grid" role="list">
+
+          <article class="card" role="listitem" aria-labelledby="tit-aceptar">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"></circle>
+                <polyline points="8,12 11,15 16,9"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-aceptar">Aceptar una oferta</h2>
+              <p>
+                Puedes <strong>aceptar</strong> cualquiera de las ofertas contenidas en tu certificado, de acuerdo con tus
+                necesidades y preferencias.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-remate">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 19h10"></path>
+                <path d="M12 5l3 3-7 7-3-3z"></path>
+                <path d="M14 7l3-3 2 2-3 3z"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-remate">Solicitar remate</h2>
+              <p>
+                Puedes pedir un <strong>remate</strong> entre las <span class="term" tabindex="0" role="button" aria-label="Definición de Compañía de Seguros de Vida">
+                  mismas compañías de seguros
+                  <span class="term-tooltip" role="tooltip">
+                    Es una institución financiera privada que asume la responsabilidad de pagarte una pensión de por vida a cambio de que tú le traspases la totalidad de tus ahorros acumulados en la AFP.
+                  </span>
+                </span>
+                que participaron en tu consulta para intentar mejorar condiciones.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-nueva">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="10.5" cy="10.5" r="4"></circle>
+                <path d="M14 14l4.5 4.5"></path>
+                <path d="M8 5.5a5 5 0 0 1 7.5 1.5"></path>
+                <path d="M6.5 10.5a5 5 0 0 0 1.5 3.5"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-nueva">Solicitar nueva consulta</h2>
+              <ul>
+                <li>
+                  Puedes realizar <strong>hasta 3 consultas</strong> durante la vigencia del
+                  <span class="term" tabindex="0" role="button" aria-label="Definición de Certificado de Saldo">
+                    Certificado de Saldo
+                    <span class="term-tooltip" role="tooltip">
+                      Documento emitido por la AFP que certifica el Saldo Previsional considerado para tu pensión.
+                    </span>
+                  </span>.
+                </li>
+                <li>No es posible ingresar una <strong>nueva</strong> si existe otra <strong>en trámite</strong>.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-desistir">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"></circle>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-desistir">Desistir</h2>
+              <p>
+                Puedes <strong>desistir</strong> de tu <em>solicitud de pensión</em> o del <em>cambio de modalidad</em> si decides no continuar.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout" role="note" aria-label="Nota">
+          <strong>Recuerda:</strong> El <em>Certificado de Ofertas</em> tiene una <strong>vigencia limitada</strong>
+          (según regulación vigente). Actúa dentro del plazo para poder <em>aceptar</em>, <em>rechazar</em> o <em>solicitar remate</em>.
+        </div>
+
+        <!-- ✅ Glosario -->
+        <section class="glossary" aria-label="Glosario">
+          <h3>Glosario</h3>
+          <dl>
+            <div class="g-item">
+              <dt>Ofertas</dt>
+              <dd>Alternativas de pensión disponibles para la persona.</dd>
+            </div>
+            <div class="g-item">
+              <dt>SCOMP</dt>
+              <dd>Es un sistema interconectado que transmite información entre AFP, Compañía de Seguros de Vida y asesoras/es previsionales, para que las personas afiliadas puedan comparar ofertas y decidir informadamente.</dd>
+            </div>
+            <div class="g-item">
+              <dt>Compañía de Seguros de Vida</dt>
+              <dd>Es una institución financiera privada que asume la responsabilidad de pagarte una pensión de por vida a cambio de que tú le traspases la totalidad de tus ahorros acumulados en la AFP.</dd>
+            </div>
+            <div class="g-item">
+              <dt>Certificado de Saldo</dt>
+              <dd>Documento emitido por la AFP que certifica el Saldo Previsional considerado para tu pensión.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuente:</strong>
+          <a href="https://www.scomp.cl/scompsa/proceso-de-pension.html" target="_blank" rel="noopener">SCOMP – Proceso de pensión</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const terms = document.querySelectorAll('.term');
+
+      function closeAll(exceptEl) {
+        terms.forEach(t => {
+          if (t !== exceptEl) t.classList.remove('is-open');
+        });
+      }
+
+      terms.forEach(term => {
+        term.addEventListener('mouseenter', () => {
+          closeAll(term);
+          term.classList.add('is-open');
+        });
+
+        term.addEventListener('mouseleave', () => {
+          term.classList.remove('is-open');
+        });
+
+        term.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const willOpen = !term.classList.contains('is-open');
+          closeAll(term);
+          if (willOpen) term.classList.add('is-open');
+        });
+
+        term.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const willOpen = !term.classList.contains('is-open');
+            closeAll(term);
+            if (willOpen) term.classList.add('is-open');
+          }
+          if (e.key === 'Escape') term.classList.remove('is-open');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (![...terms].some(t => t.contains(e.target))) closeAll(null);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAll(null);
+      });
+    });
+  </script>
+</body>
+</html>

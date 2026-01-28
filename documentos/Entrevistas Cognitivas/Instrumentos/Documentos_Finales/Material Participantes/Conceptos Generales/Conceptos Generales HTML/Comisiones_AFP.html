@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comisiones AFP</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{
+    width:100%;
+    max-width:1320px;
+    margin:24px auto;
+    padding:0 12px;
+  }
+
+  .sheet{background:var(--card);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet-header{padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px}
+  .section{padding:22px}
+
+  .grid{display:grid;gap:16px;margin-top:14px}
+  @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+  @media (min-width:960px){ .grid{grid-template-columns:1fr 1fr 1fr} }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;display:flex;gap:12px;align-items:flex-start
+  }
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  .card ul, .card ol{
+    margin:.25rem 0 .5rem 0;
+    padding-left:.9rem;
+    list-style-position:outside;
+  }
+  .card ul li + li{ margin-top:.22rem; }
+
+  .callout{margin-top:16px;border-radius:16px;border:1px solid #dfe7e2;background:var(--success-bg);padding:14px}
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  /* ====== TABLA (simple, sin cabeceras extra) ====== */
+  .table-card{
+    margin-top:14px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#fff;
+    overflow:hidden;
+  }
+
+  .data-table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+  }
+  .data-table th,
+  .data-table td{
+    border-top:1px solid var(--border);
+    padding:10px 12px;
+    text-align:left;
+    color:var(--ink);
+    vertical-align:middle;
+  }
+  .data-table thead th{
+    background:#f2f6ff;
+    font-weight:700;
+    border-top:0;
+  }
+  .data-table td.num,
+  .data-table th.num{
+    text-align:right;
+    font-variant-numeric: tabular-nums;
+    white-space:nowrap;
+  }
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+  }
+
+  /* ✅ impresión/PDF */
+  @media print{
+    @page{ size:A4; margin:16mm; }
+    html, body{
+      background:#fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .wrap{ max-width:none; margin:0; padding:0; }
+    .sheet{ box-shadow:none; border-radius:0; overflow:visible; }
+    .section{ padding:14px; }
+    .grid{ grid-template-columns: 1fr; gap:10px; }
+    .table-card{ break-inside:avoid; page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-comisiones">
+    <div class="sheet" role="region" aria-label="Módulo: Comisiones AFP">
+      <div class="sheet-header" id="titulo-comisiones">Comisiones de AFP</div>
+
+      <div class="section">
+        <p>
+          En las modalidades de pensión <strong>Retiro Programado (RP)</strong> y <strong>Renta Temporal (RT)</strong>,
+          la AFP <strong>cobra una comisión mensual por pagar y administrar la pensión</strong>. Esta comisión se descuenta del
+          monto de la pensión bajo estas modalidades.
+        </p>
+
+        <!-- ====== TABLA (sin títulos extra) ====== -->
+        <section class="table-card" aria-label="Comisiones por RP y RT">
+          <table class="data-table" role="table">
+            <thead>
+              <tr>
+                <th scope="col">A.F.P.</th>
+                <th scope="col" class="num">% sobre la pensión</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>CAPITAL</td><td class="num">1.25</td></tr>
+              <tr><td>CUPRUM</td><td class="num">1.25</td></tr>
+              <tr><td>HABITAT</td><td class="num">0.95</td></tr>
+              <tr><td>MODELO</td><td class="num">1.20</td></tr>
+              <tr><td>PLANVITAL</td><td class="num">0.00</td></tr>
+              <tr><td>PROVIDA</td><td class="num">1.25</td></tr>
+              <tr><td>UNO</td><td class="num">1.20</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <!-- ====== /TABLA ====== -->
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuente:</strong>
+          <a href="https://www.spensiones.cl/apps/estcom/estcom.php" target="_blank" rel="noopener">Estructura de Comisiones SP, Enero 2026.</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

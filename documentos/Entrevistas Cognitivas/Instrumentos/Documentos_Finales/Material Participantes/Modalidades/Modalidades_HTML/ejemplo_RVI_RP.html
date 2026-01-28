@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ejemplo de Cálculo: RVI + RP</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --radius:18px; --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{ width:100%; max-width:1320px; margin:24px auto; padding:0 12px; }
+
+  .sheet{
+    background:var(--card);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    overflow:visible; /* evita que tooltips/callout queden “tapados” */
+  }
+  .sheet-header{
+    padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px;
+    border-top-left-radius:24px;border-top-right-radius:24px;
+  }
+  .section{padding:22px}
+
+  .grid{
+    display:grid;
+    gap:16px;
+    margin-top:14px;
+    grid-template-columns: 1fr; /* tarjetas hacia abajo */
+    align-items:stretch;
+  }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px 16px 16px 14px;
+    display:grid;
+    grid-template-columns: 54px 1fr;
+    gap:14px;
+    align-items:start;
+    height:auto; min-width:0;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+
+  .ic{
+    width:54px;height:54px;flex:0 0 54px;border-radius:14px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600);
+    border:1px solid rgba(31,111,211,.12);
+  }
+  .ic svg{
+    width:30px;height:30px;
+    stroke:currentColor; fill:none;
+    stroke-width:1.9;
+    stroke-linecap:round; stroke-linejoin:round;
+    vector-effect: non-scaling-stroke;
+    shape-rendering: geometricPrecision;
+  }
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  .card ul{
+    margin:.25rem 0 .1rem 0;
+    padding-left:1.05rem;
+    list-style-position:outside;
+  }
+  .card ul li + li{ margin-top:.22rem; }
+
+  .callout{
+    margin-top:22px;
+    border-radius:16px;border:1px solid #d9e6ff;background:#eef7ff;padding:14px;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .callout strong{color:var(--primary-600)}
+
+  /* ===== Tooltip términos (hover + click) ===== */
+  .term{
+    position:relative;
+    display:inline-block;
+    font-weight:700;
+    color:var(--primary-600);
+    cursor:help;
+    text-decoration:underline;
+    text-decoration-style:dotted;
+    text-underline-offset:3px;
+  }
+  .term-tooltip{
+    position:absolute;
+    left:0;
+    top:calc(100% + 8px);
+    z-index:9999;
+    width:min(520px, 88vw);
+    background:#111827;
+    color:#fff;
+    border-radius:12px;
+    padding:10px 12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    font-weight:500;
+    font-size:.95rem;
+    line-height:1.25;
+    display:none;
+  }
+  .term-tooltip::before{
+    content:"";
+    position:absolute;
+    top:-8px;
+    left:14px;
+    border-width:0 8px 8px 8px;
+    border-style:solid;
+    border-color:transparent transparent #111827 transparent;
+  }
+
+  /* Abierto por click/teclado */
+  .term.is-open .term-tooltip{ display:block; }
+
+  /* Abierto por hover (desktop) */
+  .term:hover .term-tooltip{ display:block; }
+
+  .term:focus{
+    outline:2px solid rgba(31,111,211,.45);
+    outline-offset:2px;
+    border-radius:6px;
+  }
+
+  /* Glosario */
+  .glossary{
+    margin-top:18px;
+    padding:16px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#fff;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .glossary h3{ margin:0 0 10px 0; font-size:1.02rem; color:var(--ink); }
+  .glossary dl{ margin:0; }
+  .glossary .g-item{
+    padding:10px 12px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:#fff;
+  }
+  .glossary .g-item + .g-item{ margin-top:10px; }
+  .glossary dt{ font-weight:700; margin:0 0 4px 0; color:var(--ink); }
+  .glossary dd{ margin:0; color:var(--muted); }
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  /* ===== Gráfico grande (RVI + RP) ===== */
+.bigchart{
+  margin-top:18px;
+  padding:16px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:#fff;
+  break-inside: avoid; page-break-inside: avoid;
+}
+.bigchart h3{
+  margin:0 0 10px 0;
+  font-size:1.02rem;
+  color:var(--ink);
+}
+.bigchart svg{ width:100%; height:auto; display:block; }
+.bigchart text{ font-size:14px; fill: var(--muted); }
+
+.bigchart .axis{
+  stroke:#111;
+  stroke-width:2;
+  shape-rendering:crispEdges;
+}
+.bigchart .gridline{
+  stroke:#cfcfcf;
+  stroke-width:1;
+  shape-rendering:crispEdges;
+}
+
+/* Series en B/N (diferenciadas por patrón) */
+.bigchart .total{ stroke:#111; stroke-width:4; fill:none; }
+.bigchart .rvi{   stroke:#111; stroke-width:3; fill:none; stroke-dasharray:10 6; }
+.bigchart .rp{    stroke:#111; stroke-width:3; fill:none; stroke-dasharray:2 7; }
+
+.bigchart .marker-total{ fill:#111; }
+.bigchart .marker-hollow{ fill:#fff; stroke:#111; stroke-width:2; }
+
+.legend-inline{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin:0 0 10px 0;
+  color:var(--muted);
+  font-size:.95rem;
+}
+.legend-inline .legend-line{
+  display:inline-block;
+  width:28px;
+  border-top:4px solid #111;
+  margin-right:8px;
+  transform:translateY(-2px);
+}
+.legend-inline .lg-rvi .legend-line{ border-top-width:3px; border-top-style:dashed; }
+.legend-inline .lg-rp .legend-line{ border-top-width:3px; border-top-style:dotted; }
+
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+    .sheet-header{ border-top-left-radius:16px;border-top-right-radius:16px; }
+    .card{ grid-template-columns: 52px 1fr; }
+    .ic{ width:52px; height:52px; }
+    .ic svg{ width:28px; height:28px; }
+  }
+
+  @media print{
+    @page{ size:A4; margin:16mm; }
+    html, body{
+      background:#fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .wrap{ max-width:none; margin:0; padding:0; }
+    .sheet{ box-shadow:none !important; border-radius:0 !important; overflow:visible !important; }
+    .sheet-header{ border-radius:0 !important; }
+    .section{ padding:14px; }
+    .grid{ grid-template-columns:1fr; gap:10px; }
+
+    .term{ text-decoration:none; color:#000; }
+    .term-tooltip{ display:none !important; }
+
+    .card, .callout, .glossary{ break-inside:avoid; page-break-inside:avoid; }
+    .sources a{ color:#000; text-decoration:underline; }
+
+    .ic{ background:#fff; border:1px solid #cfd7e6; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-rvirp-ej">
+    <div class="sheet" role="region" aria-label="Módulo: Ejemplo de Cálculo RVI + RP">
+      <div class="sheet-header" id="titulo-rvirp-ej">Ejemplo de Renta Vitalicia Inmediata con Retiro Programado</div>
+
+      <div class="section">
+        <p>
+          En esta modalidad combinada los
+          <span class="term" tabindex="0" role="button" aria-label="Definición de Fondos en la cuenta individual">
+            fondos de la cuenta individual
+            <span class="term-tooltip" role="tooltip">
+              Es el monto total de dinero que has acumulado en tu cuenta de capitalización individual a lo largo de tu vida laboral. Es, básicamente, "tu ahorro para la vejez".
+            </span>
+          </span>
+          se dividen para contratar, <strong>al mismo tiempo</strong>,
+          una
+          <span class="term" tabindex="0" role="button" aria-label="Definición de Renta Vitalicia Inmediata">
+            <strong>Renta Vitalicia Inmediata</strong>
+            <span class="term-tooltip" role="tooltip">
+              Contrato con una Compañía de Seguros por una pensión mensual fija (en UF) para el resto de su vida.
+            </span>
+          </span>
+          (con una compañía de seguros) y una pensión por 
+          <span class="term" tabindex="0" role="button" aria-label="Definición de Retiro Programado">
+            <strong>Retiro Programado</strong>
+            <span class="term-tooltip" role="tooltip">
+              Un Retiro Programado es el retiro mensual de una porción de los ahorros previsionales que tiene en una Administradora de Fondos de Pensión (AFP). Es decir, todos los meses usted recibirá una porción de sus ahorros hasta que estos se consuman.
+            </span>
+          </span>
+          (pagada por la AFP).
+        </p>
+
+        <div class="grid" role="list">
+          <article class="card" role="listitem" aria-labelledby="tit-datos">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="3.2"></circle>
+                <path d="M4 19c0-3.2 3.6-5.5 8-5.5s8 2.3 8 5.5"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-datos">Ejemplo ilustrativo</h2>
+              <ul>
+                <li>
+                  Supongamos que un hombre de 65 años decide optar por la modalidad de <strong>Renta Vitalicia Inmediata con Retiro Programado</strong>,
+                  tiene un saldo en su cuenta individual
+                  de <strong>2,800 UF</strong> y decide destinar el <strong>50% de este saldo</strong> a la Renta Vitalicia Inmediata
+                </li>
+                <li>
+                  Al dividir los fondos, estará financiando una Renta vitalicia de <strong>7.8 UF de forma permanente</strong>, sumado
+                  a un Retiro Programado <strong>inicial de 7 UF</strong> el cual irá <strong>descendiendo</strong> con el paso de los años.
+                </li>
+                <li>
+                  Por lo tanto, se estima que en su <strong>primer año</strong> de pensión reciba un monto de <strong>14.8 UF</strong> el cual <strong>disminuirá a 7.8 UF</strong> con el paso de los años.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+<section class="bigchart" aria-labelledby="tit-grafico-grande">
+  <h3 id="tit-grafico-grande">Evolución referencial (UF): RV constante + RP decreciente</h3>
+
+  <svg viewBox="0 0 960 480" role="img"
+       aria-label="Gráfico en UF: RV constante en 7.8 UF y RP decreciente desde 7 UF hasta 0, total desde 14.8 UF hasta 7.8 UF entre 65 y 110 años.">
+
+    <!-- Patrones BN (impresión) -->
+    <defs>
+      <!-- RV: diagonales -->
+      <pattern id="patRV" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+        <line x1="0" y1="0" x2="0" y2="10" stroke="#111" stroke-width="2"/>
+      </pattern>
+      <!-- RP: puntos -->
+      <pattern id="patRP" width="12" height="12" patternUnits="userSpaceOnUse">
+        <circle cx="3" cy="3" r="1.6" fill="#111"/>
+        <circle cx="9" cy="9" r="1.6" fill="#111"/>
+      </pattern>
+    </defs>
+
+    <g>
+      <line x1="90" y1="360" x2="930" y2="360" stroke="#111" stroke-width="2"/>
+      <line x1="90" y1="40"  x2="90"  y2="360" stroke="#111" stroke-width="2"/>
+
+      <line x1="90" y1="40"     x2="930" y2="40"     stroke="#cfcfcf" stroke-width="1"/>
+      <line x1="90" y1="191.35" x2="930" y2="191.35" stroke="#111" stroke-width="2"/>
+      <line x1="90" y1="360"    x2="930" y2="360"    stroke="#cfcfcf" stroke-width="1"/>
+
+      <text x="78" y="44" text-anchor="end" font-size="14" fill="#111" font-weight="700">14.8</text>
+      <text x="78" y="195" text-anchor="end" font-size="14" fill="#111" font-weight="700">7.8</text>
+      <text x="78" y="364" text-anchor="end" font-size="14" fill="#111" font-weight="700">0</text>
+
+      <text transform="translate(28,200) rotate(-90)" text-anchor="middle" font-size="14" fill="#111">
+        Monto pensión (UF)
+      </text>
+
+      <g stroke="#cfcfcf" stroke-width="1">
+        <line x1="90"  y1="40" x2="90"  y2="360"/>
+        <line x1="183.33" y1="40" x2="183.33" y2="360"/>
+        <line x1="276.67" y1="40" x2="276.67" y2="360"/>
+        <line x1="370" y1="40" x2="370" y2="360"/>
+        <line x1="463.33" y1="40" x2="463.33" y2="360"/>
+        <line x1="556.67" y1="40" x2="556.67" y2="360"/>
+        <line x1="650" y1="40" x2="650" y2="360"/>
+        <line x1="743.33" y1="40" x2="743.33" y2="360"/>
+        <line x1="836.67" y1="40" x2="836.67" y2="360"/>
+        <line x1="930" y1="40" x2="930" y2="360"/>
+      </g>
+
+      <g font-size="14" fill="#111">
+        <text x="90"     y="392" text-anchor="middle">65</text>
+        <text x="183.33" y="392" text-anchor="middle">70</text>
+        <text x="276.67" y="392" text-anchor="middle">75</text>
+        <text x="370"    y="392" text-anchor="middle">80</text>
+        <text x="463.33" y="392" text-anchor="middle">85</text>
+        <text x="556.67" y="392" text-anchor="middle">90</text>
+        <text x="650"    y="392" text-anchor="middle">95</text>
+        <text x="743.33" y="392" text-anchor="middle">100</text>
+        <text x="836.67" y="392" text-anchor="middle">105</text>
+        <text x="930"    y="392" text-anchor="middle">110</text>
+        <text x="510" y="418" text-anchor="middle">Edad</text>
+      </g>
+
+      <rect x="90" y="191.35" width="840" height="168.65" fill="url(#patRV)" stroke="#111" stroke-width="1"/>
+
+      <path d="
+        M 90 191.35
+        L 90 40
+        L 183.33 52.97
+        L 276.67 68.11
+        L 370 96.22
+        L 463.33 132.97
+        L 556.67 165.41
+        L 650 182.70
+        L 743.33 189.19
+        L 836.67 191.35
+        L 930 191.35
+        Z"
+        fill="url(#patRP)" stroke="#111" stroke-width="1"/>
+
+      <polyline
+        points="
+          90,40
+          183.33,52.97
+          276.67,68.11
+          370,96.22
+          463.33,132.97
+          556.67,165.41
+          650,182.70
+          743.33,189.19
+          836.67,191.35
+          930,191.35"
+        fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <text x="96" y="34" font-size="13" fill="#111" font-weight="700">Total inicial: 14.8 UF</text>
+      <text x="800" y="186" font-size="13" fill="#111" font-weight="700">RV: 7.8 UF (constante)</text>
+    </g>
+
+    <g transform="translate(320,440)" font-size="14" fill="#111">
+      <rect x="0" y="-12" width="22" height="14" fill="url(#patRV)" stroke="#111" stroke-width="1"/>
+      <text x="30" y="0">RV (Renta Vitalicia)</text>
+
+      <rect x="260" y="-12" width="22" height="14" fill="url(#patRP)" stroke="#111" stroke-width="1"/>
+      <text x="290" y="0">RP (Retiro Programado)</text>
+    </g>
+
+  </svg>
+</section>
+
+        <div class="callout" role="note" aria-label="Notas del ejemplo">
+          <strong>Notas:</strong> Este es un ejemplo referencial para fines educativos. Los montos finales dependen de las
+          condiciones de la Renta Vitalicia Inmediata, del saldo en Retiro Programado y otros factores.
+        </div>
+
+        <!-- ===== GLOSARIO (nuevo) ===== -->
+        <section class="glossary" aria-labelledby="tit-glosario">
+          <h3 id="tit-glosario">Glosario</h3>
+          <dl>
+            <div class="g-item">
+              <dt>Fondos en la cuenta individual</dt>
+              <dd>
+                Es el monto total de dinero que has acumulado en tu cuenta de capitalización individual a lo largo de tu vida laboral.
+                Es, básicamente, “tu ahorro para la vejez”.
+              </dd>
+            </div>
+
+            <div class="g-item">
+              <dt>Renta Vitalicia Inmediata</dt>
+              <dd>
+                Contrato con una Compañía de Seguros por una pensión mensual fija (en UF) para el resto de su vida.
+              </dd>
+            </div>
+
+            <div class="g-item">
+              <dt>Retiro Programado</dt>
+              <dd>
+                Un Retiro Programado es el retiro mensual de una porción de los ahorros previsionales que tiene en una Administradora
+                de Fondos de Pensión (AFP). Es decir, todos los meses usted recibirá una porción de sus ahorros hasta que estos se consuman.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuentes sugeridas:</strong>
+          <a href="https://www.cmfchile.cl/educa/621/w3-article-1739.html" target="_blank" rel="noopener">CMF Educa: Ejemplo de cálculo</a>
+          ·
+          <a href="https://www.spensiones.cl/portal/institucional/594/w3-propertyvalue-9924.html" target="_blank" rel="noopener">SPensiones: RVI + RP</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Tooltips accesibles: click/tap + teclado + cierre con Escape/click afuera
+    (function () {
+      const terms = Array.from(document.querySelectorAll('.term'));
+
+      function closeAll(except) {
+        terms.forEach(t => { if (t !== except) t.classList.remove('is-open'); });
+      }
+
+      terms.forEach(term => {
+        // Evita que el click se propague y cierre inmediatamente
+        term.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = term.classList.contains('is-open');
+          closeAll(term);
+          term.classList.toggle('is-open', !isOpen);
+        });
+
+        // Teclado: Enter / Space para alternar, Escape para cerrar
+        term.addEventListener('keydown', (e) => {
+          const key = e.key;
+          if (key === 'Enter' || key === ' ') {
+            e.preventDefault();
+            const isOpen = term.classList.contains('is-open');
+            closeAll(term);
+            term.classList.toggle('is-open', !isOpen);
+          }
+          if (key === 'Escape') {
+            term.classList.remove('is-open');
+            term.blur();
+          }
+        });
+      });
+
+      document.addEventListener('click', () => closeAll(null));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAll(null);
+      });
+    })();
+  </script>
+</body>
+</html>

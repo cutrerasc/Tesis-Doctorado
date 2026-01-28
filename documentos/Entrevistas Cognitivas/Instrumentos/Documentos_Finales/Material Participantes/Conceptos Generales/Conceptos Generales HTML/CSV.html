@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Compañías de Seguros de Vida</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  /* Contenedor móvil-first */
+  .wrap{
+    width:100%;
+    max-width:1320px;
+    margin:24px auto;
+    padding:0 12px;
+  }
+
+  .sheet{background:var(--card);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet-header{padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px}
+  .section{padding:22px}
+
+  .grid{display:grid;gap:16px;margin-top:14px}
+  @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+  @media (min-width:960px){ .grid{grid-template-columns:1fr 1fr 1fr} }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;display:flex;gap:12px;align-items:flex-start
+  }
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  /* Sangría corta para bullets */
+  .card ul, .card ol{
+    margin:.25rem 0 .5rem 0;
+    padding-left:.9rem;
+    list-style-position:outside;
+  }
+  .card ul li + li{ margin-top:.22rem; }
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo">
+    <div class="sheet" role="region" aria-label="Módulo: Compañías de Seguros de Vida">
+      <div class="sheet-header" id="titulo">Compañías de Seguros de Vida</div>
+
+      <div class="section">
+        <p>
+          Las <strong>Compañías de Seguros de Vida</strong> son empresas que cubren riesgos personales y de salud,
+          garantizan un capital dentro de un plazo establecido o entregan una <strong>renta</strong> para el asegurado
+          y/o las personas designadas como beneficiarias.
+        </p>
+
+        <div class="grid" role="list">
+          
+          <article class="card" role="listitem" aria-labelledby="tit-que-son">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l7 3v6c0 4.5-3.3 7.6-7 9-3.7-1.4-7-4.5-7-9V6l7-3z"></path>
+                <line x1="9" y1="11.5" x2="15" y2="11.5"></line>
+                <line x1="12" y1="9" x2="12" y2="14"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-que-son">Qué son y qué cubren</h2>
+              <ul>
+                <li>Cubren <strong>riesgos personales y de salud</strong>.</li>
+                <li>Pueden <strong>garantizar un capital</strong> por un plazo o <strong>pagar una renta</strong> al asegurado y/o sus beneficiarios.</li>
+              </ul>
+            </div>
+          </article>
+
+          
+          <article class="card" role="listitem" aria-labelledby="tit-rv">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12c2.5-4 6.5-4 9 0s6.5 4 9 0"></path>
+                <path d="M5 12c2.5 4 6.5 4 9 0s6.5-4 9 0" opacity=".5"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-rv">Rentas vitalicias como pensión</h2>
+              <p>
+                Algunas compañías ofrecen <strong>rentas vitalicias</strong> como modalidad de pensión a afiliados del sistema previsional.
+                Entran en vigencia una vez que la AFP <strong>traspasa los fondos</strong> del afiliado a la compañía seleccionada.
+              </p>
+            </div>
+          </article>
+
+          
+          <article class="card" role="listitem" aria-labelledby="tit-poliza">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <rect x="6" y="3.5" width="12" height="17" rx="1.8"></rect>
+                <circle cx="12" cy="12" r="3.2"></circle>
+                <line x1="12" y1="12" x2="12" y2="10.4"></line>
+                <line x1="12" y1="12" x2="13.6" y2="12.9"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-poliza">Inicio y término de la póliza</h2>
+              <p>
+                La renta vitalicia <strong>finaliza al fallecer</strong> el asegurado o el <strong>último beneficiario</strong>.
+                Con ello, la póliza termina y <strong>cesa la responsabilidad</strong> de la compañía.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuentes:</strong>
+          <a href="https://www.spensiones.cl" target="_blank" rel="noopener">Superintendencia de Pensiones (Chile)</a> ·
+          <a href="https://www.cmfchile.cl" target="_blank" rel="noopener">Comisión para el Mercado Financiero (CMF)</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>¿Qué es pensión?</title>
+
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+
+  html,body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{
+    width: 100%;
+    max-width: 1320px;
+    margin: 24px auto;
+    padding: 0 12px;
+  }
+
+  .sheet{
+    background:var(--card);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    overflow:hidden
+  }
+
+  .sheet-header{
+    padding:14px 18px;
+    background:var(--primary);
+    color:#fff;
+    font-weight:700;
+    letter-spacing:.2px
+  }
+
+  .section{padding:22px}
+
+  .grid{display:grid;gap:16px;margin-top:14px}
+  @media (min-width:720px){ .grid{grid-template-columns:1fr 1fr 1fr} }
+
+  .card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:16px;
+    display:flex;
+    gap:12px;
+    align-items:flex-start
+  }
+
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{
+    width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;
+    stroke-linecap:round;stroke-linejoin:round
+  }
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p{margin:.2rem 0;color:var(--muted)}
+
+  .callout{
+    margin-top:16px;
+    border-radius:16px;
+    border:1px solid #dfe7e2;
+    background:var(--success-bg);
+    padding:14px
+  }
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  /* ============================
+     SECCIÓN TABLITAS (LIKERT)
+     ============================ */
+
+  .print-block{
+    margin-top:18px;
+    padding:16px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#fff;
+  }
+
+  .print-block h3{
+    margin:0 0 8px 0;
+    font-size:1.02rem;
+    color:var(--ink);
+  }
+
+  .hint{
+    margin:0 0 10px 0;
+    color:var(--muted);
+    font-size:.95rem;
+  }
+
+  .question-block{
+    margin-top:12px;
+    padding-top:10px;
+    border-top:1px solid var(--border);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .item-title{
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 6px 0;
+  }
+
+  .likert{
+    border-collapse:collapse;
+    width:100%;
+    table-layout:fixed;
+    margin:6pt 0 8pt 0;
+  }
+
+  .likert th, .likert td{
+    border:0.6pt solid #000;
+    padding:4pt 3pt;
+    text-align:center;
+    vertical-align:middle;
+    font-size:10.5pt;
+    color:#000;
+  }
+
+  .likert .scale-head{
+    font-weight:700;
+    font-size:10.5pt;
+    background:#fff;
+  }
+
+  .anchors{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:4pt;
+    font-size:10pt;
+    color:#000;
+  }
+
+  .anchors span{
+    display:inline-block;
+    max-width:48%;
+  }
+
+  .open-response{
+    margin-top:6pt;
+  }
+  .open-response label{
+    display:block;
+    font-weight:700;
+    color:#000;
+    margin-bottom:4pt;
+  }
+  .open-response .line{
+    border-bottom:0.6pt solid #000;
+    height:14pt;
+    margin:6pt 0;
+  }
+
+  /* ============================
+     IMPRESIÓN (PDF)
+     ============================ */
+  @media print{
+    :root{
+      --bg:#fff; --card:#fff; --border:#cfcfcf; --accent:#fff;
+    }
+
+    @page{
+      size:A4;
+      margin:18mm;
+    }
+
+    html, body{
+      background:#fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .wrap{
+      max-width:none;
+      margin:0;
+      padding:0;
+    }
+
+    .sheet{
+      box-shadow:none !important;
+      border-radius:0 !important;
+      overflow:visible;
+      border:0;
+    }
+
+    /* Si quieres conservar cabecera azul en el PDF, deja esto.
+       Si prefieres blanco/negro, cambia background a #fff y color a #000. */
+    .sheet-header{
+      border-radius:0 !important;
+    }
+
+    /* Evitar cortes feos */
+    .card, .callout, .print-block, .question-block{
+      break-inside:avoid;
+      page-break-inside:avoid;
+    }
+
+    /* En impresión, aseguro texto algo más compacto */
+    p{ color:#000; }
+    .sources{ color:#000; }
+    .sources a{ color:#000; text-decoration:underline; }
+
+    /* Quita colores suaves de iconos en impresión (opcional) */
+    .ic{ background:#fff; }
+  }
+
+  /* ===== Tooltip términos (hover + click) ===== */
+.term {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--primary-600, #1a5fb3);
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+.term-tooltip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  z-index: 50;
+  width: min(360px, 80vw);
+  background: #111827;
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  display: none;
+}
+
+.term-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent #111827 transparent;
+}
+
+.term.is-open .term-tooltip { display: block; }
+
+/* Accesibilidad: foco visible si navegan con teclado */
+.term:focus {
+  outline: 2px solid rgba(31,111,211,.45);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ===== Impresión: no mostrar burbujas ===== */
+@media print {
+  .term { text-decoration: none; color: #000; }
+  .term-tooltip { display: none !important; }
+}
+</style>
+</head>
+
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo">
+    <div class="sheet" role="region" aria-label="Módulo: ¿Qué es pensión?">
+      <div class="sheet-header" id="titulo">¿Qué es pensión?</div>
+
+      <div class="section">
+        <p>
+          En el actual sistema de <strong>capitalización individual obligatoria</strong> administrado por las 
+          <span class="term" tabindex="0" role="button" aria-label="Definición de AFP">
+  AFP
+  <span class="term-tooltip" role="tooltip">
+    Las Administradoras de Fondos de Pensiones (AFP) son las instituciones privadas encargadas de gestionar
+    los ahorros previsionales para tu futura jubilación.
+  </span>
+</span>,
+          existen <strong>tres tipos de pensiones</strong>: <em>vejez</em>, <em>invalidez</em> y <em>sobrevivencia</em>.
+        </p>
+
+        <div class="grid" role="list">
+
+          <article class="card" role="listitem" aria-labelledby="tit-vejez">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="4.5" width="17" height="16" rx="2"></rect>
+                <line x1="8" y1="3.5" x2="8" y2="6.5"></line>
+                <line x1="16" y1="3.5" x2="16" y2="6.5"></line>
+                <line x1="3.5" y1="9" x2="20.5" y2="9"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-vejez">Pensión de vejez</h2>
+              <p>
+                Derecho de afiliadas y afiliados a obtener una pensión al cumplir la edad legal para retirarse del
+                mercado laboral: <strong>60 años mujeres</strong> y <strong>65 años hombres</strong>.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-invalidez">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l7 3v6c0 4.5-3.3 7.6-7 9-3.7-1.4-7-4.5-7-9V6l7-3z"></path>
+                <line x1="12" y1="8.5" x2="12" y2="15.5"></line>
+                <line x1="8.5" y1="12" x2="15.5" y2="12"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-invalidez">Pensión de invalidez</h2>
+              <p>
+                Beneficio para personas afiliadas que sufran un <strong>menoscabo permanente de su capacidad de trabajo</strong>
+                por enfermedad o debilitamiento físico o intelectual. Requiere ser <strong>declarada invalidez</strong>
+                por una <strong>Comisión Médica</strong>.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-sobrev">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="8" cy="9" r="2.5"></circle>
+                <circle cx="16" cy="9" r="2.5"></circle>
+                <path d="M4.5 19c0-3 2.5-5 5-5s5 2 5 5"></path>
+                <path d="M10.5 19c0-2.2 1.8-4 4-4s4 1.8 4 4"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-sobrev">Pensión de sobrevivencia</h2>
+              <p>
+                Beneficio para <strong>familiares</strong> de una persona afiliada que <strong>fallece</strong>, ya sea
+                estando activa o pensionada. Otorga una <strong>pensión mensual</strong> si se cumplen los
+                <strong>requisitos legales</strong>.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout" role="note" aria-label="Recordatorio importante">
+          <strong>Tip:</strong> Identificar el tipo de pensión que aplica a tu situación es el primer paso para
+          conocer requisitos, documentos y trámites específicos.
+        </div>
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuentes:</strong>
+          <a href="https://www.spensiones.cl" target="_blank" rel="noopener">Superintendencia de Pensiones (Chile)</a>
+        </div>
+
+        <section class="glossary" aria-label="Glosario" style="margin-top:18px;">
+  <h3 style="margin:0 0 8px 0;">Glosario</h3>
+  <dl style="margin:0; padding:0;">
+    <div style="padding:10px 12px; border:1px solid var(--border,#e6e9f0); border-radius:14px; background:#fff;">
+      <dt style="font-weight:700; margin:0 0 4px 0;">AFP</dt>
+      <dd style="margin:0; color:var(--muted,#5b6573);">
+        Las Administradoras de Fondos de Pensiones (AFP) son las instituciones privadas encargadas de gestionar
+        los ahorros previsionales para tu futura jubilación.
+      </dd>
+    </div>
+  </dl>
+</section>
+
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const terms = document.querySelectorAll('.term');
+
+  function closeAll(exceptEl) {
+    terms.forEach(t => {
+      if (t !== exceptEl) t.classList.remove('is-open');
+    });
+  }
+
+  terms.forEach(term => {
+    term.addEventListener('mouseenter', () => {
+      closeAll(term);
+      term.classList.add('is-open');
+    });
+
+    term.addEventListener('mouseleave', () => {
+      term.classList.remove('is-open');
+    });
+
+    term.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const willOpen = !term.classList.contains('is-open');
+      closeAll(term);
+      if (willOpen) term.classList.add('is-open');
+    });
+
+    term.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const willOpen = !term.classList.contains('is-open');
+        closeAll(term);
+        if (willOpen) term.classList.add('is-open');
+      }
+      if (e.key === 'Escape') term.classList.remove('is-open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (![...terms].some(t => t.contains(e.target))) closeAll(null);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll(null);
+  });
+});
+</script>
+
+</body>
+</html>

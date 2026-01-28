@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>¿Qué es pensión?</title>
+
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+
+  html,body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{
+    width: 100%;
+    max-width: 1320px;
+    margin: 24px auto;
+    padding: 0 12px;
+  }
+
+  .sheet{
+    background:var(--card);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    overflow:hidden
+  }
+
+  .sheet-header{
+    padding:14px 18px;
+    background:var(--primary);
+    color:#fff;
+    font-weight:700;
+    letter-spacing:.2px
+  }
+
+  .section{padding:22px}
+
+  .grid{display:grid;gap:16px;margin-top:14px}
+  @media (min-width:720px){ .grid{grid-template-columns:1fr 1fr 1fr} }
+
+  .card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:16px;
+    display:flex;
+    gap:12px;
+    align-items:flex-start
+  }
+
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{
+    width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;
+    stroke-linecap:round;stroke-linejoin:round
+  }
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p{margin:.2rem 0;color:var(--muted)}
+
+  .callout{
+    margin-top:16px;
+    border-radius:16px;
+    border:1px solid #dfe7e2;
+    background:var(--success-bg);
+    padding:14px
+  }
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  /* ============================
+     SECCIÓN TABLITAS (LIKERT)
+     ============================ */
+
+  .print-block{
+    margin-top:18px;
+    padding:16px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#fff;
+  }
+
+  .print-block h3{
+    margin:0 0 8px 0;
+    font-size:1.02rem;
+    color:var(--ink);
+  }
+
+  .hint{
+    margin:0 0 10px 0;
+    color:var(--muted);
+    font-size:.95rem;
+  }
+
+  .question-block{
+    margin-top:12px;
+    padding-top:10px;
+    border-top:1px solid var(--border);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .item-title{
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 6px 0;
+  }
+
+  .likert{
+    border-collapse:collapse;
+    width:100%;
+    table-layout:fixed;
+    margin:6pt 0 8pt 0;
+  }
+
+  .likert th, .likert td{
+    border:0.6pt solid #000;
+    padding:4pt 3pt;
+    text-align:center;
+    vertical-align:middle;
+    font-size:10.5pt;
+    color:#000;
+  }
+
+  .likert .scale-head{
+    font-weight:700;
+    font-size:10.5pt;
+    background:#fff;
+  }
+
+  .anchors{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:4pt;
+    font-size:10pt;
+    color:#000;
+  }
+
+  .anchors span{
+    display:inline-block;
+    max-width:48%;
+  }
+
+  .open-response{
+    margin-top:6pt;
+  }
+  .open-response label{
+    display:block;
+    font-weight:700;
+    color:#000;
+    margin-bottom:4pt;
+  }
+  .open-response .line{
+    border-bottom:0.6pt solid #000;
+    height:14pt;
+    margin:6pt 0;
+  }
+
+  /* ============================
+     IMPRESIÓN (PDF)
+     ============================ */
+  @media print{
+    :root{
+      --bg:#fff; --card:#fff; --border:#cfcfcf; --accent:#fff;
+    }
+
+    @page{
+      size:A4;
+      margin:18mm;
+    }
+
+    html, body{
+      background:#fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .wrap{
+      max-width:none;
+      margin:0;
+      padding:0;
+    }
+
+    .sheet{
+      box-shadow:none !important;
+      border-radius:0 !important;
+      overflow:visible;
+      border:0;
+    }
+
+    /* Si quieres conservar cabecera azul en el PDF, deja esto.
+       Si prefieres blanco/negro, cambia background a #fff y color a #000. */
+    .sheet-header{
+      border-radius:0 !important;
+    }
+
+    /* Evitar cortes feos */
+    .card, .callout, .print-block, .question-block{
+      break-inside:avoid;
+      page-break-inside:avoid;
+    }
+
+    /* En impresión, aseguro texto algo más compacto */
+    p{ color:#000; }
+    .sources{ color:#000; }
+    .sources a{ color:#000; text-decoration:underline; }
+
+    /* Quita colores suaves de iconos en impresión (opcional) */
+    .ic{ background:#fff; }
+  }
+</style>
+</head>
+
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo">
+    <div class="sheet" role="region" aria-label="Módulo: ¿Qué es pensión?">
+    
+        <!-- ============================
+             TABLITAS PARA IMPRESIÓN
+             ============================ -->
+        <section class="print-block" aria-label="Evaluación y comprensión del módulo">
+          <h3>Evaluación rápida del módulo</h3>
+          <p class="hint">
+            Marca un número en cada fila (1 = Muy en desacuerdo, 7 = Muy de acuerdo).
+          </p>
+
+          <!-- Ítem 1 -->
+          <div class="question-block">
+            <p class="item-title">1) La explicación del módulo fue clara.</p>
+            <table class="likert" aria-label="Escala Likert 1 a 7">
+              <tr>
+                <th class="scale-head">1</th><th class="scale-head">2</th><th class="scale-head">3</th>
+                <th class="scale-head">4</th>
+                <th class="scale-head">5</th><th class="scale-head">6</th><th class="scale-head">7</th>
+              </tr>
+              <tr>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+              </tr>
+            </table>
+            <div class="anchors" aria-hidden="true">
+              <span>Muy en desacuerdo</span>
+              <span>Muy de acuerdo</span>
+            </div>
+          </div>
+
+          <!-- Ítem 2 -->
+          <div class="question-block">
+            <p class="item-title">2) El lenguaje utilizado es fácil de comprender.</p>
+            <table class="likert" aria-label="Escala Likert 1 a 7">
+              <tr>
+                <th class="scale-head">1</th><th class="scale-head">2</th><th class="scale-head">3</th>
+                <th class="scale-head">4</th>
+                <th class="scale-head">5</th><th class="scale-head">6</th><th class="scale-head">7</th>
+              </tr>
+              <tr>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+              </tr>
+            </table>
+            <div class="anchors" aria-hidden="true">
+              <span>Muy en desacuerdo</span>
+              <span>Muy de acuerdo</span>
+            </div>
+          </div>
+
+          <!-- Ítem 3 -->
+          <div class="question-block">
+            <p class="item-title">3) Esta información me resulta útil para rellenar los formularios.</p>
+            <table class="likert" aria-label="Escala Likert 1 a 7">
+              <tr>
+                <th class="scale-head">1</th><th class="scale-head">2</th><th class="scale-head">3</th>
+                <th class="scale-head">4</th>
+                <th class="scale-head">5</th><th class="scale-head">6</th><th class="scale-head">7</th>
+              </tr>
+              <tr>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+              </tr>
+            </table>
+            <div class="anchors" aria-hidden="true">
+              <span>Muy en desacuerdo</span>
+              <span>Muy de acuerdo</span>
+            </div>
+          </div>
+
+
+          
+        <!-- /TABLITAS -->
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Saldo Cuenta Individual</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  .wrap{
+    width:100%;
+    max-width:1320px;
+    margin:24px auto;
+    padding:0 12px;
+  }
+
+  .sheet{background:var(--card);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet-header{padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px}
+  .section{padding:22px}
+
+  /* ✅ Grid autoajustable */
+  .grid{
+    display:grid;
+    gap:16px;
+    margin-top:14px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items:stretch;
+  }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;display:flex;gap:12px;align-items:flex-start;
+  }
+
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  .card ul, .card ol{
+    margin:.25rem 0 .5rem 0;
+    padding-left:.9rem;
+    list-style-position:outside;
+  }
+  .card ul li + li{ margin-top:.22rem; }
+
+  /* ✅ Nota dentro del grid y a ancho completo */
+  .callout{
+    grid-column: 1 / -1;         /* ocupa todo el ancho del grid */
+    margin-top: 0;               /* el espacio lo da el gap del grid */
+    border-radius:16px;
+    border:1px solid #dfe7e2;
+    background:var(--success-bg);
+    padding:14px;
+  }
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-saldo">
+    <div class="sheet" role="region" aria-label="Módulo: Saldo Cuenta Individual">
+      <div class="sheet-header" id="titulo-saldo">Saldo Cuenta Individual</div>
+
+      <div class="section">
+        <p>
+          El <strong>saldo efectivo</strong> de tu cuenta de capitalización individual corresponde a los <strong>dineros acumulados</strong> en tu AFP.
+        </p>
+
+        <div class="grid" role="list">
+
+          <article class="card" role="listitem" aria-labelledby="tit-que-es">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="7.5" width="17" height="9" rx="2"></rect>
+                <rect x="13" y="9.5" width="6.5" height="5" rx="1.2"></rect>
+                <circle cx="16.8" cy="12" r="0.7"></circle>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-que-es">¿Qué es?</h2>
+              <p>El total acumulado en tu AFP a tu nombre en la cuenta de capitalización individual.</p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="tit-fuentes">
+            <div class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="3"></rect>
+                <polyline points="7,12 10,15 17,8"></polyline>
+                <line x1="7" y1="8"  x2="12" y2="8"></line>
+                <line x1="7" y1="18" x2="12" y2="18"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-fuentes">¿De dónde proviene?</h2>
+              <ul>
+                <li><strong>Cotizaciones obligatorias</strong> individuales.</li>
+                <li><strong>Rentabilidad</strong> de los instrumentos financieros donde invierten los fondos.</li>
+                <li><strong>Bono de Reconocimiento</strong>, cuando corresponda.</li>
+                <li><strong>Ahorro previsional voluntario</strong> (APV) que hayas realizado.</li>
+                <li><strong>Depósitos convenidos</strong> con la/el empleador, si existen.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ✅ Nota ahora es parte del grid -->
+          <div class="callout" role="note" aria-label="Nota">
+            <strong>Nota:</strong> La evolución del saldo depende de tus depósitos y de la rentabilidad (que puede subir o bajar).
+          </div>
+
+        </div>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuente:</strong>
+          <a href="https://www.spensiones.cl" target="_blank" rel="noopener">Superintendencia de Pensiones (Chile)</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

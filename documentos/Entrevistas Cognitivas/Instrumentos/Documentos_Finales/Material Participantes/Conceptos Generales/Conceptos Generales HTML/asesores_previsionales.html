@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Asesores Previsionales</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --primary:#1f6fd3; --primary-600:#1a5fb3;
+    --ink:#1b2430; --muted:#5b6573; --border:#e6e9f0; --accent:#eff6ff;
+    --success-bg:#e8f5e9; --success:#1b5e20; --radius:18px;
+    --shadow:0 6px 20px rgba(16,24,40,.08);
+  }
+  html,body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,"Noto Sans",Arial,sans-serif;
+    line-height:1.45
+  }
+
+  /* Contenedor móvil-first (evita cortes en celular) */
+  .wrap{
+    width:100%;
+    max-width:1320px;
+    margin:24px auto;
+    padding:0 12px;
+  }
+
+    /* ✅ SIEMPRE 1 COLUMNA (tarjetas apiladas) */
+  .grid{
+    display:grid;
+    gap:16px;
+    margin-top:14px;
+    grid-template-columns: 1fr;   /* ✅ clave */
+    align-items:stretch;
+  }
+
+  .sheet{background:var(--card);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet-header{padding:14px 18px;background:var(--primary);color:#fff;font-weight:700;letter-spacing:.2px}
+  .section{padding:22px}
+
+  .grid{display:grid;gap:16px;margin-top:14px}
+  /* 1 col móvil, 2 col tablet, 3 col escritorio */
+  @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+  @media (min-width:960px){ .grid{grid-template-columns:1fr 1fr 1fr} }
+
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;display:flex;gap:12px;align-items:flex-start
+  }
+  .ic{
+    width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--accent);
+    display:grid;place-items:center;color:var(--primary-600)
+  }
+  .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  h2{margin:0 0 8px 0;font-size:1.05rem}
+  p, li{margin:.2rem 0;color:var(--muted);overflow-wrap:anywhere}
+
+  /* Sangría más corta para bullets en tarjetas */
+  .card ul, .card ol{
+    margin:.25rem 0 .5rem 0;
+    padding-left:.9rem;
+    list-style-position:outside;
+  }
+  .card ul li + li{ margin-top:.22rem; }
+
+  .callout{margin-top:16px;border-radius:16px;border:1px solid #dfe7e2;background:var(--success-bg);padding:14px}
+  .callout strong{color:var(--success)}
+
+  .sources{margin-top:12px;font-size:.92rem;color:var(--muted)}
+  .sources a{color:var(--primary-600);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+
+  @media (max-width:640px){
+    .wrap{ padding:0 10px; }
+    .sheet{ border-radius:16px; }
+  }
+
+  /* ✅ impresión/PDF: 1 columna también */
+  @media print{
+    @page{ size:A4; margin:16mm; }
+    html, body{
+      background:#fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .wrap{ max-width:none; margin:0; padding:0; }
+    .sheet{ box-shadow:none; border-radius:0; overflow:visible; }
+    .section{ padding:14px; }
+    .grid{ grid-template-columns: 1fr; gap:10px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="titulo-asesores">
+    <div class="sheet" role="region" aria-label="Módulo: Asesores Previsionales">
+      <div class="sheet-header" id="titulo-asesores">Asesores Previsionales</div>
+
+      <div class="section">
+        <p>
+          La <strong>Asesoría Previsional</strong> entrega información a afiliadas/os y beneficiarias/os del Sistema de Pensiones,
+          considerando de forma <strong>integral</strong> su situación particular para <strong>decisiones informadas</strong> sobre
+          prestaciones y beneficios.
+        </p>
+
+        <div class="grid" role="list">
+          
+          <article class="card" role="listitem" aria-labelledby="tit-que-es">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"></circle>
+                <line x1="12" y1="10" x2="12" y2="15"></line>
+                <circle cx="12" cy="7" r="1"></circle>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-que-es">¿Qué es la asesoría previsional?</h2>
+              <ul>
+                <li>Información personalizada considerando necesidades e intereses.</li>
+                <li>Aborda prestaciones y beneficios del sistema de pensiones.</li>
+                <li>Busca apoyar decisiones informadas.</li>
+              </ul>
+            </div>
+          </article>
+
+          
+          <article class="card" role="listitem" aria-labelledby="tit-honorarios">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="4.5" width="9.5" height="14" rx="2"></rect>
+                <path d="M14.5 12l4.5 4.5"></path>
+                <circle cx="9.5" cy="9" r="1.5"></circle>
+                <circle cx="9.5" cy="14.5" r="1.5"></circle>
+                <line x1="8.7" y1="15.3" x2="10.3" y2="13.7"></line>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-honorarios">¿Cuánto cuesta una asesoria previsional?</h2>
+              Depende de la modalidad de pensión escogida:
+              <ul>
+                <li><strong>Renta vitalicia:</strong> máximo <strong>1,5&nbsp;%</strong> del saldo destinado a pensión, con tope de <strong>60&nbsp;UF</strong>.</li>
+                <li><strong>Retiro programado:</strong> máximo <strong>1,2&nbsp;%</strong> del saldo destinado a pensión, con tope de <strong>36&nbsp;UF</strong>.</li>
+                <li><strong>Tope global:</strong> el total de honorarios por asesoría <strong>no puede exceder</strong> el <strong>1,5&nbsp;%</strong> del saldo ni <strong>60&nbsp;UF</strong>.</li>
+              </ul>
+            </div>
+          </article>
+
+          
+          <article class="card" role="listitem" aria-labelledby="tit-cambio">
+            <div class="ic" aria-hidden="true">
+              
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="6" width="6.5" height="5" rx="1"></rect>
+                <rect x="14" y="13" width="6.5" height="5" rx="1"></rect>
+                <path d="M10 8.5h3"></path>
+                <path d="M12 7l1.8 1.5L12 10"></path>
+                <path d="M14 15.5h-3"></path>
+                <path d="M12 14l-1.8 1.5L12 17"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 id="tit-cambio">¿Y si quiero asesoría para cambiarme de modalidad?</h2>
+              Solo es posible cambiar de la modalidad de Retiro Programado a la de Renta Vitalicia o alguna de sus combinaciones.
+              <ul>
+                <li>Máximo <strong>1,5&nbsp;%</strong> del saldo destinado a la nueva modalidad, <strong>menos</strong> el porcentaje pagado en la primera asesoría (cuando se eligió retiro programado).</li>
+                <li>Con tope de <strong>60&nbsp;UF</strong>, <strong>menos</strong> las UF pagadas en la primera asesoría.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout" role="note" aria-label="Nota">
+          <strong>Nota:</strong> Los porcentajes y UF indicados son <strong>comisiones máximas</strong>; no pueden sobrepasarse.
+        </div>
+
+        <div class="sources" aria-label="Fuentes">
+          <strong>Fuentes:</strong>
+          <a href="https://www.spensiones.cl" target="_blank" rel="noopener">Superintendencia de Pensiones (Chile)</a> ·
+          <a href="https://www.cmfchile.cl" target="_blank" rel="noopener">Comisión para el Mercado Financiero (CMF)</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
